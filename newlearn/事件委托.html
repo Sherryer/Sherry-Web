@@ -17,9 +17,9 @@
     ul.onclick=function(ev){
         var oEvent=ev||event;
         var target=oEvent.target||oEvent.srcElement;
-        alert(target.nodeName);
+//        alert(target.nodeName);
         if(target.nodeName.toLowerCase()=="li"){
-            alert("1")
+            alert(target.innerHTML);
         }
 //        target.nodeName.style.background="red"
     }
