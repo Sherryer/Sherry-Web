@@ -1,0 +1,16 @@
+{
+  "menu": [
+    {
+      "name": "login",
+      "app_id": "login",
+      "icon": "local/img/OA.png",
+      "url": "http://10.1.36.1:8083/tenderLogin.jsp"
+    },
+    {
+      "name": "招标",
+      "app_id": "zhaobiao",
+      "icon": "local/img/OA.png",
+      "url": "http://10.1.36.1:8083/xb_project!view.do?approveId=1455375&spWorkItemId=1455378&spFlowCode=0765&projectId=1455324&targetId="
+    }
+  ]
+}

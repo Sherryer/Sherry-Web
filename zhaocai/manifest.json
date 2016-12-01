@@ -1,0 +1,44 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "description": "",
+  "version": "",
+  "name": "招采",
+  "default_url": "http://10.1.36.1:8083/tenderLogin.jsp",
+  "scope": "zhaocai",
+  "useAppMenu": true,
+  "options": {
+    "resource_intercept": {
+      "type": [
+        "css",
+        "image"
+      ],
+      "ignore": []
+    },
+    "resource_inject": []
+  },
+  "start_url": "enterplorer://zhaocai/local/index.html",
+  "runtime_version": "8.0.0",
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://zhaocai/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/tenderLogin\\.jsp"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/tenderLogin.jsp"
+      ]
+    },
+    {
+      "title": "zhaobiaojihua",
+      "url": "adapter://zhaocai/plan/zhaobiaojihua/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/xb_project!view\\.do\\?approveId=1455375&spWorkItemId=1455378&spFlowCode=0765&projectId=1455324&targetId="
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/xb_project!view.do?approveId=1455375&spWorkItemId=1455378&spFlowCode=0765&projectId=1455324&targetId="
+      ]
+    }
+  ]
+}

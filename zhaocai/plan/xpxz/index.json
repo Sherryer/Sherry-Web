@@ -1,0 +1,323 @@
+{
+  "version": "0.1",
+  "id": "xpxz",
+  "targetURL": "http://10.1.36.1:8083/zb_tec_eval_item!viewRules.do?projectId=1434619&tecType=1",
+  "jsFile": "index.js",
+  "chineseName": "xpxz",
+  "description": "审批细则",
+  "controls": {
+    "control24": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 886,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false
+    },
+    "control25": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标- 技术标评分表(一)"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 886,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control25"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control26": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "序号 评审项目 最高分值 评审细则 分值 1 qwe 100 asd 0-100 合计 100.0"
+              ],
+              "visText": [
+                "序号 评审项目 最高分值 评审细则 分值 1 qwe 100 asd 0-100 合计 100.0"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.table02 TABLE.wd_tablelist01"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]/TR[1]/TD[1]/TABLE[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 886,
+              "height": 90
+            }
+          }
+        ]
+      },
+      "intendedRole": "fragment",
+      "roles": "element,fragment",
+      "monitored": false
+    }
+  },
+  "contexts": {
+    "context4": {
+      "controls": [
+        "control24",
+        "control25",
+        "control26"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow15": {
+      "toContexts": [
+        {
+          "toContextId": "context4"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page4": {
+      "contextId": "context4",
+      "layout": [
+        {
+          "id": "uiControl43",
+          "controlId": "control25",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl43",
+                "onGetTemplate": "getTemplate_uiControl43"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl42",
+          "controlId": "control24",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl45",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl45body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl46",
+                  "controlId": "control26",
+                  "display": {
+                    "adapterId": "fragment",
+                    "type": "fragment",
+                    "class": "zhTable2",
+                    "adapter": {
+                      "templateType": ""
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context4": [
+          "评审细则"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context4": [
+          "10.1.36.1:8083/zb_tec_eval_item!viewRules.do?projectId=1434619&tecType=1"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context4": [
+          [
+            "submitDiv"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context4": [
+          [
+            "divh",
+            "table",
+            "wd_tablelist",
+            "wdtable_title",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context4": [
+          [
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/DIV/A",
+            "TD/TABLE/TBODY",
+            "TR/TD/DIV",
+            "TR/TD/TABLE"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,1192 @@
+{
+  "version": "0.1",
+  "id": "zhaobiaojihua",
+  "targetURL": "http://10.1.36.1:8083/xb_project!view.do?approveId=1455375&spWorkItemId=1455378&spFlowCode=0765&projectId=1455324&targetId=",
+  "jsFile": "index.js",
+  "chineseName": "招标计划",
+  "description": "招标计划",
+  "controls": {
+    "control13": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ],
+              "visText": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ],
+              "visText": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control13"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control34": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ],
+              "visText": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ],
+              "visText": [
+                "非中心数据演示-询价比价-mdq01瓷砖类询标比价-招标计划"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false
+    },
+    "control35": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "招标方案 确定日期 入围单位 确定日期 图纸技术条件 提供日期 招标文件、清单 编制完成日期 计划发标日期 计划开标日期 计划定标日期 1 2016-11-25 2016-11-26 2016-11-27 2016-11-28 2016-11-29 2016-11-30 2016-12-01"
+              ],
+              "visText": [
+                "招标方案 确定日期 入围单位 确定日期 图纸技术条件 提供日期 招标文件、清单 编制完成日期 计划发标日期 计划开标日期 计划定标日期 1 2016-11-25 2016-11-26 2016-11-27 2016-11-28 2016-11-29 2016-11-30 2016-12-01"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              5
+            ],
+            "value": "TABLE.table02 TABLE.table_fj"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[4]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 64
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control35"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control36": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "招标小组成员"
+              ],
+              "visText": [
+                "招标小组成员"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "招标小组成员"
+              ],
+              "visText": [
+                "招标小组成员"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              2,
+              7
+            ],
+            "value": "TABLE.table02 TABLE.divh3"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[5]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 31
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control36"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false
+    },
+    "control37": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 1798
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control37"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control38": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              9,
+              10
+            ],
+            "value": "TABLE.table02 TABLE.wd_tablelist03 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[14]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1074,
+              "height": 236
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control38"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control39": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "经办人 刘宝山 区域公司成本管理部经理 张雪林 区域公司副总经理（成本） 胡晓亮 区域公司总经理 徐文亮 成本管理中心副总经理（招采） 巨峰"
+              ],
+              "visText": [
+                "经办人 刘宝山 区域公司成本管理部经理 张雪林 区域公司副总经理（成本） 胡晓亮 区域公司总经理 徐文亮 成本管理中心副总经理（招采） 巨峰"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TD"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              8
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 921,
+              "height": 36
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control39"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control40": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批流程： 经办人 刘宝山 区域公司成本管理部经理 张雪林 区域公司副总经理（成本） 胡晓亮 区域公司总经理 徐文亮 成本管理中心副总经理（招采） 巨峰 * 审批意见： 审批常用语： 请选择 同意 不同意 请领导审批 请提出建议 征询到：N/A"
+              ],
+              "visText": [
+                "审批流程： 经办人 刘宝山 区域公司成本管理部经理 张雪林 区域公司副总经理（成本） 胡晓亮 区域公司总经理 徐文亮 成本管理中心副总经理（招采） 巨峰 * 审批意见： 审批常用语："
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 205
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control40"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control41": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 105
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control41"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control42": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 1798
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control42"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    }
+  },
+  "contexts": {
+    "context5": {
+      "controls": [
+        "control13",
+        "control34",
+        "control35",
+        "control36",
+        "control37",
+        "control38",
+        "control39",
+        "control40",
+        "control41",
+        "control42"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow17": {
+      "toContexts": [
+        {
+          "toContextId": "context5"
+        }
+      ]
+    },
+    "flow18": {
+      "fromContextId": "context5",
+      "fromAction": "doAction",
+      "fromControlId": "control40",
+      "toContexts": [
+        {
+          "toContextId": "context5"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page5": {
+      "contextId": "context5",
+      "layout": [
+        {
+          "id": "uiControl23",
+          "controlId": "control13",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl23",
+                "onGetTemplate": "getTemplate_uiControl23"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl52",
+          "controlId": "control34",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl53",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl53body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl56",
+                  "controlId": "control35",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl56",
+                        "onGetTemplate": "getTemplate_uiControl56"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl57",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl57body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl61",
+                  "controlId": "control36",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl61",
+                        "onGetTemplate": "getTemplate_uiControl61"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl64",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl64body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl63",
+                  "controlId": "control37",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl63",
+                        "onGetTemplate": "getTemplate_uiControl63"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl65",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl65body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl66",
+                  "controlId": "control38",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl66",
+                        "onGetTemplate": "getTemplate_uiControl66"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl73",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl73body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl74",
+                  "controlId": "control42",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl74",
+                        "onGetTemplate": "getTemplate_uiControl74"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl67",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl67body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl68",
+                  "controlId": "control39",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl68",
+                        "onGetTemplate": "getTemplate_uiControl68"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl69",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl69body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl70",
+                  "controlId": "control40",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl70",
+                        "onGetTemplate": "getTemplate_uiControl70"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl71",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl71body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl72",
+                  "controlId": "control41",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl72",
+                        "onGetTemplate": "getTemplate_uiControl72"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context5": [
+          "招标计划",
+          "审批信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context5": [
+          "10.1.36.1:8083/xb_project!view.do?approveId=1455375&spWorkItemId=1455378&spFlowCode=0765&projectId=1455324&targetId=",
+          "10.1.36.1:8083/approve!index.do?projectId=1455324&approveId=1455375&spActivityInsId=1455336&spFlowCode=0765&userCode=1455375&targetId="
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context5": [
+          [
+            "_myDP",
+            "expertListSize",
+            "isHotel",
+            "projectId",
+            "spList"
+          ],
+          [
+            "expertListSize",
+            "isHotel",
+            "projectId",
+            "spList"
+          ],
+          [
+            "isHotel",
+            "projectId"
+          ],
+          [
+            "_myDP",
+            "isHotel",
+            "projectId"
+          ],
+          [
+            "_a",
+            "_myDP",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "saveBtn",
+            "saveSpBtn",
+            "submitDiv"
+          ],
+          [
+            "_a",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "saveBtn",
+            "saveSpBtn",
+            "submitDiv"
+          ],
+          [
+            "isHotel",
+            "projectId",
+            "spList"
+          ],
+          [
+            "_myDP",
+            "isHotel",
+            "projectId",
+            "spList"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context5": [
+          [
+            "cred",
+            "divh",
+            "divh_time",
+            "divh_title",
+            "gkol",
+            "gkyd_green",
+            "gkyd_red",
+            "heightspace",
+            "sd",
+            "table",
+            "table_fj",
+            "wd_tablelist"
+          ],
+          [
+            "divh",
+            "lct_tool",
+            "lct_tt",
+            "table"
+          ],
+          [
+            "Noprn",
+            "sp_wrapper",
+            "wdtable_title",
+            "wdtable_title_sp",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ],
+          [
+            "cred",
+            "divh",
+            "divh_time",
+            "divh_title",
+            "gkol",
+            "gkyd_green",
+            "gkyd_red",
+            "heightspace",
+            "table",
+            "table_fj",
+            "wd_tablelist"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context5": [
+          [
+            "-/-/DIV",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/DIV/IFRAME",
+            "-/TABLE/TBODY",
+            "OL/LI/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/IMG",
+            "TD/DIV/A",
+            "TD/DIV/IMG",
+            "TD/OL/LI",
+            "TD/TABLE/INPUT-hidden",
+            "TD/TABLE/TBODY",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IFRAME",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/OL",
+            "TR/TD/STRONG",
+            "TR/TD/TABLE",
+            "TR/TH/BR",
+            "TR/TH/STRONG"
+          ],
+          [
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/TABLE/TBODY",
+            "OL/LI/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/IMG",
+            "TD/DIV/A",
+            "TD/DIV/IMG",
+            "TD/OL/LI",
+            "TD/TABLE/INPUT-hidden",
+            "TD/TABLE/TBODY",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IFRAME",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/OL",
+            "TR/TD/STRONG",
+            "TR/TD/TABLE",
+            "TR/TH/BR",
+            "TR/TH/STRONG"
+          ],
+          [
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/DIV",
+            "TR/TD/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/DIV/IFRAME",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TR/TD/DIV",
+            "TR/TD/SPAN"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/IFRAME",
+            "-/DIV/INPUT-hidden",
+            "-/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/DIV/INPUT-hidden",
+            "TR/TD/DIV"
+          ],
+          [
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/TABLE/TBODY",
+            "OL/LI/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/IMG",
+            "TD/DIV/A",
+            "TD/DIV/IMG",
+            "TD/OL/LI",
+            "TD/TABLE/TBODY",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IFRAME",
+            "TR/TD/INPUT-hidden",
+            "TR/TD/OL",
+            "TR/TD/STRONG",
+            "TR/TD/TABLE",
+            "TR/TH/BR",
+            "TR/TH/STRONG"
+          ],
+          [
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/TABLE/TBODY",
+            "OL/LI/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/IMG",
+            "TD/DIV/A",
+            "TD/DIV/IMG",
+            "TD/OL/LI",
+            "TD/TABLE/TBODY",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IFRAME",
+            "TR/TD/OL",
+            "TR/TD/STRONG",
+            "TR/TD/TABLE",
+            "TR/TH/BR",
+            "TR/TH/STRONG"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/DIV/IFRAME",
+            "-/TABLE/TBODY",
+            "OL/LI/SPAN",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TBODY/TR/TH",
+            "TD/A/IMG",
+            "TD/DIV/A",
+            "TD/DIV/IMG",
+            "TD/OL/LI",
+            "TD/TABLE/TBODY",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IFRAME",
+            "TR/TD/OL",
+            "TR/TD/STRONG",
+            "TR/TD/TABLE",
+            "TR/TH/BR",
+            "TR/TH/STRONG"
+          ]
+        ]
+      }
+    }
+  }
+}
