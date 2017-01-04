@@ -1,0 +1,734 @@
+{
+  "version": "0.1",
+  "id": "buyishenpi",
+  "targetURL": "http://10.1.36.1:8083/approve!index.do?projectId=1434619&approveId=1440393&spActivityInsId=1440388&spFlowCode=4621&userCode=1440393&targetId=",
+  "jsFile": "index.js",
+  "chineseName": "补遗审批",
+  "description": "补遗审批",
+  "controls": {
+    "control6": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control6"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control9": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TABLE.table02"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1100,
+              "height": 1026
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control9"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control5": {
+      "location": {
+        "data": {
+          "tagName": "TR"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              18
+            ],
+            "value": "TABLE.table02 TBODY TR"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1078,
+              "height": 1002
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control5"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control7": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "经办人 刘宝山 招标小组成员会签 胡晓亮,聂瑞海 招标小组组长 梁常明"
+              ],
+              "visText": [
+                "经办人 刘宝山 招标小组成员会签 胡晓亮,聂瑞海 招标小组组长 梁常明"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "经办人 刘宝山 招标小组成员会签 胡晓亮,聂瑞海 招标小组组长 梁常明"
+              ],
+              "visText": [
+                "经办人 刘宝山 招标小组成员会签 胡晓亮,聂瑞海 招标小组组长 梁常明"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TD"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              12
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 921,
+              "height": 25
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control7"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control10": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 131
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control10"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control12": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批流程： 经办人 刘宝山 招标小组成员会签 胡晓亮,聂瑞海 招标小组组长 梁常明 * 审批意见： 审批常用语： 请选择 同意 不同意 请领导审批 请提出建议 征询到：N/A"
+              ],
+              "visText": [
+                "审批流程： 经办人 刘宝山 招标小组成员会签 胡晓亮,聂瑞海 招标小组组长 梁常明 * 审批意见： 审批常用语："
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 194
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control12"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control21": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ],
+              "visText": [
+                "东区国际12321园林工程类招标-补遗审批"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    }
+  },
+  "contexts": {
+    "context2": {
+      "controls": [
+        "control6",
+        "control9",
+        "control5",
+        "control7",
+        "control10",
+        "control12",
+        "control21"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow6": {
+      "toContexts": [
+        {
+          "toContextId": "context2"
+        }
+      ]
+    },
+    "flow4": {
+      "fromContextId": "context2",
+      "fromAction": "click",
+      "fromControlId": "control5",
+      "toContexts": [
+        {
+          "toContextId": "context2"
+        }
+      ]
+    },
+    "flow10": {
+      "fromContextId": "context2",
+      "fromAction": "click",
+      "fromControlId": "control10",
+      "toContexts": [
+        {
+          "toContextId": "context2"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page2": {
+      "contextId": "context2",
+      "layout": [
+        {
+          "id": "uiControl13",
+          "controlId": "control6",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl13",
+                "onGetTemplate": "getTemplate_uiControl13"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl39",
+          "controlId": "control21",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl8",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl8body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl14",
+                  "controlId": "control9",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl14",
+                        "onGetTemplate": "getTemplate_uiControl14"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl10",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl10body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl9",
+                  "controlId": "control5",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl9",
+                        "onGetTemplate": "getTemplate_uiControl9"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl11",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl11body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl12",
+                  "controlId": "control7",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl12",
+                        "onGetTemplate": "getTemplate_uiControl12"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl18",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl18body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl20",
+                  "controlId": "control12",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl20",
+                        "onGetTemplate": "getTemplate_uiControl20"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl16",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl16body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl17",
+                  "controlId": "control10",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl17",
+                        "onGetTemplate": "getTemplate_uiControl17"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context2": [
+          "审批信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context2": [
+          "10.1.36.1:8083/approve!index.do?projectId=1434619&approveId=1440393&spActivityInsId=1440388&spFlowCode=4621&userCode=1440393&targetId="
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context2": [
+          [
+            "_a",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "saveBtn",
+            "saveSpBtn",
+            "submitDiv"
+          ],
+          [
+            "_a",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "submitDiv"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context2": [
+          [
+            "Noprn",
+            "sp_wrapper",
+            "wdtable_title",
+            "wdtable_title_sp",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context2": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/IFRAME",
+            "-/DIV/INPUT-hidden",
+            "-/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/DIV/INPUT-hidden",
+            "TR/TD/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,876 @@
+{
+  "version": "0.1",
+  "id": "zhiweidingbiao",
+  "targetURL": "http://10.1.36.1:8083/approve!index.do?projectId=180595&approveId=183453&spActivityInsId=183421&spFlowCode=8345&userCode=183453&spWorkItemId=183807&is_yb=1",
+  "jsFile": "index.js",
+  "chineseName": "直委定标",
+  "description": "",
+  "controls": {
+    "control85": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 传阅 打印 关闭"
+              ],
+              "visText": [
+                "审批信息查看 传阅 打印 关闭"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 传阅 打印 关闭"
+              ],
+              "visText": [
+                "审批信息查看 传阅打印关闭"
+              ]
+            }
+          },
+          {
+            "id": "@id/nonWord",
+            "prob": 1,
+            "disabled": true,
+            "fact": "_a",
+            "value": "descendant::TABLE[@id=\"_a\"]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.ext-webkit.ext-chrome DIV.wdtable_title_sp.Noprn TABLE.wdtable_title TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1100,
+              "height": 32
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control85"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control88": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "平房河渠改造物探及地形图测绘直委-直接委托定标[紧急]"
+              ],
+              "visText": [
+                "平房河渠改造物探及地形图测绘直委-直接委托定标[紧急]"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "平房河渠改造物探及地形图测绘直委-直接委托定标[紧急]"
+              ],
+              "visText": [
+                "平房河渠改造物探及地形图测绘直委-直接委托定标[紧急]"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control89": {
+      "location": {
+        "data": {
+          "tagName": "OL"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "是否超签约控制金额：否。禁止连续3个月内给同一供应商直接委托次数超过3次：符合制度。"
+              ],
+              "visText": [
+                "是否超签约控制金额：否。 禁止连续3个月内给同一供应商直接委托次数超过3次：符合制度。"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              4
+            ],
+            "value": "TABLE.table02 TABLE.wd_tablelist03 OL.gkol"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[7]/TBODY[1]/TR[1]/TD[1]/OL[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1002,
+              "height": 60
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control89"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control90": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "经办人 胡晓亮 招标小组成员 蔡浩,衣晓伟,陈涛 分管部门经理 陈光耀 区域公司成本管理部经理 张雪林 区域公司招标采购部经理 刘宝山 分管部门副总经理 张祥顺 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮"
+              ],
+              "visText": [
+                "经办人 胡晓亮 招标小组成员 蔡浩,衣晓伟,陈涛 分管部门经理 陈光耀 区域公司成本管理部经理 张雪林 区域公司招标采购部经理 刘宝山 分管部门副总经理 张祥顺 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TD"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              12
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 921,
+              "height": 36
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control90"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control91": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批流程： 经办人 胡晓亮 招标小组成员 蔡浩,衣晓伟,陈涛 分管部门经理 陈光耀 区域公司成本管理部经理 张雪林 区域公司招标采购部经理 刘宝山 分管部门副总经理 张祥顺 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮 意见*: 审批常用语: 请选择 同意 不同意 请领导审批 请提出建议 转发人*:"
+              ],
+              "visText": [
+                "审批流程： 经办人 胡晓亮 招标小组成员 蔡浩,衣晓伟,陈涛 分管部门经理 陈光耀 区域公司成本管理部经理 张雪林 区域公司招标采购部经理 刘宝山 分管部门副总经理 张祥顺 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 72
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control91"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control92": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 531
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control92"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control93": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 1461
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control93"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control86": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "TABLE.table02 TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 183
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control86"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control113": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "友情提示 对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ],
+              "visText": [
+                "友情提示 对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.alert_box DIV.alert_box_inner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 540,
+              "height": 168
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control113"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    }
+  },
+  "contexts": {
+    "context14": {
+      "controls": [
+        "control85",
+        "control88",
+        "control89",
+        "control90",
+        "control91",
+        "control92",
+        "control93",
+        "control86",
+        "control113"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow33": {
+      "toContexts": [
+        {
+          "toContextId": "context14"
+        }
+      ]
+    },
+    "flow43": {
+      "fromContextId": "context14",
+      "fromAction": "doAction",
+      "fromControlId": "control93",
+      "toContexts": [
+        {
+          "toContextId": "context14"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page13": {
+      "contextId": "context14",
+      "layout": [
+        {
+          "id": "uiControl145",
+          "controlId": "control85",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl145",
+                "onGetTemplate": "getTemplate_uiControl145"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl150",
+          "controlId": "control88",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl146",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl146body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl144",
+                  "controlId": "control86",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl144",
+                        "onGetTemplate": "getTemplate_uiControl144"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl148",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl148body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl159",
+                  "controlId": "control93",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl159",
+                        "onGetTemplate": "getTemplate_uiControl159"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl151",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl151body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl152",
+                  "controlId": "control89",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl152",
+                        "onGetTemplate": "getTemplate_uiControl152"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl153",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl153body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl154",
+                  "controlId": "control90",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl154",
+                        "onGetTemplate": "getTemplate_uiControl154"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl155",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl155body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl156",
+                  "controlId": "control91",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl156",
+                        "onGetTemplate": "getTemplate_uiControl156"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl157",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl157body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl158",
+                  "controlId": "control92",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl158",
+                        "onGetTemplate": "getTemplate_uiControl158"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl194",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl194body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl195",
+                  "controlId": "control113",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl195",
+                        "onGetTemplate": "getTemplate_uiControl195"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context14": [
+          "审批信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context14": [
+          "10.1.36.1:8083/approve!index.do?projectId=180595&approveId=183453&spActivityInsId=183421&spFlowCode=8345&userCode=183453&spWorkItemId=183807&is_yb=1",
+          "10.1.36.1:8083/approve!index.do?projectId=282674&approveId=489725&spActivityInsId=489659&spFlowCode=8835&userCode=489725&spWorkItemId=491180&is_yb=1",
+          "10.1.36.1:8083/approve!index.do?projectId=188281&approveId=224525&spActivityInsId=224512&spFlowCode=8907&userCode=224525&spWorkItemId=224534&is_yb=1"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context14": [
+          [
+            "_a",
+            "_myDP",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "submitDiv"
+          ],
+          [
+            "_a",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "submitDiv"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context14": [
+          [
+            "Noprn",
+            "sp_wrapper",
+            "wdtable_title",
+            "wdtable_title_sp",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context14": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/IFRAME",
+            "-/DIV/INPUT-hidden",
+            "-/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/DIV/INPUT-hidden",
+            "TR/TD/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}

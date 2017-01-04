@@ -1,0 +1,567 @@
+{
+  "version": "0.1",
+  "id": "login",
+  "targetURL": "http://10.1.36.87:8888/",
+  "jsFile": "index.js",
+  "requires": {
+    "index": "../index/index.json"
+  },
+  "chineseName": "登陆",
+  "description": "登陆",
+  "controls": {
+    "control0": {
+      "location": {
+        "data": {
+          "tagName": "INPUT"
+        },
+        "locators": [
+          {
+            "id": "@placeholder",
+            "prob": 3,
+            "value": {
+              "text": [
+                "请输入登录名"
+              ]
+            }
+          },
+          {
+            "id": "elem/@name",
+            "prob": 2,
+            "value": "descendant::INPUT[@name=\"loginname\"]"
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::INPUT[@id=\"loginname\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.loginbg DIV.login_os INPUT.login_user"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/INPUT[1]"
+          },
+          {
+            "id": "input/type",
+            "verifyEnabled": true,
+            "value": "text"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 173,
+              "height": 21
+            }
+          }
+        ]
+      },
+      "intendedRole": "textbox",
+      "roles": "element,textbox",
+      "monitored": false
+    },
+    "control1": {
+      "location": {
+        "data": {
+          "tagName": "INPUT"
+        },
+        "locators": [
+          {
+            "id": "@placeholder",
+            "prob": 3,
+            "value": {
+              "text": [
+                "请输入密码"
+              ]
+            }
+          },
+          {
+            "id": "elem/@name",
+            "prob": 2,
+            "value": "descendant::INPUT[@name=\"password\"]"
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::INPUT[@id=\"password\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.loginbg DIV.login_os INPUT.login_pw"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[2]/TD[1]/INPUT[1]"
+          },
+          {
+            "id": "input/type",
+            "verifyEnabled": true,
+            "value": "password"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 173,
+              "height": 21
+            }
+          }
+        ]
+      },
+      "intendedRole": "passwordbox",
+      "roles": "element,passwordbox,textbox",
+      "monitored": false
+    },
+    "control2": {
+      "location": {
+        "data": {
+          "tagName": "INPUT"
+        },
+        "locators": [
+          {
+            "id": "@placeholder",
+            "prob": 3,
+            "value": {
+              "text": [
+                "验证码"
+              ]
+            }
+          },
+          {
+            "id": "elem/@name",
+            "prob": 2,
+            "value": "descendant::INPUT[@name=\"randomCode\"]"
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::INPUT[@id=\"randomCode\"]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              2,
+              4
+            ],
+            "value": "BODY.loginpage DIV.loginbg DIV.login_os TABLE TBODY TR TD INPUT"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/INPUT[1]"
+          },
+          {
+            "id": "input/type",
+            "verifyEnabled": true,
+            "value": "text"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 154,
+              "height": 30
+            }
+          }
+        ]
+      },
+      "intendedRole": "textbox",
+      "roles": "element,textbox",
+      "monitored": true
+    },
+    "control3": {
+      "location": {
+        "data": {
+          "tagName": "IMG"
+        },
+        "locators": [
+          {
+            "id": "img/@src",
+            "prob": 2,
+            "value": {
+              "pathname": "/randomCode"
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": "descendant::IMG[@id=\"randomCodeImg\"]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[3]/TD[1]/A[1]/IMG[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 70,
+              "height": 20
+            }
+          }
+        ]
+      },
+      "roles": "element,image,button",
+      "monitored": true
+    },
+    "control4": {
+      "location": {
+        "data": {
+          "tagName": "INPUT"
+        },
+        "locators": [
+          {
+            "id": "input/@value",
+            "prob": 1,
+            "value": {
+              "text": [
+                "用户登录"
+              ]
+            }
+          },
+          {
+            "id": "input/button/@value",
+            "prob": 3,
+            "value": {
+              "text": [
+                "用户登录"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.loginbg DIV.login_os INPUT.login_btn"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[4]/TD[1]/INPUT[1]"
+          },
+          {
+            "id": "input/type",
+            "verifyEnabled": true,
+            "value": "button"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 68,
+              "height": 21
+            }
+          }
+        ]
+      },
+      "intendedRole": "button",
+      "roles": "element,button",
+      "monitored": false
+    }
+  },
+  "contexts": {
+    "context0": {
+      "controls": [
+        "control0",
+        "control1",
+        "control2",
+        "control3",
+        "control4"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow0": {
+      "toContexts": [
+        {
+          "toContextId": "context0"
+        }
+      ]
+    },
+    "flow1": {
+      "fromContextId": "context0",
+      "fromAction": "click",
+      "fromControlId": "control2",
+      "toContexts": [
+        {
+          "toContextId": "context0"
+        }
+      ]
+    },
+    "flow2": {
+      "fromContextId": "context0",
+      "fromAction": "click",
+      "fromControlId": "control0",
+      "toContexts": [
+        {
+          "toContextId": "context0"
+        }
+      ]
+    },
+    "flow3": {
+      "fromContextId": "context0",
+      "fromAction": "click",
+      "fromControlId": "control1",
+      "toContexts": [
+        {
+          "toContextId": "context0"
+        }
+      ]
+    },
+    "flow4": {
+      "fromContextId": "context0",
+      "fromAction": "click",
+      "fromControlId": "control4",
+      "toContexts": [
+        {
+          "toContextId": "context0"
+        },
+        {
+          "toContextId": "context1",
+          "toModelId": "index"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page0": {
+      "contextId": "context0",
+      "layout": [
+        {
+          "id": "uiControl0",
+          "display": {
+            "title": "登陆",
+            "type": "header",
+            "adapterId": "header",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl0headerLeft",
+              "display": {
+                "type": "headerLeft",
+                "adapterId": "headerLeft",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": []
+            }
+          ]
+        },
+        {
+          "id": "uiControl1",
+          "controlId": "control0",
+          "display": {
+            "adapterId": "textbox",
+            "type": "textbox",
+            "value": "",
+            "label": "username:zhangpeng",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl2",
+          "controlId": "control1",
+          "display": {
+            "adapterId": "passwordbox",
+            "type": "passwordbox",
+            "label": "password:123",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl3",
+          "display": {
+            "type": "grid",
+            "adapterId": "grid",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl3row0",
+              "display": {
+                "cols": 3,
+                "type": "col",
+                "adapterId": "col",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl4",
+                  "controlId": "control2",
+                  "display": {
+                    "adapterId": "textbox",
+                    "type": "textbox",
+                    "adapter": {
+                      "templateType": ""
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "uiControl3row1",
+              "display": {
+                "cols": 3,
+                "type": "col",
+                "adapterId": "col",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl5",
+                  "controlId": "control3",
+                  "display": {
+                    "adapterId": "image_link",
+                    "type": "image",
+                    "adapter": {
+                      "templateType": ""
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl6",
+          "controlId": "control4",
+          "display": {
+            "adapterId": "clickable",
+            "type": "button",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context0": [
+          ""
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context0": [
+          "10.1.36.87:8888/"
+        ],
+        "context3": [
+          "10.1.36.87:8888/sp!index.do?buinessId=2763308&spId=2763309&spAiId=2763318&spWiId=2763327&t=1481534226146",
+          "10.1.36.87:8888/sp!index.do?buinessId=2785564&spId=2786093&spAiId=2786101&spWiId=2786106&t=1481522745913",
+          "10.1.36.87:8888/sp!index.do?buinessId=3019194&spId=3019237&spAiId=3019254&spWiId=3021155&t=1482118746200",
+          "10.1.36.87:8888/sp!index.do?buinessId=3019194&spId=3019237&spAiId=3019254&spWiId=3021155&t=1482124964822",
+          "10.1.36.87:8888/sp!index.do?buinessId=3019194&spId=3019237&spAiId=3019254&spWiId=3021155&t=1482129623513",
+          "10.1.36.87:8888/sp!index.do?buinessId=3019194&spId=3019237&spAiId=3019254&spWiId=3021155&t=1482199527473"
+        ],
+        "context4": [
+          "10.1.36.87:8888/sp!index.do?buinessId=2740748&spId=2740753&spAiId=2740761&spWiId=2740772&t=1481599261604",
+          "10.1.36.87:8888/sp!index.do?buinessId=2162577&spId=2849136&spAiId=2849144&spWiId=2849149&t=1481597747187",
+          "10.1.36.87:8888/sp!index.do?buinessId=3021205&spId=3021207&spAiId=3021276&spWiId=3021295&t=1482141354864"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context0": [
+          [
+            "loginname",
+            "password",
+            "randomCode",
+            "randomCodeImg",
+            "systemAlert"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context0": [
+          [
+            "login_btn",
+            "login_error",
+            "login_os",
+            "login_pw",
+            "login_user",
+            "loginbg"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context0": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/DIV/DIV",
+            "DIV/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/A/IMG",
+            "TR/TD/A",
+            "TR/TD/INPUT-button",
+            "TR/TD/INPUT-password",
+            "TR/TD/INPUT-text",
+            "TR/TD/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

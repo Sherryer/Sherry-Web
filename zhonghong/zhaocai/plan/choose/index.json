@@ -1,0 +1,175 @@
+{
+  "version": "0.1",
+  "id": "choose",
+  "targetURL": "http://10.1.36.1:8083/cs_user!index.do?request_time=1482212614166&approveId=493888&userIds=",
+  "jsFile": "index.js",
+  "chineseName": "choose",
+  "description": "choose",
+  "controls": {
+    "control117": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "选择审批人"
+              ],
+              "visText": [
+                "选择审批人"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "选择审批人"
+              ],
+              "visText": [
+                "选择审批人"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.wdtable_title DIV.wdtable_titleh"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 95,
+              "height": 19
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false
+    }
+  },
+  "contexts": {
+    "context18": {
+      "controls": [
+        "control117"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow49": {
+      "toContexts": [
+        {
+          "toContextId": "context18"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page17": {
+      "contextId": "context18",
+      "layout": [
+        {
+          "id": "uiControl199",
+          "controlId": "control117",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context18": [
+          "选择审批人"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context18": [
+          "10.1.36.1:8083/cs_user!index.do?request_time=1482212614166&approveId=493888&userIds="
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context18": [
+          [
+            "acceptBtn",
+            "closewindow",
+            "loginName",
+            "orgTree",
+            "orgnId",
+            "submitDiv",
+            "ttt",
+            "userList"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context18": [
+          [
+            "input",
+            "t_search",
+            "wdtable_title",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context18": [
+          [
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/-/TABLE",
+            "-/TABLE/INPUT-hidden",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/A/IMG",
+            "TD/DIV/A",
+            "TR/TD/A",
+            "TR/TD/DIV",
+            "TR/TD/IFRAME",
+            "TR/TD/INPUT-text"
+          ]
+        ]
+      }
+    }
+  }
+}

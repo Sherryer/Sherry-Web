@@ -1,0 +1,204 @@
+{
+  "type": "adapter",
+  "short_name": "",
+  "description": "",
+  "version": "",
+  "name": "招采",
+  "default_url": "http://10.1.36.1:8083/tenderLogin.jsp",
+  "scope": "zhaocai",
+  "useAppMenu": true,
+  "options": {
+    "resource_intercept": {
+      "type": [
+        "css",
+        "image"
+      ],
+      "ignore": []
+    },
+    "resource_inject": []
+  },
+  "start_url": "enterplorer://zhaocai/local/index.html",
+  "runtime_version": "2.0.6",
+  "adapter_urls": [
+    {
+      "title": "login",
+      "url": "adapter://zhaocai/plan/login/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/tenderLogin\\.jsp"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/tenderLogin.jsp"
+      ]
+    },
+    {
+      "title": "zhaobiaojihua",
+      "url": "adapter://zhaocai/plan/zhaobiaojihua/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/xb_project!view\\.do\\?approveId=1455375&spWorkItemId=1455378&spFlowCode=0765&projectId=1455324&targetId="
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/xb_project!view.do?approveId=1455375&spWorkItemId=1455378&spFlowCode=0765&projectId=1455324&targetId="
+      ]
+    },
+    {
+      "title": "buyishenpi",
+      "url": "adapter://zhaocai/plan/buyishenpi/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=1434619&approveId=1440393&spActivityInsId=1440388&spFlowCode=4621&userCode=1440393&targetId="
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=1434619&approveId=1440393&spActivityInsId=1440388&spFlowCode=4621&userCode=1440393&targetId="
+      ]
+    },
+    {
+      "title": "dayishenpi",
+      "url": "adapter://zhaocai/plan/dayishenpi/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/question!spView\\.do\\?approveId=757792&spWorkItemId=758130&spFlowCode=1078&projectId=660219&targetId=&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/question!spView.do?approveId=757792&spWorkItemId=758130&spFlowCode=1078&projectId=660219&targetId=&is_yb=1"
+      ]
+    },
+    {
+      "title": "dingbiao",
+      "url": "adapter://zhaocai/plan/dingbiao/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=282674&approveId=489725&spActivityInsId=489659&spFlowCode=8835&userCode=489725&spWorkItemId=491180&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=282674&approveId=489725&spActivityInsId=489659&spFlowCode=8835&userCode=489725&spWorkItemId=491180&is_yb=1"
+      ]
+    },
+    {
+      "title": "jishufeibiao",
+      "url": "adapter://zhaocai/plan/jishufeibiao/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=1434619&approveId=1435553&spActivityInsId=1435510&spFlowCode=2198&userCode=1435553&targetId="
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=1434619&approveId=1435553&spActivityInsId=1435510&spFlowCode=2198&userCode=1435553&targetId="
+      ]
+    },
+    {
+      "title": "liubiaoshenpi",
+      "url": "adapter://zhaocai/plan/liubiaoshenpi/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=1248832&approveId=1249582&spActivityInsId=1249521&spFlowCode=1515&userCode=1249582&spWorkItemId=1249580&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=1248832&approveId=1249582&spActivityInsId=1249521&spFlowCode=1515&userCode=1249582&spWorkItemId=1249580&is_yb=1"
+      ]
+    },
+    {
+      "title": "pingbiaoxiaozushouquan",
+      "url": "adapter://zhaocai/plan/pingbiaoxiaozushouquan/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=1197604&approveId=1198418&spActivityInsId=1198391&spFlowCode=8293&userCode=1198418"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=1197604&approveId=1198418&spActivityInsId=1198391&spFlowCode=8293&userCode=1198418"
+      ]
+    },
+    {
+      "title": "qingbiaoshenpi",
+      "url": "adapter://zhaocai/plan/qingbiaoshenpi/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=322636&approveId=493888&spActivityInsId=493869&spFlowCode=9293&userCode=493888&spWorkItemId=494415&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=322636&approveId=493888&spActivityInsId=493869&spFlowCode=9293&userCode=493888&spWorkItemId=494415&is_yb=1"
+      ]
+    },
+    {
+      "title": "shangwufeibiao",
+      "url": "adapter://zhaocai/plan/shangwufeibiao/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=282674&approveId=469640&spActivityInsId=469617&spFlowCode=3864&userCode=469640&spWorkItemId=470198&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=282674&approveId=469640&spActivityInsId=469617&spFlowCode=3864&userCode=469640&spWorkItemId=470198&is_yb=1"
+      ]
+    },
+    {
+      "title": "zhaobiaofabiaoshenpi",
+      "url": "adapter://zhaocai/plan/zhaobiaofabiaoshenpi/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/yq_zb_file_new!view\\.do\\?projectId=1434619&flowInsId=1434606&activityInsId=1434610&place=do&t=1479897132805"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/yq_zb_file_new!view.do?projectId=1434619&flowInsId=1434606&activityInsId=1434610&place=do&t=1479897132805"
+      ]
+    },
+    {
+      "title": "zhiweidingbiao",
+      "url": "adapter://zhaocai/plan/zhiweidingbiao/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=180595&approveId=183453&spActivityInsId=183421&spFlowCode=8345&userCode=183453&spWorkItemId=183807&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=180595&approveId=183453&spActivityInsId=183421&spFlowCode=8345&userCode=183453&spWorkItemId=183807&is_yb=1"
+      ]
+    },
+    {
+      "title": "zhiweiliubiao",
+      "url": "adapter://zhaocai/plan/zhiweiliubiao/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=188281&approveId=224525&spActivityInsId=224512&spFlowCode=8907&userCode=224525&spWorkItemId=224534&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=188281&approveId=224525&spActivityInsId=224512&spFlowCode=8907&userCode=224525&spWorkItemId=224534&is_yb=1"
+      ]
+    },
+    {
+      "title": "zhiweizhaobiaojihua",
+      "url": "adapter://zhaocai/plan/zhiweizhaobiaojihua/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/entrust_project!view\\.do\\?approveId=181206&spWorkItemId=181430&spFlowCode=3375&projectId=180595&targetId=&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/entrust_project!view.do?approveId=181206&spWorkItemId=181430&spFlowCode=3375&projectId=180595&targetId=&is_yb=1"
+      ]
+    },
+    {
+      "title": "zhiweizhaobiaoxiaozu",
+      "url": "adapter://zhaocai/plan/zhiweizhaobiaoxiaozu/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/zw_expert!view\\.do\\?approveId=180621&spWorkItemId=180788&spFlowCode=3278&projectId=180595&targetId=&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/zw_expert!view.do?approveId=180621&spWorkItemId=180788&spFlowCode=3278&projectId=180595&targetId=&is_yb=1"
+      ]
+    },
+    {
+      "title": "zhongbiaotongzhishu",
+      "url": "adapter://zhaocai/plan/zhongbiaotongzhishu/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/approve!index\\.do\\?projectId=1363282&approveId=1364547&spActivityInsId=1364509&spFlowCode=6641&userCode=1364547"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/approve!index.do?projectId=1363282&approveId=1364547&spActivityInsId=1364509&spFlowCode=6641&userCode=1364547"
+      ]
+    },
+    {
+      "title": "shangwutanpan",
+      "url": "adapter://zhaocai/plan/shangwutanpan/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.36\\.1:8083\\/entrust_swtp!tpView\\.do\\?approveId=182103&spWorkItemId=183574&spFlowCode=4827&projectId=181243&targetId=&is_yb=1"
+      ],
+      "demo": [
+        "http://10.1.36.1:8083/entrust_swtp!tpView.do?approveId=182103&spWorkItemId=183574&spFlowCode=4827&projectId=181243&targetId=&is_yb=1"
+      ]
+    },
+    {
+      "title": "zhenlogin",
+      "url": "adapter://zhaocai/plan/zhenlogin/index.json",
+      "matcher": [
+        "^http:\\/\\/10\\.1\\.0\\.34\\/cas\\/login\\?service=.*"
+      ],
+      "demo": [
+        "http://10.1.0.34/cas/login?service=http%3A%2F%2F10.1.36.1%3A8083%2Fframe%21index.do"
+      ]
+    }
+  ]
+}

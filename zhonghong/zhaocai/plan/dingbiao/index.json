@@ -1,0 +1,1094 @@
+{
+  "version": "0.1",
+  "id": "dingbiao",
+  "targetURL": "http://10.1.36.1:8083/approve!index.do?projectId=282674&approveId=489725&spActivityInsId=489659&spFlowCode=8835&userCode=489725&spWorkItemId=491180&is_yb=1",
+  "jsFile": "index.js",
+  "chineseName": "dingbiao",
+  "description": "dingbiao",
+  "controls": {
+    "control49": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "夏各庄一期5A地块园林绿化工程园林工程类招标-定标"
+              ],
+              "visText": [
+                "夏各庄一期5A地块园林绿化工程园林工程类招标-定标"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "夏各庄一期5A地块园林绿化工程园林工程类招标-定标"
+              ],
+              "visText": [
+                "夏各庄一期5A地块园林绿化工程园林工程类招标-定标"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::TABLE[@id=\"table_height\"]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control50": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 558
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control50"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control51": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "经办人 聂瑞海 招标小组成员 何圣波,施婷婷,张雪林,赵磊,黄成谋 招标小组组长 苏庆华 区域公司招标采购部经理 刘宝山 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮 精屋项目经理 赵丽红 招标采购中心总经理 巨峰 成本管理中心总经理 杨爱兵 总裁 赵毅"
+              ],
+              "visText": [
+                "经办人 聂瑞海 招标小组成员 何圣波,施婷婷,张雪林,赵磊,黄成谋 招标小组组长 苏庆华 区域公司招标采购部经理 刘宝山 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮 精屋项目经理 赵丽红 招标采购中心总经理 巨峰 成本管理中心总经理 杨爱兵 总裁 赵毅"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TD"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              12
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.wd_tablelist04 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 921,
+              "height": 50
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control51"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control52": {
+      "location": {
+        "data": {
+          "tagName": "OL"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              4
+            ],
+            "value": "TABLE.table02 TABLE.wd_tablelist03 OL.gkol"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[12]/TBODY[1]/TR[1]/TD[1]/OL[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1002,
+              "height": 180
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control52"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control53": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "TABLE.wd_tablelist01_2 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 642
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control53"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='kpbInfoFrame']<<IFRAME>>"
+    },
+    "control54": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              8
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.table02 TABLE.wd_tablelist01_2 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[6]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1074,
+              "height": 36
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control54"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control55": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "请领导批示！"
+              ],
+              "visText": [
+                "请领导批示！"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "请领导批示！"
+              ],
+              "visText": [
+                "请领导批示！"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              8
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.table02 TABLE.wd_tablelist01_2 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[4]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1074,
+              "height": 25
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control55"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control57": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批流程： 经办人 聂瑞海 招标小组成员 何圣波,施婷婷,张雪林,赵磊,黄成谋 招标小组组长 苏庆华 区域公司招标采购部经理 刘宝山 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮 精屋项目经理 赵丽红 招标采购中心总经理 巨峰 成本管理中心总经理 杨爱兵 总裁 赵毅 意见*: 审批常用语: 请选择 同意 不同意 请领导审批 请提出建议 转发人*:"
+              ],
+              "visText": [
+                "审批流程： 经办人 聂瑞海 招标小组成员 何圣波,施婷婷,张雪林,赵磊,黄成谋 招标小组组长 苏庆华 区域公司招标采购部经理 刘宝山 区域公司副总经理（招采） 杨兆清 区域公司总经理 徐文亮 精屋项目经理 赵丽红 招标采购中心总经理 巨峰 成本管理中心总经理 杨爱兵 总裁 赵毅"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 79
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control57"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control71": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "市场化分析表： 一标段和三标段市场分析表和清标报告.Pdf 北京市夏各庄新城5A地块景观绿化工程投标分析报告-20140912.part1.rar 其他附件： 上海十方二次报价承诺.Pdf 园林会议纪要20140915.pdf 20140912夏各庄5A地块园林绿化定标会会议纪要.pdf 9月15日定标会会议纪要录音.rar 园林一三标段定标推荐表.Pdf"
+              ],
+              "visText": [
+                "市场化分析表： 一标段和三标段市场分析表和清标报告.Pdf 北京市夏各庄新城5A地块景观绿化工程投标分析报告-20140912.part1.rar 其他附件： 上海十方二次报价承诺.Pdf 园林会议纪要20140915.pdf 20140912夏各庄5A地块园林绿化定标会会议纪要.pdf 9月15日定标会会议纪要录音.rar 园林一三标段定标推荐表.Pdf"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TABLE[@id=\"table_height\"]//TABLE[@id=\"fjTab_table\"]/TBODY[1]",
+              "descendant::TABLE[@id=\"table_height\"]//TABLE[@id=\"fjTab_table\"]//TBODY",
+              "descendant::TABLE[@id=\"fjTab_table\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table02 TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[8]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 152
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control71"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control111": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 传阅 打印 关闭"
+              ],
+              "visText": [
+                "审批信息查看 传阅 打印 关闭"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 传阅 打印 关闭"
+              ],
+              "visText": [
+                "审批信息查看 传阅打印关闭"
+              ]
+            }
+          },
+          {
+            "id": "@id/nonWord",
+            "prob": 1,
+            "disabled": true,
+            "fact": "_a",
+            "value": "descendant::TABLE[@id=\"_a\"]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac DIV.wdtable_title_sp.Noprn TABLE.wdtable_title TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1100,
+              "height": 32
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control111"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control112": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "友情提示 对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ],
+              "visText": [
+                "友情提示 对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.alert_box DIV.alert_box_inner"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 540,
+              "height": 168
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control112"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    }
+  },
+  "contexts": {
+    "context8": {
+      "controls": [
+        "control49",
+        "control50",
+        "control51",
+        "control52",
+        "control53",
+        "control54",
+        "control55",
+        "control57",
+        "control71",
+        "control111",
+        "control112"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow22": {
+      "toContexts": [
+        {
+          "toContextId": "context8"
+        }
+      ]
+    },
+    "flow23": {
+      "fromContextId": "context8",
+      "fromAction": "click",
+      "fromControlId": "control53",
+      "toContexts": [
+        {
+          "toContextId": "context8"
+        }
+      ]
+    },
+    "flow39": {
+      "fromContextId": "context8",
+      "fromAction": "doAction",
+      "fromControlId": "control71",
+      "toContexts": [
+        {
+          "toContextId": "context8"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page7": {
+      "contextId": "context8",
+      "layout": [
+        {
+          "id": "uiControl190",
+          "controlId": "control111",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl190",
+                "onGetTemplate": "getTemplate_uiControl190"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl79",
+          "controlId": "control49",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl89",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl89body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl90",
+                  "controlId": "control53",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl90",
+                        "onGetTemplate": "getTemplate_uiControl90"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl91",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl91body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl92",
+                  "controlId": "control54",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl92",
+                        "onGetTemplate": "getTemplate_uiControl92"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl93",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl93body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl94",
+                  "controlId": "control55",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl94",
+                        "onGetTemplate": "getTemplate_uiControl94"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl95",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl95body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl123",
+                  "controlId": "control71",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl123",
+                        "onGetTemplate": "getTemplate_uiControl123"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl87",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl87body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl88",
+                  "controlId": "control52",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl88",
+                        "onGetTemplate": "getTemplate_uiControl88"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl85",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl85body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl86",
+                  "controlId": "control51",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl86",
+                        "onGetTemplate": "getTemplate_uiControl86"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl97",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl97body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl98",
+                  "controlId": "control57",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl98",
+                        "onGetTemplate": "getTemplate_uiControl98"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl75",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl75body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl84",
+                  "controlId": "control50",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl84",
+                        "onGetTemplate": "getTemplate_uiControl84"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl193",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl193body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl192",
+                  "controlId": "control112",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl192",
+                        "onGetTemplate": "getTemplate_uiControl192"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context8": [
+          "审批信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context8": [
+          "10.1.36.1:8083/approve!index.do?projectId=282674&approveId=489725&spActivityInsId=489659&spFlowCode=8835&userCode=489725&spWorkItemId=491180&is_yb=1",
+          "10.1.36.1:8083/approve!index.do?projectId=1197604&approveId=1198418&spActivityInsId=1198391&spFlowCode=8293&userCode=1198418"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context8": [
+          [
+            "_a",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "submitDiv"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context8": [
+          [
+            "Noprn",
+            "sp_wrapper",
+            "wdtable_title",
+            "wdtable_title_sp",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context8": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/IFRAME",
+            "-/DIV/INPUT-hidden",
+            "-/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/DIV/INPUT-hidden",
+            "TR/TD/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}

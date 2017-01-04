@@ -1,0 +1,807 @@
+{
+  "version": "0.1",
+  "id": "heimingdan",
+  "targetURL": "http://10.1.36.87:8888/sp!index.do?buinessId=2618993&spId=2618996&spAiId=2618921&spWiId=2619014&t=1481609820410",
+  "jsFile": "index.js",
+  "chineseName": "",
+  "description": "",
+  "controls": {
+    "control21": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "locators": [
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 898,
+              "height": 544
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control21"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>"
+    },
+    "control22": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 关闭"
+              ],
+              "visText": [
+                "审批信息查看 关闭"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 关闭"
+              ],
+              "visText": [
+                "审批信息查看关闭"
+              ]
+            }
+          },
+          {
+            "id": "@id/nonWord",
+            "prob": 1,
+            "disabled": true,
+            "fact": "_a",
+            "value": "descendant::TABLE[@id=\"_a\"]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "TABLE.wdtable_title TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "/HTML[1]/BODY[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 898,
+              "height": 32
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control22"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false
+    },
+    "control23": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "浙江银建装饰工程有限公司,建峰建设集团股份有限公司供方黑名单审批"
+              ],
+              "visText": [
+                "浙江银建装饰工程有限公司,建峰建设集团股份有限公司供方黑名单审批"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "浙江银建装饰工程有限公司,建峰建设集团股份有限公司供方黑名单审批"
+              ],
+              "visText": [
+                "浙江银建装饰工程有限公司,建峰建设集团股份有限公司供方黑名单审批"
+              ]
+            }
+          },
+          {
+            "id": "@title",
+            "prob": 2,
+            "value": {
+              "text": [
+                "浙江银建装饰工程有限公司,建峰建设集团股份有限公司供方黑名单审批"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 898,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>"
+    },
+    "control24": {
+      "location": {
+        "data": {
+          "tagName": "TEXTAREA"
+        },
+        "locators": [
+          {
+            "id": "elem/@name",
+            "prob": 2,
+            "value": "descendant::TEXTAREA[@name=\"supplierAdjustLog.causeNote\"]"
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::TABLE[@id=\"itemtb\"]/TBODY[1]/TR[1]/TD[2]/TEXTAREA[1]",
+              "descendant::TABLE[@id=\"itemtb\"]//TEXTAREA"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "TABLE.table12 TBODY TR TD TEXTAREA"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[4]/TBODY[1]/TR[1]/TD[2]/TEXTAREA[1]"
+          },
+          {
+            "id": "input/type",
+            "verifyEnabled": true,
+            "value": "textarea"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 570.59375,
+              "height": 118
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control24"
+      },
+      "intendedRole": "custom",
+      "roles": "element,textbox,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>"
+    },
+    "control25": {
+      "location": {
+        "data": {
+          "tagName": "BODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 634,
+              "height": 170
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control25"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>//iframe[@id='fileUploadFrame']<<IFRAME>>"
+    },
+    "control26": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "发起人【张鹏】 招采中心副总【赵鸿飞】 成本管理中心副总经理（供方）【赵鸿飞】 招标领导小组会签【冯腾飞,于重明,杨爱兵,梁琪】 总裁【崔崴】 董事长【王继红】"
+              ],
+              "visText": [
+                "发起人【张鹏】 招采中心副总【赵鸿飞】 成本管理中心副总经理（供方）【赵鸿飞】 招标领导小组会签【冯腾飞,于重明,杨爱兵,梁琪】 总裁【崔崴】 董事长【王继红】"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              1,
+              4
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.wd_tablelist04 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[6]/TBODY[1]/TR[1]/TD[2]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 723,
+              "height": 36
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control26"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='spList'][@id='spList']<<IFRAME>>"
+    },
+    "control27": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 898,
+              "height": 142
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control27"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='spList'][@id='spList']<<IFRAME>>"
+    },
+    "control30": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批流程 发起人【张鹏】 招采中心副总【赵鸿飞】 成本管理中心副总经理（供方）【赵鸿飞】 招标领导小组会签【冯腾飞,于重明,杨爱兵,梁琪】 总裁【崔崴】 董事长【王继红】"
+              ],
+              "visText": [
+                "审批流程 发起人【张鹏】 招采中心副总【赵鸿飞】 成本管理中心副总经理（供方）【赵鸿飞】 招标领导小组会签【冯腾飞,于重明,杨爱兵,梁琪】 总裁【崔崴】 董事长【王继红】"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[6]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1222,
+              "height": 27
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control30"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='spList'][@id='spList']<<IFRAME>>"
+    }
+  },
+  "contexts": {
+    "context5": {
+      "controls": [
+        "control21",
+        "control22",
+        "control23",
+        "control24",
+        "control25",
+        "control26",
+        "control27",
+        "control30"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow9": {
+      "toContexts": [
+        {
+          "toContextId": "context5"
+        }
+      ]
+    },
+    "flow10": {
+      "fromContextId": "context5",
+      "fromAction": "click",
+      "fromControlId": "control24",
+      "toContexts": [
+        {
+          "toContextId": "context5"
+        }
+      ]
+    },
+    "flow11": {
+      "fromContextId": "context5",
+      "fromAction": "click",
+      "fromControlId": "control26",
+      "toContexts": [
+        {
+          "toContextId": "context5"
+        }
+      ]
+    },
+    "flow13": {
+      "fromContextId": "context5",
+      "fromAction": "doAction",
+      "fromControlId": "control25",
+      "toContexts": [
+        {
+          "toContextId": "context5"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page5": {
+      "contextId": "context5",
+      "layout": [
+        {
+          "id": "uiControl35",
+          "controlId": "control22",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl35",
+                "onGetTemplate": "getTemplate_uiControl35"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl36",
+          "controlId": "control23",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl33",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl33body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl34",
+                  "controlId": "control21",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl34",
+                        "onGetTemplate": "getTemplate_uiControl34"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl37",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl37body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl38",
+                  "controlId": "control24",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl38",
+                        "onGetTemplate": "getTemplate_uiControl38"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl39",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl39body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl40",
+                  "controlId": "control25",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl40",
+                        "onGetTemplate": "getTemplate_uiControl40"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl41",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl41body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl42",
+                  "controlId": "control26",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl42",
+                        "onGetTemplate": "getTemplate_uiControl42"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl48",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl48body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl49",
+                  "controlId": "control30",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl49",
+                        "onGetTemplate": "getTemplate_uiControl49"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl43",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl43body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl44",
+                  "controlId": "control27",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl44",
+                        "onGetTemplate": "getTemplate_uiControl44"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context5": [
+          "审批信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context5": [
+          "10.1.36.87:8888/sp!index.do?buinessId=2618993&spId=2618996&spAiId=2618921&spWiId=2619014&t=1481609820410"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context5": [
+          [
+            "_a",
+            "app",
+            "nodeFrame",
+            "spList",
+            "submitDiv"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context5": [
+          [
+            "heightspace",
+            "wdtable_title",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context5": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/TABLE",
+            "-/DIV/IMG",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TR/TD/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}

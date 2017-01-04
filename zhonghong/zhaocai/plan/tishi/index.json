@@ -1,0 +1,242 @@
+{
+  "version": "0.1",
+  "id": "tishi",
+  "targetURL": "http://10.1.36.1:8083/file!download.do?id=180583",
+  "jsFile": "index.js",
+  "chineseName": "tishi",
+  "description": "tishi",
+  "controls": {
+    "control108": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ],
+              "visText": [
+                "对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.alert_box DIV.alert_box_inner DIV.alert_content"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]/DIV[2]"
+          },
+          {
+            "id": "style/color",
+            "value": [
+              248,
+              111,
+              0
+            ]
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 538,
+              "height": 100
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control108"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false
+    },
+    "control110": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "友情提示 对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ],
+              "visText": [
+                "友情提示 对不起，系统无法正确处理您的请求，点击 返回 或联系管理员! 提示：对不起,未找到打开文件！"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "DIV.alert_box"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 550,
+              "height": 178
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control110"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false
+    }
+  },
+  "contexts": {
+    "context16": {
+      "controls": [
+        "control108",
+        "control110"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow38": {
+      "toContexts": [
+        {
+          "toContextId": "context16"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page15": {
+      "contextId": "context16",
+      "layout": [
+        {
+          "id": "uiControl191",
+          "controlId": "control108",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl191",
+                "onGetTemplate": "getTemplate_uiControl191"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl187",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl187body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl189",
+                  "controlId": "control110",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl189",
+                        "onGetTemplate": "getTemplate_uiControl189"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context16": [
+          "出错提示"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context16": [
+          "10.1.36.1:8083/file!download.do?id=180583",
+          "10.1.36.1:8083/file!download.en?id=757659"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context16": [
+          []
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context16": [
+          [
+            "alert_box",
+            "alert_box_inner",
+            "alert_content",
+            "alert_title"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context16": [
+          [
+            "-/-/DIV",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/DIV",
+            "DIV/DIV/A",
+            "DIV/DIV/BR",
+            "DIV/DIV/DIV",
+            "DIV/DIV/INPUT-button",
+            "DIV/DIV/SPAN"
+          ]
+        ]
+      }
+    }
+  }
+}

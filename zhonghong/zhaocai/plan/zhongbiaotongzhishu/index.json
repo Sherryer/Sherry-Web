@@ -1,0 +1,845 @@
+{
+  "version": "0.1",
+  "id": "zhongbiaotongzhishu",
+  "targetURL": "http://10.1.36.1:8083/approve!index.do?projectId=1363282&approveId=1364547&spActivityInsId=1364509&spFlowCode=6641&userCode=1364547",
+  "jsFile": "index.js",
+  "chineseName": "中标通知书/感谢信",
+  "description": "",
+  "controls": {
+    "control62": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 传阅 打印 关闭"
+              ],
+              "visText": [
+                "审批信息查看 传阅 打印 关闭"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批信息查看 传阅 打印 关闭"
+              ],
+              "visText": [
+                "审批信息查看 传阅打印关闭"
+              ]
+            }
+          },
+          {
+            "id": "@id/nonWord",
+            "prob": 1,
+            "disabled": true,
+            "fact": "_a",
+            "value": "descendant::TABLE[@id=\"_a\"]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "value": "BODY.ext-webkit.ext-chrome DIV.wdtable_title_sp.Noprn TABLE.wdtable_title TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1100,
+              "height": 32
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control62"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false
+    },
+    "control63": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际0928wk园林工程类招标-中标通知书/感谢信"
+              ],
+              "visText": [
+                "东区国际0928wk园林工程类招标-中标通知书/感谢信"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "东区国际0928wk园林工程类招标-中标通知书/感谢信"
+              ],
+              "visText": [
+                "东区国际0928wk园林工程类招标-中标通知书/感谢信"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table02 DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control73": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "附件 备注 操作 www.zip 无"
+              ],
+              "visText": [
+                "附件 备注 操作 www.zip 无"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "附件 备注 操作 www.zip 无"
+              ],
+              "visText": [
+                "附件 备注 操作 www.zip 无"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table02 TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/TABLE[11]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 53
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control73"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control74": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "经办人 刘宝山 区域公司副总经理（成本） 曲寒 区域公司总经理 徐文亮"
+              ],
+              "visText": [
+                "经办人 刘宝山 区域公司副总经理（成本） 曲寒 区域公司总经理 徐文亮"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "经办人 刘宝山 区域公司副总经理（成本） 曲寒 区域公司总经理 徐文亮"
+              ],
+              "visText": [
+                "经办人 刘宝山 区域公司副总经理（成本） 曲寒 区域公司总经理 徐文亮"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TD"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              9
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY TR TD"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 921,
+              "height": 25
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control74"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control75": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批流程： 经办人 刘宝山 区域公司副总经理（成本） 曲寒 区域公司总经理 徐文亮 意见*: 审批常用语: 请选择 同意 不同意 请领导审批 请提出建议"
+              ],
+              "visText": [
+                "审批流程： 经办人 刘宝山 区域公司副总经理（成本） 曲寒 区域公司总经理 徐文亮 意见*: 审批常用语:"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"sp_frm\"]/TABLE[1]/TBODY[1]",
+              "descendant::FORM[@id=\"sp_frm\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 194
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control75"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control76": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              3
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 194
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control76"
+      },
+      "intendedRole": "custom",
+      "roles": "element,link,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>//iframe[@id='spList']<<IFRAME>>"
+    },
+    "control77": {
+      "location": {
+        "data": {
+          "tagName": "TABLE"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::FORM[@id=\"frm\"]/TABLE[1]"
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "BODY.ext-webkit.ext-chrome TABLE.table02"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1100,
+              "height": 1772
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control77"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    },
+    "control78": {
+      "location": {
+        "data": {
+          "tagName": "TD"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": "descendant::FORM[@id=\"frm\"]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1076,
+              "height": 1041
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control78"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@id='nodeFrame']<<IFRAME>>"
+    }
+  },
+  "contexts": {
+    "context11": {
+      "controls": [
+        "control62",
+        "control63",
+        "control73",
+        "control74",
+        "control75",
+        "control76",
+        "control77",
+        "control78"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow25": {
+      "toContexts": [
+        {
+          "toContextId": "context11"
+        }
+      ]
+    },
+    "flow28": {
+      "fromContextId": "context11",
+      "fromAction": "click",
+      "fromControlId": "control75",
+      "toContexts": [
+        {
+          "toContextId": "context11"
+        }
+      ]
+    },
+    "flow29": {
+      "fromContextId": "context11",
+      "fromAction": "click",
+      "fromControlId": "control78",
+      "toContexts": [
+        {
+          "toContextId": "context11"
+        }
+      ]
+    },
+    "flow42": {
+      "fromContextId": "context11",
+      "fromAction": "doAction",
+      "fromControlId": "control73",
+      "toContexts": [
+        {
+          "toContextId": "context11"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page10": {
+      "contextId": "context11",
+      "layout": [
+        {
+          "id": "uiControl101",
+          "controlId": "control62",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl101",
+                "onGetTemplate": "getTemplate_uiControl101"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl106",
+          "controlId": "control63",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl132",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl132body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl133",
+                  "controlId": "control77",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl133",
+                        "onGetTemplate": "getTemplate_uiControl133"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl130",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl130body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl131",
+                  "controlId": "control78",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl131",
+                        "onGetTemplate": "getTemplate_uiControl131"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl115",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl115body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl116",
+                  "controlId": "control73",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl116",
+                        "onGetTemplate": "getTemplate_uiControl116"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl117",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl117body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl118",
+                  "controlId": "control74",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl118",
+                        "onGetTemplate": "getTemplate_uiControl118"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl126",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl126body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl127",
+                  "controlId": "control75",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl127",
+                        "onGetTemplate": "getTemplate_uiControl127"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl128",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl128body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl129",
+                  "controlId": "control76",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl129",
+                        "onGetTemplate": "getTemplate_uiControl129"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context11": [
+          "审批信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context11": [
+          "10.1.36.1:8083/approve!index.do?projectId=1363282&approveId=1364547&spActivityInsId=1364509&spFlowCode=6641&userCode=1364547",
+          "10.1.36.1:8083/approve!index.do?projectId=322636&approveId=493888&spActivityInsId=493869&spFlowCode=9293&userCode=493888&spWorkItemId=494415&is_yb=1",
+          "10.1.36.1:8083/approve!index.do?projectId=282674&approveId=489725&spActivityInsId=489659&spFlowCode=8835&userCode=489725&spWorkItemId=491180&is_yb=1"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context11": [
+          [
+            "_a",
+            "_myDP",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "submitDiv"
+          ],
+          [
+            "_a",
+            "_spActivityInsId",
+            "backActivityCode",
+            "nodeFrame",
+            "submitDiv"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context11": [
+          [
+            "Noprn",
+            "sp_wrapper",
+            "wdtable_title",
+            "wdtable_title_sp",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context11": [
+          [
+            "-/-/DIV",
+            "-/-/SCRIPT",
+            "-/-/SPAN",
+            "-/DIV/IFRAME",
+            "-/DIV/INPUT-hidden",
+            "-/DIV/TABLE",
+            "DIV/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TD/DIV/INPUT-hidden",
+            "TR/TD/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}

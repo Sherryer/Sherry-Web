@@ -1,0 +1,773 @@
+{
+  "version": "0.1",
+  "id": "ziliaoxiugaishenpi",
+  "targetURL": "http://10.1.36.87:8888/sp!index.do?buinessId=2162577&spId=2849136&spAiId=2849144&spWiId=2849149&t=1481597747187",
+  "jsFile": "index.js",
+  "chineseName": "ziliaoxiugaishenpi",
+  "description": "ziliaoxiugaishenpi",
+  "controls": {
+    "control10": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ],
+              "visText": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ],
+              "visText": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ]
+            }
+          },
+          {
+            "id": "@title",
+            "prob": 2,
+            "value": {
+              "text": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.regwrapper DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1071,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control10"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>"
+    },
+    "control13": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ],
+              "visText": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ],
+              "visText": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ]
+            }
+          },
+          {
+            "id": "@title",
+            "prob": 2,
+            "value": {
+              "text": [
+                "中冶京诚工程技术有限公司-供方基本信息修改审批"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.regwrapper DIV.divh1"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[1]"
+          },
+          {
+            "id": "elderLevel",
+            "value": {
+              "level": 0
+            }
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1071,
+              "height": 39
+            }
+          }
+        ]
+      },
+      "roles": "element",
+      "content": true,
+      "monitored": false,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>"
+    },
+    "control14": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "供方基本信息修改审批 节点 操作人 操作 意见 接收时间 操作时间 成本管理中心副总经理（供方） 贾雅静 进行中 2016-12-11 15:10:41 发起人 张鹏 提交审批 同意 2016-12-11 15:10:30 2016-12-11 15:10:41"
+              ],
+              "visText": [
+                "供方基本信息修改审批 节点 操作人 操作 意见 接收时间 操作时间 成本管理中心副总经理（供方） 贾雅静 进行中 2016-12-11 15:10:41 发起人 张鹏 提交审批 同意 2016-12-11 15:10:30 2016-12-11 15:10:41"
+              ]
+            }
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.table_fj TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/TABLE[2]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1222,
+              "height": 105
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control14"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='spList'][@id='spList']<<IFRAME>>"
+    },
+    "control16": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::DIV[@id=\"cardarea\"]/DIV[1]/TABLE[6]/TBODY[1]",
+              "descendant::DIV[@id=\"cardarea\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              2,
+              6
+            ],
+            "value": "DIV.regwrapper DIV.item TABLE.regtable TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]/DIV[2]/DIV[1]/TABLE[6]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1200,
+              "height": 149
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control16"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>"
+    },
+    "control17": {
+      "location": {
+        "data": {
+          "tagName": "DIV"
+        },
+        "locators": [
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              2
+            ],
+            "value": "DIV.regwrapper"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/DIV[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1222,
+              "height": 1355
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control17"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": true,
+      "frameXPath": "//iframe[@name='nodeFrame'][@id='nodeFrame']<<IFRAME>>"
+    },
+    "control32": {
+      "location": {
+        "data": {
+          "tagName": "SPAN"
+        },
+        "locators": [
+          {
+            "id": "button/text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "发起人 【贾雅静】 成本管理中心副总经理（供方） 【赵鸿飞】"
+              ],
+              "visText": [
+                "发起人 【贾雅静】 成本管理中心副总经理（供方） 【赵鸿飞】"
+              ]
+            }
+          },
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "发起人 【贾雅静】 成本管理中心副总经理（供方） 【赵鸿飞】"
+              ],
+              "visText": [
+                "发起人 【贾雅静】 成本管理中心副总经理（供方） 【赵鸿飞】"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 3,
+            "value": [
+              "descendant::FORM[@id=\"spFrm\"]//SPAN[@id=\"ShowSpFlowSpan\"]",
+              "descendant::SPAN[@id=\"ShowSpFlowSpan\"]"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              2,
+              10
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.wd_tablelist04 TBODY TR TD SPAN"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]/TR[1]/TD[1]/SPAN[2]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 347.3125,
+              "height": 14
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control32"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='spList'][@id='spList']<<IFRAME>>"
+    },
+    "control33": {
+      "location": {
+        "data": {
+          "tagName": "TBODY"
+        },
+        "locators": [
+          {
+            "id": "text",
+            "prob": 3,
+            "value": {
+              "text": [
+                "审批流程： 请先选择审批流转分支参数 发起人 【贾雅静】 成本管理中心副总经理（供方） 【赵鸿飞】 *审批意见： 审批常用语: 请选择 同意 收到 不同意 请领导审批 请与我面谈 信息不完整，请补充"
+              ],
+              "visText": [
+                "审批流程： 发起人 【贾雅静】 成本管理中心副总经理（供方） 【赵鸿飞】 *审批意见： 审批常用语:"
+              ]
+            }
+          },
+          {
+            "id": "@id/word",
+            "prob": 2,
+            "value": [
+              "descendant::FORM[@id=\"spFrm\"]/TABLE[1]/TBODY[1]",
+              "descendant::FORM[@id=\"spFrm\"]//TBODY"
+            ]
+          },
+          {
+            "id": "@class/word",
+            "prob": 1,
+            "ordinal": [
+              0,
+              4
+            ],
+            "value": "BODY.ext-webkit.ext-chrome.ext-mac TABLE.wd_tablelist04 TBODY"
+          },
+          {
+            "id": "path/ordinal",
+            "prob": 1,
+            "value": "/HTML[1]/BODY[1]/FORM[1]/TABLE[1]/TBODY[1]"
+          },
+          {
+            "id": "shield",
+            "value": {
+              "zIndex": "auto",
+              "width": 1182,
+              "height": 171
+            }
+          }
+        ]
+      },
+      "events": {
+        "onGetData": "getData_control33"
+      },
+      "intendedRole": "custom",
+      "roles": "element,custom",
+      "monitored": false,
+      "frameXPath": "//iframe[@name='spList'][@id='spList']<<IFRAME>>"
+    }
+  },
+  "contexts": {
+    "context3": {
+      "controls": [
+        "control10",
+        "control13",
+        "control14",
+        "control16",
+        "control17",
+        "control32",
+        "control33"
+      ],
+      "anchors": []
+    }
+  },
+  "flows": {
+    "flow7": {
+      "toContexts": [
+        {
+          "toContextId": "context3"
+        }
+      ]
+    },
+    "flow12": {
+      "fromContextId": "context3",
+      "fromAction": "doAction",
+      "fromControlId": "control16",
+      "toContexts": [
+        {
+          "toContextId": "context3"
+        }
+      ]
+    }
+  },
+  "pages": {
+    "page3": {
+      "contextId": "context3",
+      "layout": [
+        {
+          "id": "uiControl17",
+          "controlId": "control10",
+          "display": {
+            "adapterId": "custom",
+            "type": "custom",
+            "adapter": {
+              "templateType": "react",
+              "events": {
+                "onDoAction": "doAction_uiControl17",
+                "onGetTemplate": "getTemplate_uiControl17"
+              }
+            }
+          }
+        },
+        {
+          "id": "uiControl21",
+          "controlId": "control13",
+          "display": {
+            "adapterId": "content",
+            "type": "content",
+            "class": "pageTitle",
+            "adapter": {
+              "templateType": ""
+            }
+          }
+        },
+        {
+          "id": "uiControl29",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl29body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl30",
+                  "controlId": "control17",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl30",
+                        "onGetTemplate": "getTemplate_uiControl30"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl27",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl27body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl28",
+                  "controlId": "control16",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl28",
+                        "onGetTemplate": "getTemplate_uiControl28"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl25",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl25body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl52",
+                  "controlId": "control32",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl52",
+                        "onGetTemplate": "getTemplate_uiControl52"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl24",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl24body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl53",
+                  "controlId": "control33",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl53",
+                        "onGetTemplate": "getTemplate_uiControl53"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "uiControl22",
+          "display": {
+            "type": "card",
+            "adapterId": "card",
+            "class": "content",
+            "adapter": {
+              "templateType": ""
+            }
+          },
+          "layout": [
+            {
+              "id": "uiControl22body",
+              "display": {
+                "type": "cardBody",
+                "adapterId": "cardBody",
+                "adapter": {
+                  "templateType": ""
+                }
+              },
+              "layout": [
+                {
+                  "id": "uiControl23",
+                  "controlId": "control14",
+                  "display": {
+                    "adapterId": "custom",
+                    "type": "custom",
+                    "adapter": {
+                      "templateType": "react",
+                      "events": {
+                        "onDoAction": "doAction_uiControl23",
+                        "onGetTemplate": "getTemplate_uiControl23"
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "matchers": {
+    "page/title": {
+      "contexts": {
+        "context3": [
+          "审批信息"
+        ]
+      }
+    },
+    "page/urls": {
+      "contexts": {
+        "context3": [
+          "10.1.36.87:8888/sp!index.do?buinessId=2162577&spId=2849136&spAiId=2849144&spWiId=2849149&t=1481597747187",
+          "10.1.36.87:8888/sp!index.do?buinessId=2173569&spId=3008572&spAiId=3008603&spWiId=3023267&t=1482199828412"
+        ]
+      }
+    },
+    "page/ids": {
+      "contexts": {
+        "context3": [
+          [
+            "_a",
+            "_myDP",
+            "app",
+            "nodeFrame",
+            "spList",
+            "submitDiv"
+          ],
+          [
+            "_a",
+            "app",
+            "nodeFrame",
+            "spList",
+            "submitDiv"
+          ]
+        ]
+      }
+    },
+    "page/classes": {
+      "contexts": {
+        "context3": [
+          [
+            "heightspace",
+            "wdtable_title",
+            "wdtable_titleh",
+            "wdtable_titletool"
+          ]
+        ]
+      }
+    },
+    "page/tagTriplets": {
+      "contexts": {
+        "context3": [
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/TABLE",
+            "-/DIV/IFRAME",
+            "-/DIV/IMG",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TR/TD/DIV"
+          ],
+          [
+            "-/-/DIV",
+            "-/-/IFRAME",
+            "-/-/INPUT-hidden",
+            "-/-/SCRIPT",
+            "-/-/TABLE",
+            "-/DIV/IMG",
+            "-/TABLE/TBODY",
+            "TABLE/TBODY/TR",
+            "TBODY/TR/TD",
+            "TD/DIV/A",
+            "TR/TD/DIV"
+          ]
+        ]
+      }
+    }
+  }
+}
