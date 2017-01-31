@@ -2,9 +2,196 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f6b6b90-13ed-4e5d-bf13-01e89adff27e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/这才是css3/呼吸按钮.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Informations/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Informations/学习网址/WebPack.pdf" afterPath="$PROJECT_DIR$/Informations/学习网址/WebPack.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/1.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/10.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/11.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/12.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/13.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/14.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/15.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/16.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/17.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/18.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/19.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/2.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/20.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/21.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/22.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/23.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/3.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/4.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/5.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/6.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/7.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/9.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/Sherry.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/mime.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/server.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/1234.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/index.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/agent/ysp_body_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/agent/ysp_head_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/common.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/lib/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/lib/base.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/lib/base.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/lib/customTemplate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/css/fonts/myfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/css/fonts/myfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/css/fonts/myfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/css/fonts/myfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/css/normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/OA.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/checkFalse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/checkTrue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/dot_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/dot_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/dot_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/dot_yellow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/fagao.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/neibu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/seal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/selectBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/shangjiantou.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/img/xiajiantou.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/js/eapi-all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/js/list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/local/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/override/a.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/override/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/override/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/heimingdan/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/heimingdan/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/heimingdan/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/index/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/index/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/index/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/linshiruku/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/linshiruku/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/linshiruku/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/login/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/login/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/login/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/pinpaikurukushenpi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/pinpaikurukushenpi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/pinpaikurukushenpi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/qiangzhizhongzhi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/qiangzhizhongzhi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/qiangzhizhongzhi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/zhaobiaogonggao/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/zhaobiaogonggao/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/zhaobiaogonggao/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/ziliaoxiugaishenpi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/ziliaoxiugaishenpi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/gongfang/plan/ziliaoxiugaishenpi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/agent/ysp_body_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/agent/ysp_head_init.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/common.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/config.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/lib/base.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/lib/base.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/lib/base.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/lib/customTemplate.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/css/fonts/myfont.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/css/fonts/myfont.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/css/fonts/myfont.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/css/fonts/myfont.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/css/normalize.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/css/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/favicon.ico" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/OA.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/checkFalse.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/checkTrue.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/dot_green.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/dot_grey.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/dot_red.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/dot_yellow.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/fagao.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/neibu.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/seal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/selectBg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/shangjiantou.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/img/xiajiantou.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/js/eapi-all.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/local/js/list.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/override/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/buyishenpi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/buyishenpi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/buyishenpi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/choose/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/choose/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/choose/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/dayishenpi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/dayishenpi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/dayishenpi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/dingbiao/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/dingbiao/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/dingbiao/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/index2/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/index2/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/index2/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/jishufeibiao/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/jishufeibiao/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/jishufeibiao/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/liubiaoshenpi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/liubiaoshenpi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/liubiaoshenpi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/login/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/login/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/login/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/pingbiaoxiaozushouquan/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/pingbiaoxiaozushouquan/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/pingbiaoxiaozushouquan/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/qingbiaoshenpi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/qingbiaoshenpi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/qingbiaoshenpi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/shangwufeibiao/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/shangwufeibiao/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/shangwufeibiao/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/shangwutanpan/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/shangwutanpan/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/shangwutanpan/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/tishi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/tishi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/tishi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/xpxz/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/xpxz/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/xpxz/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhaobiaofabiaoshenpi/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhaobiaofabiaoshenpi/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhaobiaofabiaoshenpi/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhaobiaojihua/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhaobiaojihua/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhaobiaojihua/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhenlogin/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhenlogin/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhenlogin/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweidingbiao/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweidingbiao/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweidingbiao/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweiliubiao/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweiliubiao/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweiliubiao/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweizhaobiaojihua/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweizhaobiaojihua/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweizhaobiaojihua/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweizhaobiaoxiaozu/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweizhaobiaoxiaozu/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhiweizhaobiaoxiaozu/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhongbiaotongzhishu/index.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhongbiaotongzhishu/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/plan/zhongbiaotongzhishu/index.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/zhonghong/zhaocai/归档.zip" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mygit.iws" />
@@ -26,31 +213,58 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-490">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1234.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/1234.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Informations/学习网址/index.html">
+        <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="968">
-              <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+            <state relative-caret-position="383">
+              <caret line="244" column="24" lean-forward="true" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="呼吸按钮.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/newlearn/这才是css3/呼吸按钮.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
-              <folding />
-            </state>
+      <file leaf-file-name="Sherry.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/Sherry.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="404.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/404.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="176">
+              <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -59,18 +273,8 @@
       <file leaf-file-name="heiheiehahaha.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pubuliu/heiheiehahaha.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5016">
+            <state relative-caret-position="762">
               <caret line="228" column="17" lean-forward="false" selection-start-line="228" selection-start-column="15" selection-end-line="228" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bind方法.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/newlearn/bind方法.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -81,6 +285,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -88,6 +293,9 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>thum-item-title</find>
+      <find>console</find>
+      <find>.html</find>
+      <find>ajax</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -102,7 +310,12 @@
         <option value="$PROJECT_DIR$/a" />
         <option value="$PROJECT_DIR$/pubuliu/heiheiehahaha.html" />
         <option value="$PROJECT_DIR$/newlearn/这才是css3/呼吸按钮.html" />
+        <option value="$PROJECT_DIR$/newlearn/node实现文件容器/static/404.html" />
         <option value="$PROJECT_DIR$/ceshi.html" />
+        <option value="$PROJECT_DIR$/newlearn/node实现文件容器/server.js" />
+        <option value="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/index.html" />
+        <option value="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/1234.txt" />
+        <option value="$PROJECT_DIR$/newlearn/node实现文件容器/static/index.html" />
       </list>
     </option>
   </component>
@@ -116,7 +329,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="950" />
+    <option name="height" value="953" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -148,6 +361,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mygit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SherryWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pubuliu" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mygit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SherryWeb" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="newlearn" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -163,13 +404,18 @@
     <property name="js.eslint.eslintPackage" value="" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="E:\Sherry\mygit\Informations\学习网址\xiaohe" />
-      <recent name="E:\Sherry\mygit\Informations\学习网址" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/newlearn/node实现文件容器/static/pic" />
+      <recent name="$PROJECT_DIR$/newlearn/node实现文件容器" />
+      <recent name="$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu" />
       <recent name="$PROJECT_DIR$/newlearn/这才是css3" />
+      <recent name="E:\Sherry\mygit\Informations\学习网址\xiaohe" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/newlearn/node实现文件容器/static" />
+      <recent name="$PROJECT_DIR$/newlearn" />
+      <recent name="$PROJECT_DIR$/newlearn/node实现文件容器" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="E:\Sherry\mygit\Informations\学习网址\xiaohe" />
     </key>
   </component>
@@ -256,33 +502,38 @@
       <workItem from="1481161006619" duration="2100000" />
       <workItem from="1481188516621" duration="953000" />
       <workItem from="1481254175926" duration="33000" />
+      <workItem from="1482137695506" duration="32000" />
+      <workItem from="1482825810445" duration="52000" />
+      <workItem from="1482994704614" duration="619000" />
+      <workItem from="1484232692622" duration="687000" />
+      <workItem from="1485848867565" duration="4646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3943000" />
+    <option name="totallyTimeSpent" value="9984000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="950" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="23" width="1680" height="953" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24653405" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24291742" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934782" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,6 +547,51 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/zhaocai/lib/base.js" />
+    <entry file="file://$PROJECT_DIR$/Informations/学习网址/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="757">
+          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a" />
+    <entry file="file://$PROJECT_DIR$/pubuliu/heiheiehahaha.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5016">
+          <caret line="228" column="17" lean-forward="false" selection-start-line="228" selection-start-column="15" selection-end-line="228" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/bind方法.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/这才是css3/呼吸按钮.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="24" column="28" lean-forward="false" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ceshi.html" />
+    <entry file="file://$PROJECT_DIR$/Informations/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/lala.html" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Informations/学习网址/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="968">
@@ -426,23 +722,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Informations/学习网址/xiaohe/二维码.html" />
     <entry file="file://$PROJECT_DIR$/zhaocai/lib/base.js" />
-    <entry file="file://$PROJECT_DIR$/Informations/学习网址/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="968">
-          <caret line="44" column="17" lean-forward="false" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a" />
-    <entry file="file://$PROJECT_DIR$/pubuliu/heiheiehahaha.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5016">
-          <caret line="228" column="17" lean-forward="false" selection-start-line="228" selection-start-column="15" selection-end-line="228" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newlearn/bind方法.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -459,8 +739,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ceshi.html" />
-    <entry file="file://$PROJECT_DIR$/Informations/.gitignore">
+    <entry file="file://$PROJECT_DIR$/Informations/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/大转盘(简单)/新建文件夹/indext.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/static/jq/comQ.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -468,10 +764,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/newlearn/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ceshi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="22" lean-forward="false" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubuliu/1234.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/mime.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2552">
+          <caret line="116" column="8" lean-forward="false" selection-start-line="116" selection-start-column="3" selection-end-line="116" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Informations/学习网址/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="47" column="44" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/beijing4.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/chou.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/mmm1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/myow.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/pic/Sherry.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubuliu/heiheiehahaha.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="762">
+          <caret line="228" column="17" lean-forward="false" selection-start-line="228" selection-start-column="15" selection-end-line="228" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-490">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="244" column="24" lean-forward="true" selection-start-line="244" selection-start-column="24" selection-end-line="244" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/pubuliu/1234.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/newlearn/node实现文件容器/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
