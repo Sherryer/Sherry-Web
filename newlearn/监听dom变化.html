@@ -17,7 +17,7 @@
     var callback = function(records){
         console.log('触发了MutationObserver callback');
         records.map(function(record){
-            console.log('Mutation type: '+ record.type, ', target: ', record.target.nodeName);
+            console.log(111,'Mutation type: '+ record.type, ', target: ', record.target.nodeName);
 //            type:观察的变动类型（attribute、characterData或者childList）。
 //            target:发生变动的DOM对象。
 //            addedNodes:新增的DOM对象。
