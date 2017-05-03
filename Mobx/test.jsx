@@ -1,17 +1,32 @@
-import{ observable, computed, autorun }from'mobx';
+function decorateArmour(target, key, descriptor) {
+    const method = descriptor.value;
+    let moreDef = 100;
+    let ret;
+    descriptor.value = (...args)=>{
+        args[0] += moreDef;
+        ret = method.apply(target, args);
+        return ret;
+    }
+    return descriptor;
+}
 
-letnumbers = observable([1,2,3]);
-letsum = computed(()=>numbers.reduce((a, b) =>a + b,0));
+class Man{
+    constructor(def = 2,atk = 3,hp = 3){
+        this.init(def,atk,hp);
+    }
 
-letdisposer1 = autorun(()=>console.log(`sum:${sum.get()}`));
-letdisposer2 = autorun(()=>console.log(`length:${numbers.length}`));
-// sum:6
-// length:3
+    @decorateArmour
+    init(def,atk,hp){
+        this.def = def; // 防御值
+        this.atk = atk;  // 攻击力
+        this.hp = hp;  // 血量
+    }
+    toString(){
+        return `防御力:${this.def},攻击力:${this.atk},血量:${this.hp}`;
+    }
+}
 
-numbers.push(4);
-// sum:10
-// length:4
+var tony = new Man();
 
-disposer2();
-numbers.push(5);
-// sum:15
+console.log(`当前状态 ===> ${tony}`);
+// 输出：当前状态 ===> 防御力:102,攻击力:3,血量:3
