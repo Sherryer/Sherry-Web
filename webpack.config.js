@@ -2,11 +2,10 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        boundle: './js/app.jsx',
-        ceshi: "./ceshi/test01.jsx"
+        boundle: './Mobx/test.jsx'
     },
     output: {
-        path: "./",
+        path: "./Mobx",
         filename: '[name].js'
     },
     module: {
