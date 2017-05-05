@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    var a = function () {
+        console.log(11)
+    }
+
+    var b = function () {
+        console.log(22)
+    }
+
+      b.prototype = a.prototype;
+
+    a.prototype.toString = function () {
+        console.log("toString")
+    }
+
+
+    console.log(b.prototype.toString)
+
+
+
+
+    var aa = function () {
+        console.log(11)
+    }
+
+    var bb = aa.prototype;
+
+    aa.prototype.toString = function () {
+        console.log("toString")
+    }
+
+
+    console.log(bb.toString)
+
+
+
+
+    var aaa = function () {
+        console.log(11)
+    }
+
+    var bbb = aaa.prototype.toString;
+
+    aaa.prototype.toString = function () {
+        console.log("toString")
+    }
+
+
+    console.log(bbb)
+</script>
+
+</html>
