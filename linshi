@@ -1,0 +1,2 @@
+1.尖头 函数里不写 let var const 那么这个属性是全局的么？
+2.class 函数里不写 let var const 那么这个属性是全局的么？

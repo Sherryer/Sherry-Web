@@ -2,10 +2,13 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: {
-        boundle: './Mobx/test.jsx'
+        boundle: './Mobx/变形金刚/test.jsx',
+        learn: './Mobx/learn/test.jsx',
+        setName:'./Mobx/todoList/test.jsx',
+        myTodoList:'./Mobx/myTodoList/test.jsx'
     },
     output: {
-        path: "./Mobx",
+        path: "./Mobx/compress/",
         filename: '[name].js'
     },
     module: {
@@ -21,10 +24,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            compress: {
-                warnings: false
-            }
-        })
+
     ]
 };
+
+// new webpack.optimize.UglifyJsPlugin({
+//     compress: {
+//         warnings: false
+//     }
+// })
