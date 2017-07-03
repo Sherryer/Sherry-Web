@@ -3,32 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
 <body>
-
 </body>
-<script>
-    function Animal(){
-        this.name= 'animal';
-        this.say = function(){
-            alert(this.name);
-        }
-    }
-
-    Animal.prototype.walk = 'I can walk';
-
-
-    function Duck(){
-        Animal.call(this);
-        /*这样，就实现了凡是有构造函数Duck  new处理的对象就会继承Animal上的属性（name）和方法（say）*//*但是Animal的原型上面的属性和方法不会被继承。*/
-        /*也就是说通过这种方法只会继承实例属性，而不能继承原型属性。*/
-        this.color = 'white';
-    }
-
-
-    var duck = new Duck();
-
-    duck.say();//animal
-
-</script>
+<script src="./Mobx/compress/ceshi.js"></script>
 </html>

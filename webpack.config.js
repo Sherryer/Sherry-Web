@@ -5,7 +5,8 @@ module.exports = {
         boundle: './Mobx/变形金刚/test.jsx',
         learn: './Mobx/learn/test.jsx',
         setName:'./Mobx/todoList/test.jsx',
-        myTodoList:'./Mobx/myTodoList/test.jsx'
+        myTodoList:'./Mobx/myTodoList/test.jsx',
+        ceshi:'./test.js'
     },
     output: {
         path: "./Mobx/compress/",
@@ -27,9 +28,3 @@ module.exports = {
 
     ]
 };
-
-// new webpack.optimize.UglifyJsPlugin({
-//     compress: {
-//         warnings: false
-//     }
-// })
