@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        #div{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+        }
+        #stop{
+            position: absolute;
+            top: 100px;
+        }
     </style>
 </head>
 <body>
+<div id="div"></div>
 
+<div id="stop">停止</div>
 </body>
+<script>
+    var div = document.getElementById('div');
+    var stop = document.getElementById('stop');
+    div.onclick = function(){
+        move(1000)
+    }
+    var timer = null;
+    function move(target){
+        var target = target
+        var speed = 1
+        var timer = null
 
+        function go(){
+            cancelAnimationFrame(timer)
+            if((target-div.offsetLeft)<= speed){
+                div.style.left = target+"px";
+            }else{
+                div.style.left = div.offsetLeft+speed+"px";
+                timer = requestAnimationFrame(go)
+            }
+        }
+        timer = requestAnimationFrame(go)
+        console.log(timer)
+
+        stop.onclick=function () {
+            console.log(timer)
+            cancelAnimationFrame(timer)
+        }
+    }
+</script>
 </html>
