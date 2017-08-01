@@ -25,6 +25,7 @@
             position: absolute;
         }
     </style>
+    <script src="./Tween.js"></script>
 </head>
 <body>
 <div id="content">
@@ -32,30 +33,26 @@
 </div>
 </body>
 <script>
-    var btn = document.getElementById("btn");
-    btn.onclick = back;
-    var timer;
 
-    function back (){
-        clearInterval(timer);
-        timer = setInterval(function(){
-            var scrollTop = document.body.scrollTop||document.documentElement.scrollTop;
-            if(scrollTop == 0){
-                clearInterval(timer)
-            }else{
-                var speed = scrollTop/6;
-                if(speed>0){
-                    speed = Math.ceil(speed)
-                }else {
-                    speed = Math.floor(speed)
-                }
-                document.body.scrollTop = scrollTop - speed;
-                document.documentElement.scrollTop = scrollTop - speed;
+    function back() {
+        var scrollTop = document.body.scrollTop||document.documentElement.scrollTop
+        var t = 0,s = scrollTop,b = 0,d = 30;
+
+        function go(){
+            var value = Tween.Bounce.easeOut(t, b, s, d);
+
+            if(t<30){
+                t++;
+            document.body.scrollTop = scrollTop-value;
+            document.documentElement.scrollTop = scrollTop-value;
+                requestAnimationFrame(go)
             }
-
-        },20)
+            console.log(value);
+        }
+        go();
     }
 
-
+    var btn = document.getElementById('btn')
+    btn.onclick = back
 </script>
 </html>
