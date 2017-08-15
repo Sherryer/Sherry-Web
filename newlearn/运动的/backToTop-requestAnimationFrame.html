@@ -34,8 +34,17 @@
 </body>
 <script>
 
-    function back() {
-        var scrollTop = document.body.scrollTop||document.documentElement.scrollTop
+    function back(e) {
+        function lock(){
+            e.target.onclick = null;
+        }
+        lock();
+
+        function unlock(){
+            e.target.onclick = back
+        }
+
+        var scrollTop = document.body.scrollTop||document.documentElement.scrollTop;
         var t = 0,s = scrollTop,b = 0,d = 30;
 
         function go(){
@@ -46,11 +55,16 @@
             document.body.scrollTop = scrollTop-value;
             document.documentElement.scrollTop = scrollTop-value;
                 requestAnimationFrame(go)
+            }else{
+                unlock()
             }
             console.log(value);
         }
         go();
     }
+
+
+
 
     var btn = document.getElementById('btn')
     btn.onclick = back
