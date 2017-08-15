@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>generator</title>
+</head>
+<body>
+
+</body>
+<script>
+    function* test(z){
+        for(var i = 0;i<z;i++){
+            yield i
+        }
+        return i
+    }
+
+    var t = test(5);
+    console.log(t)
+    console.log(t.next())
+    console.log(t.next())
+    console.log(t.next())
+    console.log(t.next())
+    console.log(t.next())
+    console.log(t.next())
+</script>
+</html>

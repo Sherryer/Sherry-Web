@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+    Object.defineProperty(object, propertyname, descriptor)
+        #object,待修改的对象
+        #propertyname,属性名
+        #descriptor,修饰符
+        #descriptor要求传入一个对象
+
+        {
+            configurable: false,  //是否可以删除属性,是否可以修改属性的 writable 、 enumerable 、 configurable 属性。
+            enumerable: false,    //是否可以枚举,是否可以通过for...in 遍历到，是否可以通过 Object.keys() 方法获取属性名称
+            writable: false,      //是否可以对属性进行重新赋值
+            value: null,　　　　　  //属性的默认值
+            set: undefined,       //属性被赋值时,此方法被自动调用
+            get: undefined        //属性被读取时,此方法被自动调用
+        }
+</pre>
+
+</body>
+<script>
+    function defineGetter(obj, name, getter) {
+        Object.defineProperty(obj, name, {
+            configurable: true,
+            enumerable: true,
+            get: getter
+        });
+    };
+
+
+
+
+</script>
+</html>

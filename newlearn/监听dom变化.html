@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="myelement">ADD</button>
+</body>
+<script>
+    var MutationObserver = window.MutationObserver ||
+        window.WebKitMutationObserver ||
+        window.MozMutationObserver;
+
+    var mutationObserverSupport = !!MutationObserver;
+
+    var callback = function(records){
+        console.log('触发了MutationObserver callback');
+        records.map(function(record){
+            console.log(111,'Mutation type: '+ record.type, ', target: ', record.target.nodeName);
+//            type:观察的变动类型（attribute、characterData或者childList）。
+//            target:发生变动的DOM对象。
+//            addedNodes:新增的DOM对象。
+//            removeNodes:删除的DOM对象。
+//            previousSibling:前一个同级的DOM对象，如果没有则返回null。
+//            nextSibling:下一个同级的DOM对象，如果没有就返回null。
+//            attributeName:发生变动的属性。如果设置了attributeFilter，则只返回预先指定的属性。
+//            oldValue:变动前的值。这个属性只对attribute和characterData变动有效，如果发生childList变动，则返回null。
+        });
+    };
+
+    var mo = new MutationObserver(callback);
+
+    var option = {
+        'childList': true,
+        'subtree': true
+    };
+//    option可以定制以下信息
+//    childList：子元素的变动
+//    attributes：属性的变动
+//    characterData：节点内容或节点文本的变动
+//    subtree：所有下属节点（包括子节点和子节点的子节点）的变动
+
+    mo.observe(document.body, option);
+
+    window.onload = init;
+
+    function init(){
+        if (!mutationObserverSupport) {
+            return;
+        }
+
+        var addBtn = document.getElementById('myelement'),
+            body = document.getElementsByTagName('body')[0];
+        addBtn.addEventListener('click', function(e) {
+            for (var i = 0, j = 100; i < j; i++) {
+                var p = document.createElement('p');
+                p.appendChild(document.createTextNode(i));
+                body.appendChild(p);
+                console.log('append child node: ' + i);
+            }
+        }, false);
+    }
+</script>
+</html>

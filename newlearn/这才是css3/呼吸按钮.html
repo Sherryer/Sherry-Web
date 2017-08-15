@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #333;
+        }
+
+        .btn {
+            position: relative;
+            margin: 100px auto;
+            width: 120px;
+            height: 20px;
+            line-height: 40px;
+            border: 1px solid #FFC0CB;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 20px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#FFC0CB), to(#FF69B4));
+            background-image: -moz-linear-gradient(#FFC0CB, #FF69B4);
+            animation: ease-in-out breath 2500ms infinite alternate;
+            -webkit-animation: ease-in-out breath 2500ms infinite alternate;
+            cursor: pointer;
+
+        }
+
+        @keyframes breath {
+            0% {
+                opacity: .2;
+                box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                opacity: 1;
+                border: 1px solid rgba(255, 192, 203, 1);
+                box-shadow: 0 1px 30px rgba(255, 192, 203, 1);
+            }
+        }
+
+        @-webkit-keyframes breath {
+            0% {
+                opacity: .2;
+                box-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                opacity: 1;
+                border: 1px solid rgba(255, 192, 203, 1);
+                box-shadow: 0 1px 30px rgba(255, 192, 203, 1);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="btn"></div>
+</body>
+</html>

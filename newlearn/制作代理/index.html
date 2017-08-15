@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://blog.chinaunix.net/uid-25530360-id-5595974.html">学习地址</a>
+思路
+<p>第一步 安装 python</p>
+<p>第二部 安装 shadowsocks包 pip install shadowsocks </p>
+<p>第三部 vi /etc/shadowsocks.json </p>
+<p>输入以下内容</p>
+
+<pre>
+    {
+        "server":"my_server_ip",
+        "server_port":25,
+        "local_address": "127.0.0.1",
+        "local_port":1080,
+        "password":"mypassword",37
+        "timeout":300,
+        "method":"aes-256-cfb",
+        "fast_open": false
+    }
+
+
+    如
+    {
+        "server":"0.0.0.0",
+        "server_port":8421,
+        "password":"l112358"
+        "method":"aes-256-cfb"
+    }
+
+
+
+    server: 服务器ip地址
+    server_port: 绑定的端口，注意不要设置已经使用了的端口
+    possword: 密码
+    timeout: 超时时间
+    method: 加密方法
+    fast_open: 如果你的服务器 Linux 内核在3.7+，可以开启 fast_open 以降低延迟
+    workers: 默认为1
+</pre>
+
+</body>
+</html>

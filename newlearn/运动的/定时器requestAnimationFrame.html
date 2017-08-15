@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+    <style>
+        #SomeElementYouWantToAnimate{
+            width: 100px;
+            height: 100px;
+            border:1px solid black;
+            position: absolute;
+        }
+        #pre{
+            padding-top: 150px;
+        }
+    </style>
+</head>
+<body>
+<div id="SomeElementYouWantToAnimate">
+</div>
+</body>
+<script>
+//    兼容性
+//    requestID = window.requestAnimationFrame(callback);               // Firefox 23 / IE10 / Chrome / Safari 7 (incl. iOS)
+//    requestID = window.mozRequestAnimationFrame(callback);                // Firefox < 23
+//    requestID = window.webkitRequestAnimationFrame(callback); // Older versions Chrome/Webkit
+
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+
+    var start = null;
+    var d = document.getElementById('SomeElementYouWantToAnimate');
+    function step(timestamp) {
+        var target = 200;
+        var key = 10;
+        if (start === null){
+            start = timestamp;
+            console.log("start",start)
+        }
+        var progress = timestamp - start;
+        d.style.left = Math.min(progress/key, target) + "px";
+        console.log(Math.min(progress/key, target));
+        if (progress < target*key) {
+            requestAnimationFrame(step);
+        }
+    }
+    requestAnimationFrame(step);
+</script>
+</html>

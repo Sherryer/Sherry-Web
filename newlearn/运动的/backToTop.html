@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content{
+            height: 3000px;
+            width: 100%;
+            border:1px solid black;
+            position: relative;
+            background: linear-gradient(#ebff79 0%, white 100%);
+
+        }
+        #btn{
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+            box-shadow: 1px 1px #dfdfdf;
+            border: 3px solid #747474;
+            text-align: center;
+            line-height: 95px;
+            bottom: 100px;
+            right: 100px;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div id="btn">返回</div>
+</div>
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    btn.onclick = back;
+    var timer;
+
+    function back (){
+        clearInterval(timer);
+        timer = setInterval(function(){
+            var scrollTop = document.body.scrollTop||document.documentElement.scrollTop;
+            if(scrollTop == 0){
+                clearInterval(timer)
+            }else{
+                var speed = scrollTop/6;
+                if(speed>0){
+                    speed = Math.ceil(speed)
+                }else {
+                    speed = Math.floor(speed)
+                }
+                document.body.scrollTop = scrollTop - speed;
+                document.documentElement.scrollTop = scrollTop - speed;
+            }
+
+        },20)
+    }
+
+
+</script>
+</html>

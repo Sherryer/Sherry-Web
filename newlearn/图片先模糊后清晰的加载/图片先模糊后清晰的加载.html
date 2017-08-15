@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .placeholder {
+            position: relative;
+            /*border:1px solid black;*/
+            width:300px;
+        }
+
+        .placeholder img {
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity 1s linear;
+        }
+
+        .placeholder img.loaded {
+            opacity: 1;
+        }
+
+        .img-small {
+            filter: blur(50px);
+        }
+    </style>
+</head>
+<body>
+<div class="placeholder" data-large="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg">
+    <img src="https://cdn-images-1.medium.com/freeze/max/27/1*sg-uLNm73whmdOgKlrQdZA.jpeg?q=20" class="img-small">
+    <div style="padding-bottom: 50%;"></div>
+</div>
+</body>
+<script>
+
+
+    var placeholder = document.querySelector('.placeholder'),
+        small = placeholder.querySelector('.img-small');
+
+    // 1: load small image and show it
+    var img = new Image();
+    img.src = small.src;
+    img.onload = function () {
+        small.classList.add('loaded');
+        //问题1： classList 是什么？ 答：h5 为了方便给一个标签添加删除类名加上的
+    };
+
+    // 2: load large image
+    var imgLarge = new Image();
+    imgLarge.src = placeholder.dataset.large;
+    //问题2 dataset 是什么？ 答: h5为了方便设置自定义属性 把所有的 data-？的自定义属性全部变为可直接.的 dataset.?
+    imgLarge.onload = function () {
+        imgLarge.classList.add('loaded');
+    };
+    placeholder.appendChild(imgLarge);
+
+</script>
+</html>

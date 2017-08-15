@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+fetch基于Promise
+</body>
+<script>
+    var url = "./a.txt"
+    fetch(url).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data);
+    }).catch(function(e) {
+        console.log("Oops, error");
+    });
+</script>
+</html>
