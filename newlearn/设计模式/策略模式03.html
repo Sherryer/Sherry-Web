@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var contractor = {
+        DRAFT () {
+            // contractor草稿
+            return 1 || ContractorException
+        },
+        AUDIT_FAILED () {
+            // 商户审核失败
+            return 2 || ContractorAuditFailed
+        },
+        AUDITING () {
+            // 商户审核中 且 无待确认电子合同
+            return 3 || ContractorAuditing
+        },
+        EXCEPTION () {
+            // 其他
+            return 4 || ContractorException
+        },
+        quite_DEFAULT () {
+            // default 暂为空，作为预留情况
+            return 5 || ContractorContractFailed
+        },
+        quite_CQR_SELF () {
+            // 自己退出 暂无细分，展示为合同已解除
+            return 6 || ContractorContractFailed
+        },
+        quite_CQR_PLAT () {
+            // 平台解约 暂无细分，展示为合同已解除
+            return 7 || ContractorContractFailed
+        },
+        quite_CQR_OUTDATE () {
+            // 商户合同过期
+            return 8 || ContractorContractTimeout
+        },
+        quite_EXCEPTION () {
+            // 其他 展示为合同已解除
+            return 9 || ContractorContractFailed
+        }
+    }
+
+
+    var electronic = {
+        CONTRACTOR_TIMEOUT () {
+            // 电子合同超时
+            return 10 || ElectronicContractTimeout
+        },
+        CONTRACTOR_CONFIRMING () {
+            // 确认电子合同
+            return 11 || ElectronicContractConfirming
+        },
+    }
+
+    var shop = {
+        DRAFT () {
+            // shop草稿 暂时展示为 shop 异常
+            return 12 || ShopException
+        },
+        AUDIT () {
+            // shop审核中
+            return 13 || ShopAuditing
+        },
+        AUDIT_FAILED () {
+            // shop审核失败
+            return 14 || ShopAuditiFailed
+        },
+        ACTIVE () {
+            // shop正常
+            return 15 || ShopNormal
+        },
+        INACTIVE () {
+            // shop关闭
+            return 16 || ShopClosed
+        },
+        INACTIVE_PASSIVE () {
+            // shop解约关闭 暂时展示为 shop 异常
+            return 17 || ShopException
+        },
+        EXCEPTION () {
+            // 兜底 shop 异常
+            return 18 || ShopException
+        }
+    }
+
+    var allPages =  {
+        contractor,
+        electronic,
+        shop
+    }
+
+
+    function getPage (status) {
+        return allPages[status] ? allPages[status]() : false
+    }
+</script>
+</html>

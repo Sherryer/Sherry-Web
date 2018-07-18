@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ipt">
+<button id="btn"></button>
+</body>
+<script>
+    var ipt = document.getElementById("ipt");
+    var btn = document.getElementById("btn");
+
+    btn.onclick = function helo(){
+        what(ipt.value).then(function(a){
+            console.log("成功",a)
+        },function(a){
+            console.log("失败",a)
+        })
+    }
+
+    function what(z){
+        return(
+            new Promise(function demo(resolve, reject){
+                if(z == 1){
+                    resolve(z)
+                }else{
+                    reject(z)
+                }
+            })
+        )
+    }
+
+</script>
+</html>

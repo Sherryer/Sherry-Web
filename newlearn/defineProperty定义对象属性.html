@@ -21,18 +21,14 @@
             get: undefined        //属性被读取时,此方法被自动调用
         }
 </pre>
-
+<div id="div">111</div>
 </body>
 <script>
-    function defineGetter(obj, name, getter) {
-        Object.defineProperty(obj, name, {
-            configurable: true,
-            enumerable: true,
-            get: getter
-        });
-    };
-
-
+    var div = document.getElementById("div");
+    var obj = {a:1};
+    Object.defineProperty(obj,"a",{
+        get:function(){console.log("get")}
+    })
 
 
 </script>

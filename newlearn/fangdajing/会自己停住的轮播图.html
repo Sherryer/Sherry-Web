@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #div {
+            width: 800px;
+            height: 600px;
+            margin: 0 auto;
+            border: 1px solid #000000;
+            position: relative;
+            /*overflow: hidden;*/
+        }
+
+        #ul {
+            list-style-type: none;
+            position: absolute;
+            width: 7200px;
+        }
+
+        li {
+            float: left;
+        }
+
+        #ul2 {
+            list-style: none;
+            position: absolute;
+            top: 560px;
+            left: 240px;
+        }
+
+        .li {
+            background: #5a5a5a;
+            width: 20px;
+            height: 20px;
+            border-radius: 20px;
+            margin-right: 25px;
+            opacity: 0.3;
+            border: 2px solid black;
+        }
+
+        #li0 {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+<div id="div">
+    <ul id="ul">
+        <li><img src="images/b/1.jpg" alt=""/></li>
+        <li><img src="images/b/2.jpg" alt=""/></li>
+        <li><img src="images/b/3.jpg" alt=""/></li>
+        <li><img src="images/b/4.jpg" alt=""/></li>
+        <li><img src="images/b/5.jpg" alt=""/></li>
+        <li><img src="images/b/6.jpg" alt=""/></li>
+        <li><img src="images/b/7.jpg" alt=""/></li>
+        <li><img src="images/b/8.jpg" alt=""/></li>
+        <li><img src="images/b/1.jpg" alt=""/></li>
+    </ul>
+    <ul id="ul2">
+        <li class="li" id="li0"></li>
+        <li class="li"></li>
+        <li class="li"></li>
+        <li class="li"></li>
+        <li class="li"></li>
+        <li class="li"></li>
+        <li class="li"></li>
+        <li class="li"></li>
+    </ul>
+</div>
+<script>
+    var ul = document.getElementById("ul");
+    var ul2 = document.getElementById("ul2");
+    var li = ul.getElementsByTagName("li");
+    var li2 = ul2.getElementsByTagName("li");
+
+    var i = 1;
+    var j = 0;
+    var timer = null;
+    function demo() {
+        clearInterval(timer);
+        j<li2.length-1?j++:j=0;
+        timer = setInterval(function () {
+            change();
+            var target = i * 800;
+            var speed = (target + ul.offsetLeft) /4;
+            speed = Math.ceil(speed);
+            if (ul.offsetLeft == -li2.length*800) {
+                i = 1;
+                ul.style.left = 0;
+                return
+            } else {
+                ul.style.left = ul.offsetLeft - speed + "px"
+            }
+            if (ul.offsetLeft % 800 == 0) {
+                i++;
+                clearInterval(timer);
+                setTimeout(function(){
+                    demo();
+                }, 1500);
+            }
+        }, 30)
+    }
+
+    function change() {
+        for(var i=0;i<li2.length;i++){
+            li2[i].style.opacity=0.3;
+        }
+        li2[j].style.opacity = 1;
+    }
+
+    for(var z=0;z<li2.length;z++){
+        li2[z].z=z;
+        li2[z].onclick=demo2;
+        li2[z].onmouseover=demo2;
+    }
+
+    var timer2=null;
+    function demo2(){
+        clearInterval(timer);
+        clearTimeout(timer2);
+        timer2=setTimeout(function(){
+            demo();
+        }, 2000);
+        if(this.z==0){
+            ul.style.left=-(li2.length)*800+"px";
+            i=li.length;
+            j=0;
+        }else{
+            ul.style.left=-this.z*800+"px";
+            i=this.z+1;
+            j=this.z;
+        }
+        for(var z=0;z<li2.length;z++){
+            li2[z].style.opacity=0.3;
+            this.style.opacity=1
+        }
+    }
+    setTimeout(demo, 1500)
+</script>
+
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<meta charset="UTF-8">
+<title></title>
+<style>
+body, h2, p {
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    vertical-align: top;
+}
+
+body {
+    background: #d1cdff;
+    padding-top: 50px;
+    font-family: "Times New Roman", Arial, Times, serif;
+
+}
+
+#container {
+    width: 800px;
+    background: #eaeaea;
+    margin: auto;
+    border-radius: 10px;
+    padding: 15px;
+    overflow: hidden;
+}
+
+#body {
+    width: 550px;
+    padding-bottom: 50px;
+    background: white;
+    float: left;
+}
+
+h2 {
+    padding: 20px 20px 10px;
+}
+
+#ip1 {
+    margin: 0 0 5px 20px;
+    padding: 3px 2px 2px 5px;
+    float: left;
+
+}
+
+#ip2 {
+    width: 400px;
+    height: 100px;
+    resize: none;
+    display: block;
+    margin: 0 20px;
+    overflow: auto;
+}
+
+.write {
+    color: #848484;
+    font-size: 14px;
+    outline: none;
+    padding: 5px;
+    line-height: 20px;
+    border: 1px solid #bfbfbf;
+}
+
+#go {
+    width: 70px;
+    height: 23px;
+    padding: 5px 3px 0 5px;
+    border-radius: 13px;
+    background: #fd4d68;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 2px;
+    float: right;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#go:hover {
+    background: #9cb35a;
+}
+
+#number {
+    float: right;
+    padding: 0 10px;
+    font-size: 14px;
+}
+
+#number span {
+    float: left;
+    padding-top: 9px;
+}
+
+#fabu {
+    width: 430px;
+    padding: 5px 0 50px;
+}
+
+#num {
+    font-size: 30px;
+    display: inline;
+    height: 18px;
+    float: left;
+    font-family: Georgia, Arial, Times, serif;
+}
+
+#lets {
+    width: 460px;
+    padding: 5px 0 50px;
+    margin-left: 20px;
+}
+
+#ltop {
+    background: #e9c38f;
+    height: 22px;
+    padding: 12px 0 0 10px;
+}
+
+#ltop span {
+    display: inline;
+    background: white;
+    padding: 5px 10px 4px;
+}
+
+#lbody {
+    padding: 0 10px 10px 10px;
+}
+
+.part {
+    overflow: hidden;
+    background: #ffffff;
+    padding: 15px 0 8px 0;
+    border-bottom: 1px dashed #d1d1d1;
+    font-size: 14px;
+}
+
+#lbody img {
+    width: 48px;
+    height: 48px;
+    background: #ff0000;
+    border: 1px solid burlywood;
+    border-radius: 4px;
+    float: left;
+}
+
+.text {
+    position: relative;
+    width: 380px;
+    padding: 0 0 30px 10px;
+    float: left;
+
+}
+
+.time {
+    position: absolute;
+    font-size: 12px;
+    left: 8px;
+    bottom: 0;
+    color: #8381ba;
+}
+
+.del {
+    position: absolute;
+    font-size: 12px;
+    bottom: 0;
+    right: 5px;
+    text-decoration: none;
+    color: #8381ba;
+    display: none;
+}
+
+.del:hover {
+    text-decoration: underline;
+}
+
+.color {
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin: 0 0 0 7px;
+    opacity: 0.2;
+    transition: 0.2s ease;
+    border: 1px solid white;
+}
+
+#color1 {
+    background: #ff0000;
+    border: 1px solid #101010;
+    opacity: 1;
+}
+
+#color2 {
+    background: #ff6800;
+}
+
+#color3 {
+    background: #ffff00;
+}
+
+#color4 {
+    background: #00ff00;
+}
+
+#color5 {
+    background: #00f5f5;
+}
+
+#color6 {
+    background: #000fff;
+}
+
+#color7 {
+    background: #dd00ff;
+}
+
+#She {
+    float: left;
+    width: 150px;
+    height: 350px;
+    background: url("Sherry1.png") no-repeat;
+    margin: 30px 0 0 40px;
+}
+.opa{
+    opacity: 0;
+}
+
+</style>
+</head>
+<body>
+<div id="container">
+    <div id="body">
+        <h2>Welcome</h2>
+        <input type="text" id="ip1" class="write">
+
+        <div class="color" id="color1"></div>
+        <div class="color" id="color2"></div>
+        <div class="color" id="color3"></div>
+        <div class="color" id="color4"></div>
+        <div class="color" id="color5"></div>
+        <div class="color" id="color6"></div>
+        <div class="color" id="color7"></div>
+        <textarea id="ip2" class="write"></textarea>
+
+        <div id="fabu">
+            <div id="go">发布</div>
+            <div id="number"><span id="chao1">还能再输入</span>
+
+                <p id="num">140</p><span id="chao2">字</span></div>
+        </div>
+        <div id="lets">
+            <div id="ltop">
+                <span>大家在说</span>
+            </div>
+            <div id="lbody">
+
+                <!--<div class="part ">-->
+                <!--<img src="pic/1.jpg" alt="头像"/>-->
+                <!--<div class="text">-->
+                <!--name：中国字asdfsadfasdfasdfasdfasdfasdfasdf-->
+                <!--asdfasdfasdf fffffffff ffff ffffasdfasdfs ffffff ffffffffffsdfsdfsd fsdfsdfsdfs dfffff-->
+                <!--fffffffffff-->
+                <!--<div class="time">月日时分</div>-->
+                <!--<a class="del" href="javascript:" id="part">删除</a>-->
+                <!--</div>-->
+                <!--</div>-->
+
+
+            </div>
+        </div>
+    </div>
+    <div id="She"></div>
+</div>
+
+<script>
+    //输入框点击变绿部分
+    var writ = document.getElementsByClassName("write");
+    for (var i = 0; i < writ.length; i++) {
+        writ[i].onfocus = function () {
+            this.style.borderColor = "green"
+        };
+        writ[i].onblur = function () {
+            this.style.borderColor = " #bfbfbf";
+        }
+    }
+
+    //颜色头像
+    var color = document.getElementsByClassName('color');
+    var old1;
+    var old2;
+
+    for (var z = 0; z < color.length; z++) {
+        color[z].onclick = function () {
+            for (var x = 0; x < color.length; x++) {
+                color[x].style.border = " 1px solid white";
+                color[x].style.opacity = "0.2";
+                color[x].aaa = "0";
+                color[x].onmouseout = demo2;
+                color[x].onmouseover = demo1;
+            }
+            this.style.border = " 1px solid  #101010";
+            this.style.opacity = "1";
+            this.aaa = "1";
+            this.onmouseover = "";
+            this.onmouseout = "";
+        };
+        color[z].onmouseover = demo1;
+        function demo1() {
+            old1 = this.style.border;
+            old2 = this.style.opacity = "0.2";
+            this.style.border = " 1px solid #b7b7b7";
+            this.style.opacity = "1"
+
+        }
+
+        color[z].onmouseout = demo2;
+        function demo2() {
+            this.style.border = old1;
+            this.style.opacity = old2;
+        }
+    }
+    color[0].onmouseover = "";
+    color[0].onmouseout = "";
+    color[0].aaa = "1";
+    color[0].ccc = "#ff0000";
+    color[1].ccc = "#ff6800";
+    color[2].ccc = "#ffff00";
+    color[3].ccc = "#00ff00";
+    color[4].ccc = "#00f5f5";
+    color[5].ccc = "#000fff";
+    color[6].ccc = "#dd00ff";
+
+
+    //输入框140字数检验部分
+    var ip2 = document.getElementById("ip2");
+    var ip1 = document.getElementById("ip1");
+    var num = document.getElementById("num");
+    var go = document.getElementById("go");
+    var length;
+
+    go.onclick = test;
+
+
+    ip2.onkeyup = function (ev) {
+        var oEvent = ev || event;
+        var chao1 = document.getElementById("chao1");
+        var chao2 = document.getElementById("chao2");
+
+        var reg = /[^\w\!\@\#\$\%\^\&\*\(\)\{\}\[\]\;\'\:\"\<\>\,\.\/\?\|\+\-\=\`\~\……]/g;
+        length = ip2.value.replace(reg, "00");
+        length = 140 - Math.floor(length.length / 2);
+        if (length < 0) {
+            chao1.innerHTML = "已超出 ";
+            chao1.style.color = "red";
+            chao2.style.color = "red";
+        } else {
+            chao1.innerHTML = "还能再输入";
+            chao1.style.color = "black";
+            chao2.style.color = "black";
+        }
+        num.innerHTML = Math.abs(length);
+    };
+
+    function test() {
+        if (ip1.value == "") {
+            alert("请输入昵称")
+        } else if (ip2.value == "") {
+            alert("请输入内容")
+        } else if (length < 0) {
+            alert("内容过长")
+        } else {
+            create();
+            ip1.value = "";
+            ip2.value = "";
+            num.innerHTML ="140"
+        }
+    }
+
+
+    function create() {
+        var oDate = new Date();
+        var oMonth = oDate.getMonth() + 1;
+        var oDay = oDate.getDate();
+        var oHours = oDate.getHours();
+        var oMinutes = oDate.getMinutes();
+        var t = oMonth + "月" + oDay + "日" + oHours + ":" + oMinutes;
+
+        var div1 = document.createElement("div");
+        var div2 = document.createElement("div");
+        var div3 = document.createElement("div");
+        var a = document.createElement("a");
+        var img = document.createElement("img");
+        var lbody = document.getElementById("lbody");
+
+
+
+        var setColor;
+        for (var i = 0; i < color.length; i++) {
+            if (color[i].aaa == "1") {
+                img.style.background = color[i].ccc
+
+            }
+        }
+
+
+        div3.className = "time opa";
+        div3.innerHTML = t;
+        a.className = "del opa";
+        a.href = "javascript:";
+        a.id = "part";
+        a.innerHTML = "删除";
+
+        div2.className = "text opa";
+        div2.innerHTML = ip1.value + "：" + ip2.value;
+//        img.alt = "头像";
+//        img.src = "pic/1.jpg";
+        img.className="opa";
+        lbody.className="opa";
+
+        div1.className = "part opa";
+
+
+        div2.appendChild(div3);
+        div2.appendChild(a);
+
+        div1.appendChild(img);
+        div1.appendChild(div2);
+
+//        if (lbody.children) {
+//            lbody.insertBefore(div1, lbody.children[0])
+//        } else {
+//            lbody.appendChild(div1);
+//        }
+        if (lbody.children=="") {
+            lbody.appendChild(div1);
+        } else {
+            lbody.insertBefore(div1, lbody.children[0])
+        }
+       //成功发表后添加事件
+        div1.onmouseover = moveIn;
+        div1.onmouseout = moveOut;
+        a.onclick = aclick;
+
+        //添加成功后 设置透明度
+        var opa=document.getElementsByClassName("opa");
+        var iHeight=div1.offsetHeight;
+        div1.style.height="0";
+        startMove(div1,{height:iHeight-14},function(){
+            for(var i=0;i<opa.length;i++){
+                startMove(opa[i],{opacity:100})
+            }
+        })
+    }
+
+
+    function moveIn() {
+        this.style.background = "#f4f4f4";
+        this.children[1].children[1].style.display = "block"
+    }
+    function moveOut() {
+        this.style.background = "#fff";
+        this.children[1].children[1].style.display = "none"
+    }
+
+    function aclick() {
+
+        var _this=this;
+        startMove(this.parentNode.parentNode,{opacity:0}, function () {
+            startMove(_this.parentNode.parentNode,{height:0,padding:0},function(){
+                _this.parentNode.parentNode.parentNode.removeChild(_this.parentNode.parentNode);
+            })
+        });
+    }
+
+
+    //startmove
+    function getStyle(obj, name) {
+        if (obj.currentStyle) {
+            return obj.currentStyle[name];
+        } else {
+            return getComputedStyle(obj, false)[name];
+        }
+    }
+
+    function startMove(obj, json, fnEnd) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            var bStop = true;
+
+            for (var attr in  json) {
+                var cur = 0;
+                if (attr == "opacity") {
+
+                    cur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+                } else {
+                    cur = parseInt(getStyle(obj, attr));
+                }
+                var speed = (json[attr] - cur) / 4;
+                speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                if (cur != json[attr]) {
+                    bStop = false;
+                }
+
+                if (attr == "opacity") {
+                    obj.style.filter = "alpha(opacity:" + (cur + speed) + ")";
+                    obj.style.opacity = (cur + speed) / 100;
+                } else {
+                    obj.style[attr] = cur + speed + "px";
+                }
+            }
+
+            if (bStop) {
+                clearInterval(obj.timer);
+                if (fnEnd)fnEnd()
+            }
+        }, 30)
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div">
+    <h2>无法监控手写输入</h2>
+    <input id="input" type="text">
+    <button id="btn">点我</button>
+</div>
+</body>
+<script>
+    var btn = document.getElementById("btn");
+    var div = document.getElementById('div');
+    var input = document.getElementById('input');
+
+    btn.onclick = function () {
+        var d = document.createElement("div");
+        d.innerHTML = 123
+        div.appendChild(d)
+    }
+
+
+
+
+    var MutationObserver = window.MutationObserver ||
+        window.WebKitMutationObserver ||
+        window.MozMutationObserver;
+
+    var mutationObserverSupport = !!MutationObserver;
+    var observer = new MutationObserver(callback);
+
+
+
+    var options = {
+        'childList': true,
+        'arrtibutes': true
+    };
+
+    observer.observe(div, options);
+
+    function callback(){
+        console.log("observer callback")
+    }
+
+    overrideElementProperty(input.__proto__,'value')
+
+    function overrideElementProperty (prototype,type) {
+        var _descriptor= Object.getOwnPropertyDescriptor(prototype,'value');
+        var _oldSet = _descriptor.set;
+        _descriptor.set = function (value) {
+            _oldSet.call(this,value);
+            console.log("重写成功",value)
+        };
+        Object.defineProperty(prototype,type,_descriptor)
+
+    }
+
+</script>
+</html>

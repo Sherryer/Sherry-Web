@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="div"></div>
+<script>
+
+//    Animale -> Dog -> Ha
+
+    function Animale (){
+        this.name = "animale"
+    }
+    Animale.prototype.speak = function(){
+        console.log("Animale")
+    }
+
+    function Dog(){
+        Animale.call(this)
+        this.age = 3
+    }
+    Dog.prototype = Object.create(Animale.prototype);
+    Dog.prototype.jump = function(){console.log("i can jump")}
+    Dog.prototype.constructor = Dog;
+
+    function Ha(){
+        Dog.call(this)
+        this.name = "ha shi qi"
+    }
+    Ha.prototype = Object.create(Dog.prototype);
+    Ha.prototype.jump = function(){console.log("i can jump too")}
+    Ha.prototype.constructor = Ha;
+
+
+
+
+    var ani = new Animale()
+    var dog = new Dog()
+    var ha = new Ha()
+
+Dog.prototype.speak = function(){
+    console.log("123123")
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//    这段是张晓萌写的 我不知道 CallExpression 怎么用
+    const traverse = require('babel-traverse').default;
+    function saveModelId(modelId) {
+        traverse(ast, {
+            CallExpression(path) {
+                if (
+                    path.node.callee &&
+                    path.node.callee.property &&
+                    path.node.callee.property.name === 'extendLoadingModel'
+                ) {
+                    if (!path.node.arguments[1]) {
+                        path.node.arguments[1] = t.stringLiteral(modelId || '')
+                    }
+                }
+            }
+        });
+        return true
+    }
+</script>
+</html>

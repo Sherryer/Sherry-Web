@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../ku/jquery-1.11.0.learn.js"></script>
+    <style>
+       *{
+           padding: 0;
+           margin: 0;
+       }
+        .left{
+            float: left;
+        }
+        .yellow{
+            background: #ffff00;
+        }
+       .blue{
+           background: #0000ff;
+       }
+       .green{
+           background: #0eff35;
+       }
+       .red{
+           background: #ff4200;
+       }
+        li{
+            list-style: none;
+            width: 100px;
+            height: 50px;
+        }
+        #div{
+            position: relative;
+            left: 300px;
+            top: 200px;
+            overflow: hidden;
+
+
+            width: 100px;
+            height: 50px;
+            border: 1px solid #000000;
+        }
+        ul{
+            position:relative;
+            left: 0;
+            width: 800px;
+        }
+        span{
+            width: 15px;
+            height:15px ;
+            display: block;
+
+            border: 1px solid #000000;
+            float: left;
+            border-radius: 15px;
+            margin-left: 15px;
+        }
+        #span{
+            position: absolute;
+            left: 287px;
+            top: 300px;
+        }
+    </style>
+</head>
+<body>
+<div id="div">
+    <ul id="ul">
+        <li class="left yellow"></li>
+        <li class="left blue"></li>
+        <li class="left green"></li>
+        <li class="left red"></li>
+        <li class="left yellow"></li>
+    </ul>
+</div>
+<footer id="span">
+    <span style="background: #000000"></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</footer>
+</body>
+<script>
+    var span=document.getElementsByTagName('span');
+    var n=span.length;
+    var x=0;
+    var timer;
+
+function demo(){
+    if(ul.offsetLeft=='-400'){
+        ul.style.left=0;
+        demo()
+    }else{
+        if(x<3){
+            x++;
+        }else{
+            x=0;
+        }
+
+        changeColor(x);
+
+        $('ul').animate({'left':'-=100'},1000,function (){
+            timer=setTimeout(demo,1000)
+        })
+    }
+}demo();
+
+
+    for(var i=0;i<n;i++){
+        span[i].index=i;
+        span[i].onclick=function(){
+            var c=-this.index*100;
+            $('ul').stop(true).animate({'left':c},1);
+            clearTimeout(timer);
+            x=this.index;
+            changeColor(this.index);
+            timer=setTimeout(demo,3000)
+        }
+    }
+
+    function changeColor(x){
+        for(var i=0;i<n;i++){
+            span[i].style.background='white'
+        }
+        span[x].style.background='black';
+    }
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+广度优先遍历树
+<pre>
+                        a
+                    b       c
+                  d   e   f   g
+</pre>
+存成 [ a, b, c, d, e, f, g ]
+</body>
+<script>
+    var obj = {
+        name: 'a',
+        children: [
+            {
+                name: 'b',
+                children: [
+                    { name: 'd', children: []},
+                    { name: 'e', children: []}
+                ]
+            },
+            {
+                name: 'c',
+                children: [
+                    { name: 'f', children: []},
+                    { name: 'g', children: []}
+                ]
+            }
+        ],
+    };
+
+    var arr = [];
+    function demo(obj){
+        if (obj) {
+            arr.push( obj.name );
+            if (obj.children.length) {
+                for (let i = 0, j = obj.children.length; i < j; i++) {
+                    setTimeout( function () {
+                        demo( obj.children[i])
+                    }, 0)
+                }
+            }
+        }
+    }
+
+    demo(obj)
+</script>
+</html>

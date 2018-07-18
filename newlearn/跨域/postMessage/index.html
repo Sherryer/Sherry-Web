@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<input type="text" id="ipt">
+<button id="btn">向8888发送请求</button>
+
+<iframe id="iframe1" style="border: 1px solid black;width: 500px;height: 500px" src="http://127.0.0.1:8888/" name="iframe" frameborder="0"  ></iframe>
+<script>
+    var ipt = document.getElementById("ipt");
+    var btn = document.getElementById("btn");
+
+//    向 iframe 发送请求
+    btn.onclick = function () {
+        document.iframe.postMessage(ipt.value, "http://127.0.0.1:8888")
+    }
+
+
+    //接收 iframe 里发出的请求
+    window.addEventListener('message', function(e){
+        console.log(e,e.data)
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>curring</title>
+</head>
+<body>
+curring 传入参数储存， 不穿入参数求值
+</body>
+<script>
+//    不传函数的
+    function curring() {
+        var arr = []
+        return function () {
+            if(arguments.length) {
+                arr.push(...arguments)
+            } else {
+                return arr
+            }
+        }
+    }
+</script>
+</html>

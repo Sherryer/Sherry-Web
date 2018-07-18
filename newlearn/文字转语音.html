@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            transform-origin: left top;
+        }
+    </style>
+</head>
+<body>
+</body>
+<script>
+    var speaker = new window.SpeechSynthesisUtterance();
+    var speakTimer,
+        stopTimer;
+
+    // 开始朗读
+    function speakText(text) {
+        clearTimeout(speakTimer);
+        window.speechSynthesis.cancel();
+        speakTimer = setTimeout(function () {
+            speaker.text = text;
+            window.speechSynthesis.speak(speaker);
+        }, 200);
+    }
+
+    // 停止朗读
+    function stopSpeak() {
+        clearTimeout(stopTimer);
+        clearTimeout(speakTimer);
+        stopTimer = setTimeout(function () {
+            window.speechSynthesis.cancel();
+        }, 20);
+    }
+</script>
+</html>

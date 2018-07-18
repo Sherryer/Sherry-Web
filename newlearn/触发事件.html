@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">
+    哈哈
+</button>
+
+</body>
+<script>
+    var btn = document.getElementById('btn');
+    document.onmousedown = function(e){
+        if(e.target.tagName == "BUTTON"){
+            console.log(123123)
+        }
+    }
+
+    function dispatch(el, type){
+        try{
+            var evt = document.createEvent('Event');
+            evt.initEvent(type,true,true);
+            el.dispatchEvent(evt);
+        }catch(e){
+            alert(e);
+        };
+    }
+
+    dispatch(btn, 'mousedown');
+</script>
+</html>

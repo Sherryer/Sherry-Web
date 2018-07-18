@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>
+    通过 onmessage.js启动的 iframe 页面，和外面页面跨域
+</h2>
+<input type="text" id="ipt">
+<button id="btn">发送</button>
+<script>
+    var ipt = document.getElementById("ipt");
+    var btn = document.getElementById("btn");
+
+    var outerWindow = ''
+
+    btn.onclick = function () {
+        // window.postMessage("111", "http://localhost:63342")
+        if (outerWindow) {
+            outerWindow.postMessage(ipt.value, "http://localhost:63342")
+        }
+    }
+
+
+
+    function onMessage(e) {
+        console.log('8888:', e, e.data);
+        // 消息来源安全验证
+        if(e.origin){}
+
+//        过两秒向发请求的地方发送消息
+        outerWindow = e.source
+        setTimeout(function(){
+            e.source.postMessage("8888收到外面请求为：" + e.data, "*")
+        }, 2000)
+    }
+
+    window.addEventListener('message', onMessage);
+
+</script>
+</body>
+
+</html>

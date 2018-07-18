@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    div{
+        border: 1px solid grey;
+        width: 200px;
+        height: 100px;
+        margin-bottom: 50px;
+    }
+    .active:active{
+        background: #000;
+    }
+    .active:hover ~ .another{
+        background: green;
+    }
+    .another{
+
+    }
+</style>
+<body>
+<div class="active">active</div>
+<div class="another"></div>
+</body>
+</html>

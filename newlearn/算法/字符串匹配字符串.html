@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    function patternMatches(pattern, str) {
+        if (!pattern.includes('*')) {
+            // No wildcards, so must be an exact match
+            return pattern === str;
+        }
+
+        const starIndex = pattern.indexOf('*');
+        const leftPattern = pattern.substr(0, starIndex);
+        const rightPattern = pattern.substr(starIndex + 1);
+
+        if (leftPattern !== str.substr(0, starIndex)) {
+            // Non-wildcard characters at the start of `pattern` are different from
+            // the start of `str`, for example `ab*` and `ba`
+            return false;
+        }
+
+        if (rightPattern.length === 0) {
+            // Nothing left in pattern
+            return str.startsWith(leftPattern);
+        }
+
+        for (let numChars = 0; numChars < str.length - starIndex; ++numChars) {
+            // Check to see if the remaining part of `pattern` matches some part of `str`
+            if (patternMatches(rightPattern, str.substr(starIndex + numChars))) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+</script>
+</html>

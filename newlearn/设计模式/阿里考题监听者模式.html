@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+补全 EventEmitter 方法可以实现效果
+</body>
+<script>
+    class EventEmitter {
+        /*
+        constructor(){
+            this.eventObj = {}
+        }
+        on (target, fn) {
+            if(!this.eventObj[target]) {
+                this.eventObj[target] = []
+            }
+            if(typeof fn !== 'function' || this.eventObj[target].includes(fn)) {
+                return
+            } else {
+                this.eventObj[target].push(fn)
+            }
+        }
+        off (target, fn) {
+            if(!this.eventObj[target] || typeof fn !== 'function') {
+                return
+            }
+            var index = this.eventObj[target].indexOf(fn);
+            this.eventObj[target].splice(index, 1)
+        }
+        fire (fireObj) {
+            var type = fireObj.type;
+            var value = fireObj.value;
+            if(!this.eventObj[type]) {
+                return
+            }
+            for(var fn of this.eventObj[type]){
+                fn.apply(this, [value])
+            }
+        }
+        once (target, fn){
+            var onceFn = this.getSingle(fn);
+            this.on(target, onceFn)
+        }
+        getSingle (fn){
+            var returnValue = false;
+            return function () {
+                return returnValue || returnValue === undefined||(returnValue = fn.apply(this, arguments))
+            }
+        }
+        */
+    }
+
+    var emitter = new EventEmitter();
+    var handler = function (e) {
+        console.log(1, e)
+    };
+
+    emitter.on('foo', handler);
+
+    emitter.once('foo', function (e) {
+        console.log(2, e)
+    })
+
+    emitter.fire({type: 'foo', value: 'hello'});
+    emitter.fire({type: 'foo', value: 'hello'});
+    emitter.off('foo', handler)
+    emitter.fire({type: 'foo', value: 'test'})
+
+
+</script>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>dadishu</title>
+    <link href="dadishu.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--先说布局-->
+<div id="contain">
+    <div id="left">
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+        <div class="mouse"></div>
+    </div>
+    <div id="right">
+        <span id="tex">0</span>
+        <span id="sec">30</span>
+        <button id="begin">开始游戏</button>
+        <button id="again">重来</button>
+        <div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var timer = "";  //倒计时部分1s
+    var timer2 = "";  //倒计时部分30s
+    var timeControl = 0; //一个以后会用到的参数 这个参数是再我写的时候用到才嫁过来的
+    var x = 0;  //参数 是得分的参数
+    var tex = document.getElementById("tex");  //span 得分
+    var i = 0;  //参数
+    var left = document.getElementById("left"); //左边的打地鼠模块
+    var mouse = left.getElementsByTagName("div"); //九个地鼠
+    var ran = Math.ceil(Math.random() * 100) % 9;  //1-9随机数
+    //讲游戏整个运行流程  点击开始 才开始 才能玩 不点不能玩
+    //讲 开始的程序 begin
+    //打地鼠的程序
+    function hit() {
+        var timeNumber = 1;   //创建一个参数
+        if (1 == timeControl) {
+            mouse[ran].style.background = "black";
+            for (i = 0; i < mouse.length; i++) {
+                mouse[i].onclick = function () {
+                    if (timeNumber == 1) {//为什么要进行判断 因为点击第一个地鼠才开始计时 不能点击开始游戏就开始计时
+                        time();
+                        time2();
+                    }
+                    timeNumber += 1;
+                    if (this.style.background == "black") {
+                        x += 10;
+                        for (var j = 0; j < mouse.length; j++) {
+                            mouse[j].style.background = "peachpuff";
+                        }
+                        var ran = Math.ceil(Math.random() * 100) % 9;
+                        mouse[ran].style.background = "black";
+                    } else {
+                        x -= 25;
+                    }
+                    tex.innerHTML = x;
+                }
+            }
+        }
+        else if (timeControl == 2) {
+            for (i = 0; i < mouse.length; i++) {
+                mouse[i].style.background = "peachpuff";
+                mouse[i].onclick = function () {
+                }
+            }
+            timeControl = 0;
+        }
+    }
+
+    //倒计时部分1s time()
+    var sec = document.getElementById("sec");
+    function time() {
+        var y = 30;
+        timer = setInterval(function () {
+            y -= 1;
+            sec.innerHTML = y;
+        }, 1000);
+    }
+    //倒计时30s time2()
+    function time2() {
+        timer2 = setTimeout(function () {
+            clearInterval(timer);
+            timeControl = 2;
+            hit();
+            if (x > 600) {
+                alert("矮油不错哦")
+            } else if (x > 500) {
+                alert("还可以")
+            } else if (x > 400) {
+                alert("嗯。。")
+            } else if (x > 300) {
+                alert("手速捉鸡")
+            } else if (x > 0) {
+                alert("连300分都上不了吗！！")
+            } else {
+                alert("你是我大组长吧？！")
+            }
+            again1();
+        }, 30000);
+    }
+
+    //begin开始游戏 Begin()
+    var begin = document.getElementById("begin"); //开始按钮
+    var again = document.getElementById("again");
+    begin.onclick = function () {
+        Begin();
+    };
+    function Begin() {
+        timeControl += 1;
+        if (timeControl == 1) {
+
+            tex.innerHTML = 0;
+            sec.innerHTML = "30";
+            hit();
+        }
+    }
+
+    //again 思路是暂停所有的再调用开始 again1()
+    again.onclick = function () {
+        again1()
+    };
+    function again1() {
+        //暂停打地鼠并复原
+        timeControl = 2;
+        hit();
+        alert("1");
+        //暂停计时器
+        clearInterval(timer);
+        clearTimeout(timer2);
+        alert("2");
+        x = 0;
+        Begin();
+    }
+</script>
+</body>
+</html>

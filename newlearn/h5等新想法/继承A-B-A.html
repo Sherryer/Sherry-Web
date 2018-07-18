@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//    创建初始对象 A
+    function A (){
+        this.aa = "a"
+    }
+    A.prototype.a = function(){
+        console.log("A'pro a")
+    }
+    A.prototype.b = function(){
+        console.log("A'pro b")
+    };
+
+//    创建对象 B 从 A 继承来 .a .b 方法 重写了 .b 方法
+    function B (){
+//        A.call(this)
+        this.bb = "b"
+    }
+    B.prototype = Object.create(A.prototype);
+    B.prototype.constructor = B;
+    B.prototype.b = function(){
+        console.log("B'pro b")
+    };
+
+//    创建对象 A 从 B 继承来 .a .b 方法 新重写 .c 方法
+    function A(){
+//        B.call(this)
+        this.aa = "new a"
+    }
+    A.prototype = Object.create(B.prototype);
+    A.prototype.constructor = A;
+    A.prototype.c = function(){
+        console.log("new A'pro c")
+    };
+
+
+var a = new A()
+</script>
+</html>

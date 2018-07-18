@@ -356,7 +356,7 @@
 
         var xmlText = document.getElementById("xml").value;
         var tree = xotree.parseXML(xmlText);
-        console.log(tree);
+
 
         var template = {
             "fill":"zoom",
@@ -366,6 +366,7 @@
 
 
         var json = document.getElementById("json").value =dumper.dump(tree)
+        console.log(tree);
     }
 
 

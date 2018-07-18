@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body {
+            position: relative;
+            height: 1800px;
+            padding-top: 200px;
+        }
+        #dom {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            position: relative;
+            /*top: 200px;*/
+        }
+        .div {
+            margin-top: 100px;
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div id="dom">判断元素是否在屏幕中</div>
+<div class="div">2</div>
+<div class="div">3</div>
+<div class="div">4</div>
+</body>
+<script>
+var dom = document.getElementById('dom');
+var div = document.querySelectorAll('.div')
+// 方法一
+var io = new IntersectionObserver(function (entries){
+    console.log(111, entries)
+}, {});
+io.observe(dom);
+
+// 方法二
+// const inViewport = (el) => {
+//     const rect = el.getBoundingClientRect()
+//     console.log(rect)
+//     return rect.top > 0
+//         && rect.bottom < window.innerHeight
+//         && rect.left > 0
+//         && rect.right < window.innerWidth
+// }
+//
+// inViewport(dom)
+</script>
+</html>

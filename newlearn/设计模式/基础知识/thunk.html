@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+thunk 把某个函数（参数中含有回调函数||参数最后一位是会掉函数）的会调函数分离出来
+</body>
+<script>
+    var Thunk = function(fn){
+        return function (){
+            var args = Array.prototype.slice.call(arguments);
+            return function (callback){
+                args.push(callback);
+                return fn.apply(this, args);
+            }
+        };
+    };
+
+    var z = new Thunk(demo);
+
+    function demo(...z){
+        console.log(z)
+    }
+    function back (){
+        console.log('back')
+    }
+    z(1,2,3)(back)
+
+
+
+    function thunkify(fn){
+        return function(){
+            var args = new Array(arguments.length);
+            var ctx = this;
+
+            for(var i = 0; i < args.length; ++i) {
+                args[i] = arguments[i];
+            }
+
+            return function(done){
+                var called;
+
+                args.push(function(){
+                    if (called) return;
+                    called = true;
+                    done.apply(null, arguments);
+                });
+
+                try {
+                    fn.apply(ctx, args);
+                } catch (err) {
+                    done(err);
+                }
+            }
+        }
+    };
+</script>
+</html>

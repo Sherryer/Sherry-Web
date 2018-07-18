@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+            position: absolute;
+        }
+
+        #ul1 {
+            left: 0;
+            top: 0;
+            width: 1500px;
+        }
+
+        #ul1 li {
+            width: 300px;
+            float: left;
+        }
+
+        #container {
+            /*overflow: hidden;*/
+            width: 300px;
+            height: 225px;
+            border: 1px solid #000000;
+            position: relative;
+            left: 400px;
+            top: 100px;
+        }
+
+        #ul2 {
+            position: absolute;
+            bottom: 10px;
+            left: 70px;
+        }
+
+        #ul2 li {
+            width: 12px;
+            height: 12px;
+            border-radius: 12px;
+            border: 3px solid #808080;
+            background: #000000;
+            float: left;
+            margin-right: 20px;
+            display: inline;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="ul1">
+        <li><img src="images/s/1.jpg" alt=""/></li>
+        <li><img src="images/s/2.jpg" alt=""/></li>
+        <li><img src="images/s/3.jpg" alt=""/></li>
+        <li><img src="images/s/4.jpg" alt=""/></li>
+        <li><img src="images/s/5.jpg" alt=""/></li>
+    </ul>
+    <ul id="ul2">
+        <li style="opacity: 1"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<script>
+    var j = 0;
+    var ul = document.getElementsByTagName('ul')[0];
+    var con = document.getElementById("container");
+    var lis1=ul.getElementsByTagName('li');
+    var ul2 = document.getElementsByTagName('ul')[1];
+    var lis = ul2.getElementsByTagName("li");
+    var timer=null;
+    var timer2 = null;
+
+    for(i=0;i<lis1.length;i++){
+        lis1[i].aa=i;
+    }
+
+    for(var i=0;i<lis.length;i++){
+        lis[i].aa=i;
+        lis[i].onclick=change;
+        lis[i].onmouseover=change
+    }
+    function change() {
+        clearInterval(timer2);
+        //当前点击按钮 变量其他变暗
+        for(var i=0;i<lis.length;i++){
+            lis[i].style.opacity=0.3
+        }
+        this.style.opacity=1;
+
+        //按钮对应图片移动出现
+        for(var k= 0;k<lis1.length;k++){
+            if(ul.children[0].aa!=this.aa){
+                ul.appendChild(ul.children[0]);
+            }else{
+                ul.style.left = 0;
+                break
+            }
+        }
+
+        //参数控制以及时间控制
+        j=this.aa;
+        clearInterval(timer);
+        go()
+    }
+
+
+
+    function demo1(){
+        lis[j].style.opacity=0.3;
+        j++;
+        if (j == 5) {
+            j = 0;
+        }
+        lis[j].style.opacity=1
+    }
+
+    function demo() {
+        timer2 = setInterval(function () {
+            var speed = (-300 - ul.offsetLeft) / 6;
+            if (speed > 0) {
+                speed = Math.ceil(speed)
+            } else {
+                speed = Math.floor(speed)
+            }
+            if (ul.offsetLeft == '-300') {
+                clearInterval(timer2);
+                ul.appendChild(ul.children[0]);
+                ul.style.left = 0;
+                go();
+            } else {
+                ul.style.left = ul.offsetLeft + speed + "px";
+            }
+        }, 30)
+    }
+
+
+    function go(){
+        timer=setTimeout(function () {
+            demo();
+            demo1();
+        }, 2000)
+    }
+    go()
+</script>
+</body>
+</html>

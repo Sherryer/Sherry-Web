@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<style>
+body,ul{
+	margin:0;
+	padding:0;
+	}
+#container{
+	width:300px;
+	margin:0 auto;
+	/*overflow:hidden;*/
+	border:1px solid #ccc;
+	}
+li{
+	list-style:none;
+	float:left;
+	}
+ul{
+	position:relative;
+	width:1200px;
+	overflow:hidden;
+	}
+
+</style>
+</head>
+
+<body>
+<div id="container">
+<ul>
+<li><img src="images/1.jpg"></li>
+<li><img src="images/2.jpg"></li>
+<li><img src="images/3.jpg"></li>
+<li><img src="images/1.jpg"></li>
+</ul>
+</div>
+
+<script>
+	var i=1;  //控制目标点的
+	function startMove(oDiv,obj,target)//oDvi是最外面的 obj是要动的dom target是目标点
+	{
+		var speed;
+		var timer=null;
+
+		clearInterval(timer);
+		timer=setInterval(function(){
+			console.log(i);
+			speed=Math.floor((target-(obj.offsetLeft-oDiv.offsetLeft-1))/5);
+			if(obj.offsetLeft-oDiv.offsetLeft-1==target)
+			{
+				clearInterval(timer);
+				i++;
+				if(i==4)  //第一张->1  2->2
+				{
+					i=1;   //恢复第一张
+					obj.style.left=0;
+				}
+			}
+			else
+			{
+				obj.style.left=obj.offsetLeft-oDiv.offsetLeft-1+speed+'px';
+			}
+		},10);
+	}
+
+
+	var oDiv=document.getElementById('container');
+	var timer1=null;
+	//var left=oDiv.children[0].offsetLeft-oDiv.offsetLeft-1;//ul相对于div的位置
+	startMove(oDiv,oDiv.children[0],-300);
+	clearInterval(timer1);
+	timer1=setInterval(function(){
+		console.log("zzzzzz");
+//		startMove(oDiv,oDiv.children[0],-300*i);
+	},1000);
+
+	oDiv.onmouseover=function()
+	{
+		clearInterval(timer1);
+	};
+
+	oDiv.onmouseout=function()
+	{
+		timer1=setInterval(function(){
+			startMove(oDiv,oDiv.children[0],-300*i);
+		},1000);
+	};
+
+</script>
+</body>
+</html>

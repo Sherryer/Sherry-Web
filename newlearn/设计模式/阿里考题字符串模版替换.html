@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var compiled = template('hello <%= user %>!');
+    var z1 = compiled({user: 'world'});
+    console.log(z1);
+    var compiled = template('welcome to <%= location %>!');
+    var z2 = compiled({location: 'CVTE'});
+    console.log(z2);
+    function template(str) {
+        var regObj = {}; //用来存放使用过的正则，提高效率
+        return function (templateObj) {
+            var arr = Object.keys(templateObj);
+            var string = str;
+            for(var i of arr) {
+                if(!regObj[i]) {
+                    regObj[i] = new RegExp("<%= ?"+i+" ?%>", "g")
+                }
+                string = string.replace(regObj[i], templateObj[i])
+            }
+            return string
+        }
+    }
+
+</script>
+</html>

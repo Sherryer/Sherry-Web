@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html, body{
+            height: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        #div{
+            width: 100%;
+            height: 100%;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<div id="div">tap</div>
+</body>
+<script>
+    var div = document.getElementById('div')
+    div.addEventListener("touchstart", handleStart, false);
+    div.addEventListener("touchend", handleEnd, false);
+    div.addEventListener("touchmove", handleMove, false);
+
+    function handleStart(evt) {
+        evt.preventDefault();
+        console.log('start')
+        var touches = evt.changedTouches;
+
+        console.log(evt)
+        return false
+    }
+
+
+    function handleMove(evt) {
+        console.log('move')
+        console.log(evt)
+    }
+
+
+    function handleEnd(evt) {
+        console.log('end')
+        console.log(evt)
+    }
+</script>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #parient{
+            height: 700px;
+            border: 1px solid red;
+        }
+
+        #content {
+            height: 100%;
+            display: grid;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-rows: 150px 150px 150px;
+
+
+        /*网格空隙的设置   justify-content     align-content*/
+            /* 手动设置空隙 行/列*/
+            grid-gap: 10px 20px;
+
+
+            /*自动设置
+            start：左边
+            end：右边
+            center：中间
+            stretch：调整 网格项(grid items) 的宽度，允许该网格填充满整个 网格容器 的宽度
+            space-around：在每个网格项之间放置一个均匀的空间，左右两端放置*一半*的空间
+            space-between：在每个网格项之间放置一个均匀的空间，左右两端没有空间
+            space-evenly：在每个栅格项目之间放置一个均匀的空间，左右两端放置*一个*均匀的空间
+            */
+            /*justify-content: space-around;*/
+            /*align-content: space-around;*/
+
+
+        /*  网格的对齐设置     justify-items       align-items
+                水平缩小网格到中间
+                垂直缩小网格到中间
+            start：顶部
+            end：底部
+            center：中间
+            stretch：填满网格区域（默认值）*/
+
+            /*justify-items: center;*/
+            /*align-items: center;*/
+
+        }
+
+
+        #content div {
+            border: 1px solid black;
+        }
+
+        /*跨行*/
+        .item-1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        /*设定元素位置*/
+        /*.item-2 {*/
+            /*grid-column: 3;*/
+            /*grid-row: 2;*/
+        /*}*/
+
+        /*跨列*/
+        .item-3{
+             grid-row-start: 2;
+             grid-row-end: 4;
+         }
+
+        .item-4 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+
+
+        .item-6 {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div id="parient">
+    <div id="content">
+        <div class="item-1">1</div>
+        <div class="item-2">2</div>
+        <div class="item-3">3</div>
+        <div class="item-4">4</div>
+        <div class="item-5">5</div>
+        <div class="item-6">6</div>
+        <!--<div class="item-7">7</div>-->
+        <!--<div class="item-8">8</div>-->
+        <!--<div class="item-9">9</div>-->
+    </div>
+</div>
+</body>
+</html>

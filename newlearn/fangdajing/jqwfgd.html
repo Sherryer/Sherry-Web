@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #container {
+            position: relative;
+            left: 400px;
+            top: 200px;
+            width: 600px;
+            height: 100px;
+            border: 1px solid black;
+            /*overflow: hidden;*/
+        }
+
+        ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            list-style: none;
+            width: 1200px;
+        }
+
+        li {
+            width: 150px;
+            height: 100px;
+            float: left;
+        }
+
+        .li1 {
+            background: #fff2a1;
+        }
+
+        .li2 {
+            background: #8cff89;
+        }
+
+        .li3 {
+            background: #74afff;
+        }
+
+        .li4 {
+            background: #ff4e99;
+        }
+    </style>
+    <script src="jquery-1.11.0.learn.js"></script>
+</head>
+<body>
+<div id="container">
+    <ul>
+        <li class="li1"></li>
+        <li class="li2"></li>
+        <li class="li3"></li>
+        <li class="li4"></li>
+        <li class="li1"></li>
+        <li class="li2"></li>
+        <li class="li3"></li>
+        <li class="li4"></li>
+    </ul>
+</div>
+<script>
+    function move() {
+        if ($('ul').css('left') == '-600px') {
+            $('ul').css('left', 0);
+            move()
+        }
+        else {
+            $('ul').delay(1000).animate({'left': '-=150'}, 1000, function () {
+                move()
+            })
+        }
+    }
+    move()
+</script>
+</body>
+</html>

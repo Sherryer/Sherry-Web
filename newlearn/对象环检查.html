@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj = {
+        'son1': {
+            'son2': null
+        }
+    };
+
+
+    obj.son1.son2 = obj;
+
+    function checkCycle (checkObj){
+
+        var arr = [];
+        var flag = false
+        function inArray(obj){
+            if(arr.includes(obj)) return true
+        }
+        function inCycle(obj) {
+            for(var i in obj){
+                if(obj[i] instanceof Object){
+                    if( inArray(obj[i]) ){
+                        flag = true
+                        return true
+                    } else {
+                        arr.push(obj[i])
+                        inCycle(obj[i])
+                    }
+                }
+            }
+        }
+        inCycle(checkObj)
+        return flag
+    }
+    checkCycle(obj)
+
+
+</script>
+</html>

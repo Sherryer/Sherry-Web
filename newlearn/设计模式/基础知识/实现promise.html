@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Prom (fn){
+        this.resolveArgs = '';
+        this.resolve = (arg) => {
+            this.resolveArgs = arg;
+        };
+        this.reject = function () {
+
+        };
+        this.fn = fn;
+        this.fn.apply(this, [this.resolve, this.reject])
+    }
+
+    var z = new Prom(function (resolve, reject) {
+        resolve('bbb')
+    });
+
+    Prom.prototype.then = function (resolve, reject) {
+        this.resolve = resolve;
+        setTimeout(()=>{
+            this.resolve.call(this, this.resolveArgs)
+        }, 0)
+    };
+
+    z.then(function (z){
+        console.log(z)
+    }).then(function (c){
+        console.log('c:',c)
+    })
+
+
+</script>
+</html>

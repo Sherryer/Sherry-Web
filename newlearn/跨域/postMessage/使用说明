@@ -1,0 +1,2 @@
+分别开启 服务 onmessage.js 端口 8888； 和 postmessage.js 端口 7777
+on为监听 post为发送

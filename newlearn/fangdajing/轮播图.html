@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            padding-top: 200px;
+        }
+        #container{
+            margin: 0 auto;
+            width: 600px;
+            border: 2px solid #000000;
+            position: relative;
+            height: 100px;
+            /*overflow: hidden;*/
+        }
+        ul{
+            width: 1200px;
+            list-style: none;
+            overflow: hidden;
+            position: absolute;
+
+        }
+        ul li{
+            width: 150px;
+            height: 100px;
+            float: left;
+        }
+        #li1{
+            background: #ff0000;
+        }
+        #li2{
+            background: green;
+        }
+        #li3{
+            background: #0000ff;
+        }
+        #li4{
+            background:#ffff00;
+        }
+        #li5{
+            background: #ff0000;
+        }
+        #li6{
+            background: green;
+        }
+        #li7{
+            background: #0000ff;
+        }
+        #li8{
+            background:#ffff00;
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <ul id="ul">
+        <li id="li1"></li>
+        <li id="li2"></li>
+        <li id="li3"></li>
+        <li id="li4"></li>
+        <li id="li5"></li>
+        <li id="li6"></li>
+        <li id="li7"></li>
+        <li id="li8"></li>
+    </ul>
+</div>
+<script>
+    var container=document.getElementById("container");
+    var ul=document.getElementById("ul");
+    var li=ul.getElementsByTagName("li");
+
+
+    container.onmouseover=function(){
+        clearInterval(timer)
+    };
+    container.onmouseout=function(){
+        move()
+    };
+    var timer=null;
+    function move(){
+
+        clearInterval(timer);
+        timer=setInterval(function(){
+            var speed=7;
+            var target=-600;
+
+            if(Math.abs(target-ul.offsetLeft)<speed){
+                ul.style.left=0;
+            }else{
+                ul.style.left=ul.offsetLeft-speed+"px" ;
+            }
+        },30)
+    }
+    move();
+</script>
+</body>
+</html>

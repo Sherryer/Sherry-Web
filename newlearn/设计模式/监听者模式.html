@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+监听者模式
+</body>
+<script>
+    var event = {
+        clientList : {},
+        listen: function (key, fn) {
+            if(this.clientList[key]) {
+                this.clientList[key].push(fn)
+            } else {
+                this.clientList[key] = [];
+                this.clientList[key].push (fn)
+            }
+        },
+        trigger: function () {
+            var key = Array.prototype.shift.call(arguments);
+            if(!this.clientList[key]) {
+                return
+            }
+            for (var fn of this.clientList[key]){
+                fn.apply(this, arguments)
+            }
+        },
+        remove: function (key, fn) {
+            if(!this.clientList[key]){
+                return false
+            }
+            if(!fn) {
+                return false
+            }
+            if(this.clientList[key].includes(fn)) {
+                for(var i in this.clientList[key]){
+                    if (this.clientList[key][i] === fn) {
+                        this.clientList[key].splice(i, 1)
+                    }
+                }
+            }
+        }
+    };
+
+
+    var fn2;
+    event.listen('sepak', function (z) {
+        console.log('sepak1');
+        console.log(z)
+    });
+
+    event.listen('sepak', fn2 = function (z) {
+        console.log('sepak2');
+        console.log(z)
+    });
+
+    event.listen('sepak', function (z) {
+        console.log('sepak3');
+        console.log(z)
+    });
+
+
+    event.remove('sepak', fn2);
+    event.trigger('sepak', 'hello')
+
+
+
+</script>
+</html>

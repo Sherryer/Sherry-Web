@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<textarea name="" id="textarea" cols="30" rows="10">
+</textarea>
+<input type="text" id="ipt">
+<div id="div">
+    <h2>new create</h2>
+</div>
+<script>
+    var textarea = document.getElementById("textarea");
+    var ipt = document.getElementById("ipt");
+    var div = document.getElementById("div");
+
+    ipt.onkeypress = function(e){
+        console.log(e)
+    };
+
+    textarea.onkeypress = function(e){
+        console.log(e)
+    }
+
+    ipt.__defineSetter__ = function(){
+        console.log("set")
+    }
+
+    div.appendChild(document.createElement("input"))
+</script>
+</body>
+</html>

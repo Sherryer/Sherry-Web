@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background: #f7f7f7;
+            padding: 60px 0 0 0;
+        }
+        img{
+            vertical-align: top;
+        }
+        #container{
+            width: 900px;
+            height: 460px;
+            border: 1px solid #a7a7a7;
+            margin: 0 auto;
+            padding:20px 0 0 16px ;
+        }
+        #middle{
+            width: 300px;
+            height: 225px;
+            border: 1px solid #8b8b8b;
+            float: left;
+            position: relative;
+            margin-bottom: 140px;
+            cursor: all-scroll;
+        }
+        #large{
+            width: 400px;
+            height:300px;
+            border: 1px solid #000000;
+            float: left;
+            margin-left: 20px;
+            display: block;
+            opacity: 0;
+            filter: alpha(opacity=0);
+            overflow: hidden;
+            position: relative;
+
+        }
+        #little{
+            clear: both;
+        }
+        #little ul{
+            list-style-type: none;
+            overflow: hidden;
+            *zoom: 1;
+            *position: absolute;
+            *top:450px;
+        }
+        ul li{
+            float: left;
+            margin-right: 7px;
+        }
+        .old{
+            border: 2px solid #3a3a3a;
+            opacity: 0.3;
+            filter: alpha(opacity=30);
+        }
+        .img1{
+            border: 2px solid #000000;
+            opacity: 1;
+        }
+        #cp{
+            opacity: 0;
+        }
+        #span{
+            position: absolute;
+            display: block;
+            width: 150px;
+            height: 113px;
+            opacity: 0;
+            filter:alpha(opacity=0);
+            background: burlywood;
+            z-index: 10;
+            border: 1px solid #000000;
+        }
+        #bp{
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+  <div id="container">
+      <div id="middle">
+          <span id="span"></span>
+          <img id="cp" src="images/s/1.jpg"/>
+      </div>
+      <div id="large"><img id="bp" src="images/b/1.jpg"></div>
+      <div id="little">
+          <ul>
+              <li><img  class="img1" src="images/t/1.jpg"/></li>
+              <li><img  class="old" src="images/t/2.jpg"/></li>
+              <li><img  class="old" src="images/t/3.jpg"/></li>
+              <li><img  class="old" src="images/t/4.jpg"/></li>
+              <li><img  class="old" src="images/t/5.jpg"/></li>
+              <li><img  class="old" src="images/t/6.jpg"/></li>
+              <li><img  class="old" src="images/t/7.jpg"/></li>
+              <li><img  class="old" src="images/t/8.jpg"/></li>
+          </ul>
+      </div>
+  </div>
+  <script>
+     var middle=document.getElementById("middle");
+     var large=document.getElementById("large");
+     var little=document.getElementById("little");
+     var li=document.getElementsByTagName("li");
+     var img=little.getElementsByTagName("img");
+     var ul=document.getElementsByTagName("ul")[0];
+     var cp=document.getElementById("cp");
+     var bp=document.getElementById("bp");
+
+//最下面的八个img的鼠标移动和点击特效
+     for(var i=0;i<img.length;i++){
+         img[i].aaa=i+1
+     }
+     var last=img[0];
+     last.aaa="a";
+     var oldaaa=1;
+     ul.onmouseover=function(){
+         demo(100)
+     };
+     ul.onmouseout=function(){
+         demo(30)
+     };
+     function demo(a,e){
+         var oEvent=e||event;
+         var target=oEvent.target||oEvent.srcElement;
+         if(!isNaN(target.aaa)){
+             target.style.border="2px solid #3a3a3a";
+             startMove(target,{opacity:a})
+         }
+     }
+     ul.onclick=function(e){
+         var oEvent=e||event;
+         var target=oEvent.target||oEvent.srcElement;
+         if(!isNaN(target.aaa)){
+             last.aaa=oldaaa;
+             last.style.border="2px solid #3a3a3a";
+             target.style.border="2px solid black";
+             startMove(last,{opacity:30});
+             oldaaa=target.aaa;
+             target.aaa="a";
+             last=target;
+             cp.style.opacity=0;
+             change()
+         }
+     };
+
+
+     function change(){
+         cp.src="images/s/"+oldaaa+".jpg";
+         bp.src="images/b/"+oldaaa+".jpg";
+         if(-[1,]){
+             startMove(cp,{opacity:100})
+         }
+     }
+     change();
+
+//展示部分 放大镜的框跟着鼠标移动
+     var i=1;
+
+     //i是为了 再onmousemove的时候只startmove一次
+     var span=document.getElementById("span");
+     middle.onmousemove=function(e){
+         if(i==1){
+             startMove(large,{opacity:100});
+             startMove(span,{opacity:30});
+             i++;
+         }
+
+         var oEvent=e||event;
+         var ctop=document.body.scrollTop||document.documentElement.scrollTop;
+         var cleft=document.body.scrollLeft||document.documentElement.scrollLeft;
+         var left=oEvent.clientX-middle.offsetLeft-75+cleft;
+         var top=oEvent.clientY-middle.offsetTop-57+ctop;
+         if(left<=0){
+             left=0
+         }
+         if(left+span.offsetWidth-middle.offsetWidth>=0){
+             left=middle.offsetWidth-span.offsetWidth;
+         }
+         if(top<=0){
+             top=0
+         }
+         if(top+span.offsetHeight-middle.offsetHeight>=0){
+             top=middle.offsetHeight-span.offsetHeight;
+         }
+         span.style.left=left+"px";
+         span.style.top=top+"px";
+
+//         var blx=left/middle.offsetWidth;
+//         var bly=top/middle.offsetHeight;
+         var blx=bp.offsetWidth*(-left/middle.offsetWidth);
+         var bly=bp.offsetHeight*(-top/middle.offsetHeight);
+
+//         bp.style.left=blx+"px";
+//         bp.style.top=bly+"px";
+
+             startMove(bp,{left:blx,top:bly});
+     };
+     middle.onmouseout=function(){
+
+         startMove(large,{opacity:0});
+         startMove(span,{opacity:0});
+         i=1
+     };
+
+
+
+
+      function getStyle(obj, name) {
+          if (obj.currentStyle) {
+              return obj.currentStyle[name];
+          } else {
+              return getComputedStyle(obj, false)[name];
+          }
+      }
+
+      function startMove(obj, json, fnEnd) {
+          clearInterval(obj.timer);
+          obj.timer = setInterval(function () {
+              var bStop = true;
+
+              for (var attr in  json) {
+                  var cur = 0;
+                  if (attr == "opacity") {
+                      cur = Math.round(parseFloat(getStyle(obj, attr)) * 100);
+                  } else {
+                      cur = parseInt(getStyle(obj, attr));
+                  }
+                  var z=parseInt(json[attr]);
+                  var speed = (z - cur) / 6;
+                  speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+                  if (cur != z) {
+                      bStop = false;
+                  }
+
+                  if (attr == "opacity") {
+                      obj.style.filter = "alpha(opacity:" + (cur + speed) + ")";
+                      obj.style.opacity = (cur + speed) / 100;
+                  } else {
+                      obj.style[attr] = cur + speed + "px";
+                  }
+              }
+
+              if (bStop) {
+                  clearInterval(obj.timer);
+                  if (fnEnd)fnEnd()
+              }
+          }, 30)
+      }
+  </script>
+</body>
+</html>

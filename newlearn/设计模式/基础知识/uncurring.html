@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // 法1
+    Function.prototype.unCurring = function (){
+        var self = this;
+        return function (){
+            var target = Array.prototype.shift.call(arguments)
+            self.apply(target, arguments)
+        }
+    }
+
+    var push = Array.prototype.push.unCurring()
+    var obj = {a:1, b:2}
+
+    // 法2
+    Function.prototype.unCurring2 = function () {
+        var self = this;
+        return function () {
+            Function.prototype.call.apply(self, arguments)
+        }
+    }
+
+    var push2 = Array.prototype.push.unCurring2()
+
+</script>
+</html>

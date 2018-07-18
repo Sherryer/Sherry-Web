@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+实现 112358
+</body>
+<script>
+    function demo(n){
+        if (n>2) {
+            return demo(n-1) + demo(n-2)
+        } else {
+            return 1
+        }
+    }
+
+    function curry (){
+        var arr = [1, 1];
+        return function (n){
+            if( arr.length < n ) {
+                while (arr.length < n) {
+                    arr.push( arr[arr.length - 1] + arr[arr.length - 2])
+                }
+                return arr[n - 1]
+            } else {
+                return arr[n - 1]
+            }
+        }
+    }
+
+    var c = curry()
+</script>
+</html>

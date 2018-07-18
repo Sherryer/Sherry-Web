@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script src="https://storage.googleapis.com/workbox-cdn/releases/3.0.0-beta.0/workbox-sw.js"></script>
+<script>
+    // Check that service workers are registered
+//    if ('serviceWorker' in navigator) {
+//        // Use the window load event to keep the page load performant
+//        window.addEventListener('load', () => {
+//            navigator.serviceWorker.register('./sw.js');
+//        });
+//    }
+    if (workbox) {
+        console.log(`Yay! Workbox is loaded`);
+    } else {
+        console.log(`Boo! Workbox didn't load`);
+    }
+
+    workbox.routing.registerRoute(
+        new RegExp('.*\.js'),
+    );
+</script>
+</html>

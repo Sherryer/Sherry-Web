@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>测试</title>
+<script type="text/javascript" src="md5.js"></script>
+<script type="text/javascript">
+window.onload=function(){
+	var $=function(_id){return document.getElementById(_id);}
+	var userName=$("userName");
+	var pwd=$("pwd");
+	var info=$("info");
+	var tj=$("tj");
+	tj.onclick=function(){
+		if(info.value=="yes"){
+			var myDate=new Date();
+			var myDate1=new Date();
+			var tenDays=myDate.getTime()+10*24*3600*1000;
+			var data1="userName="+encodeURI(userName.value);
+			pwd=hex_md5(pwd.value);
+			var data2="pwd="+encodeURI(pwd);
+		    myDate.setTime(tenDays);
+            myDate1.setTime(tenDays);
+            console.log(data1)
+            console.log(data2)
+			document.cookie=data1+" ;expires="+myDate.toGMTString();
+			document.cookie=data2+" ;expires="+myDate.toGMTString();
+			}
+		};
+
+	if(document.cookie){
+	var user=decodeURI(document.cookie.split("; ")[0].split("=")[1]);
+
+	var pwd=decodeURI(document.cookie.split("; ")[1].split("=")[1]);
+
+	if(user=="wangsan" && pwd==hex_md5("123")){
+		location.href="success.html";
+		}
+	}
+	};
+</script>
+</head>
+
+<body>
+<form name="myform" action="asdf.html">
+用户名:
+<input type="text" id="userName"><br>
+密码:
+<input type="password" id="pwd"><br>
+<input type="checkbox" id="info" value="yes">是否保存用户信息10天<br>
+<input type="button" id="tj" value="登录">
+</form>
+</body>
+</html>

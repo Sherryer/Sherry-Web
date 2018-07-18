@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+const promise = new Promise(function(resolve, reject) {
+    // ... some code
+
+    if (/* 异步操作成功 */){
+        resolve(value);
+    } else {
+        reject(error);
+    }
+});
+</pre>
+</body>
+<script>
+    function Promise2(fn) {
+        this.value = '';
+        this.state = 0;
+        this.resolve =  (value) => {
+            this.value = value;
+        };
+        this.reject = function (error) {
+            console.log('reject')
+        };
+        fn(this.resolve, this.reject)
+    }
+
+    Promise2.prototype.then = function (resolveFn, rejectFn) {
+        return new Promise2((resolve, reject) => {
+            setTimeout(()=>{
+                resolve(resolveFn(this.value))
+            }, 0)
+        })
+    };
+
+    var z = new Promise2(function (resolve, reject) {
+        resolve(1123)
+    })
+
+    z.then(function (value) {
+        return value
+    }).then(function (value) {
+        console.log('打印1123',value)
+    })
+
+
+    console.log(222)
+</script>
+</html>

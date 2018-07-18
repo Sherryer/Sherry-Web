@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            vertical-align: top;
+            position: absolute;
+            opacity: 0;
+        }
+        #container{
+            border: 1px solid black;
+            width: 300px;
+            height: 225px;
+            margin: 0 auto;
+            position: relative;
+        }
+        body{
+            padding: 200px 0 0;
+        }
+        span{
+            width: 20px;
+            height: 20px;
+            background: #ff5f2c;
+            display: block;
+            border-radius: 10px;
+            float: left;
+            margin-left: 20px;
+            opacity: 0.3;
+        }
+        #point{
+            position: absolute;
+            left: 40px;
+            top: 200px;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <img src="images/s/1.jpg" alt=""/>
+    <img src="images/s/2.jpg" alt=""/>
+    <img src="images/s/3.jpg" alt=""/>
+    <img src="images/s/4.jpg" alt=""/>
+    <img src="images/s/5.jpg" alt=""/>
+    <div id="point">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<script>
+    var con=document.getElementById("container");
+    var img=document.getElementsByTagName("img");
+    var span=document.getElementsByTagName("span");
+    img[0].style.opacity='1';
+    span[0].style.opacity="1";
+
+    var i=0;
+    var tt=null;
+    function zz(){
+         tt=setInterval(function(){
+            demo(img[i],100,0);
+            demo(span[i],100,30);
+            i++;
+            if(i==5){
+                i=0;
+            }
+            demo(img[i],0,100);
+            demo(span[i],30,100)
+        },2000);
+    }
+    zz();
+
+
+    for(var j=0;j<span.length;j++){
+        var cc=null;
+        clearTimeout(cc);
+        span[j].index=j;
+        span[j].onclick= function () {
+            clearInterval(tt);
+            for(var x=0;x<span.length;x++){
+                clearInterval(span[x].timer);
+                clearInterval(img[x].timer);
+                span[x].style.opacity=0.3;
+                img[x].style.opacity=0;
+            }
+            this.style.opacity=1;
+            img[this.index].style.opacity=1;
+            i=this.index;
+            cc=setTimeout(zz,2000)
+        }
+    }
+
+
+
+
+
+    function demo(boj,opa,target){
+        boj.aa=opa;
+        clearTimeout(boj.timer);
+        boj.timer=setInterval(function(){
+            var speed=(target-boj.aa)/6;
+            boj.aa=boj.aa+speed;
+            if(speed>0){
+                boj.aa=Math.ceil(boj.aa);
+            }else{
+                boj.aa=Math.floor(boj.aa)
+            }
+
+            boj.style.opacity=boj.aa/100;
+        },30)
+    }
+//    demo(img[0],30,100)
+
+
+</script>
+</body>
+</html>

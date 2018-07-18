@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        #div1 {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: yellow;
+            left: 0;
+            top: 10px;
+
+
+            will-change: left;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+</body>
+<script>
+    var a = 0
+    var div1 = document.getElementById('div1')
+    setInterval(function () {
+        a = a+10;
+        div1.style.left = a + 'px'
+    },1000)
+</script>
+</html>

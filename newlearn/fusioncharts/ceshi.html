@@ -1,0 +1,61 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		body {
+			margin: 10px;
+			padding: 10px;
+			font-family: 'Helvetica Neue', Arial;
+		}
+
+		h2 {
+			font-size: 18px;
+			font-weight: bold;
+			padding-left: 20px;
+		}
+	</style>
+	<script type="text/javascript" src="js/fusioncharts.js"></script>
+	<script type="text/javascript">
+
+        FusionCharts.addEventListener('ready', function() {
+            var chart = new FusionCharts({
+                type: 'column2d',
+                renderAt: 'chart-container-div',
+                width: '300',
+                height: '300',
+                dataFormat: 'json',
+                dataSource: {
+                    chart: {
+                        caption: "Quarterly sales summary",
+                        numberPrefix: "$"
+                    },
+                    data: [{
+                        label: "Q1",
+                        value: "213345"
+                    }, {
+                        label: "Q2",
+                        value: "192672"
+                    }, {
+                        label: "Q3",
+                        value: "201238"
+                    }, {
+                        label: "Q4",
+                        value: "209881"
+                    }, ]
+                }
+            });
+            // Since we are in the `ready` block, the `chart-container-div`
+            // element should be available by now.
+            chart.render();
+
+        });
+	</script>
+	<script type="text/javascript" src="js/test.js"></script>
+<body>
+<div id="chart-container-div">Chart loads here...</div>
+</body>
+
+</html>

@@ -18,6 +18,7 @@
 <body>
 <div id="SomeElementYouWantToAnimate">
 </div>
+当前的做法不好，因为移动的距离是和每一帧的间隔时间有关系的，然而间隔时间又有微笑的差距，所以看得到动画会不那么平稳。
 </body>
 <script>
 //    兼容性
@@ -34,11 +35,12 @@
         var key = 10;
         if (start === null){
             start = timestamp;
-            console.log("start",start)
+
         }
         var progress = timestamp - start;
+        console.log("每一帧的时间",progress)
         d.style.left = Math.min(progress/key, target) + "px";
-        console.log(Math.min(progress/key, target));
+//        console.log(Math.min(progress/key, target));
         if (progress < target*key) {
             requestAnimationFrame(step);
         }

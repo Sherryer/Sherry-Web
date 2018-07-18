@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    //----
+    // 基础数据
+
+    function isObject(value) {
+        const type = typeof value
+        return value != null && (type == 'object' || type == 'function')
+    }
+
+    function isNil(value) {
+        return value == null
+    }
+
+    class EnumItem {
+        constructor (params) {
+            this._list = []
+            this._vmap = {}
+            this._kmap = {}
+            if (params) {
+                let list = []
+                let { _kmap, _vmap } = this
+                Object.keys(params).forEach(key => {
+                    let value = 0
+                    let text = ''
+                    let item = params[key]
+                    if (isObject(item)) {
+                        value = item.value || 0
+                        text = item.text || ''
+                    } else {
+                        value = item
+                    }
+
+                    if (this._vmap[value]) {
+                        throw new Error('Duplicate Enum value!')
+                    }
+
+                    let ret = { key, value, text }
+                    _kmap[key] = ret
+                    _vmap[value] = ret
+                    this[key] = value
+                    list.push(ret)
+                })
+                this._list = list
+            }
+        }
+
+        val2key (val) {
+            let item = this._vmap[val] || {}
+            return item.key || ''
+        }
+
+        val2text (val) {
+            let item = this._vmap[val] || {}
+            return item.text || ''
+        }
+
+        key2text (key) {
+            let item = this._kmap[key] || {}
+            return item.text || ''
+        }
+
+        key2val (key) {
+            let item = this._kmap[key] || {}
+            return item.value || 0
+        }
+
+        getList () {
+            return [...this._list]
+        }
+    }
+
+    var ShopStatus = new EnumItem({
+        DRAFT: { value: 0, text: '草稿状态' },
+        AUDIT: { value: 1, text: '审核中' },
+        AUDIT_FAILED: { value: 2, text: '审核失败' },
+        ACTIVE: { value: 3, text: '正常' },
+        INACTIVE: { value: 4, text: '关闭' },
+        INACTIVE_PASSIVE: { value: 5, text: '解约关闭' }
+    })
+
+    var ContractorStatus = new EnumItem({
+        DRAFT: { value: 0, text: '草稿' },
+        AUDIT: { value: 1, text: '审核中' },
+        AUDIT_FAILED: { value: 2, text: '审核失败' },
+        ACTIVE: { value: 3, text: '审核通过' },
+        INACTIVE: { value: 4, text: '已解约' }
+    })
+
+
+
+    var contractor = 4;
+    var shop = 5;
+    var waitConfirmed = false
+    var isContractor = true
+
+    // 基础数据
+    //----
+
+
+    //----
+    // 策略
+
+    var contractorStrategies = {
+        [ContractorStatus.DRAFT]: function () {
+            // 返回草稿页
+            // console.log('草稿')
+            return  getPage('contractor_DRAFT')
+        },
+        [ContractorStatus.AUDIT]: function ({shopStatus, waitConfirmed, isContractor}) {
+            // console.log('审核中')
+            return  eContractStrategies({waitConfirmed, isContractor})
+        },
+        [ContractorStatus.AUDIT_FAILED]: function () {
+            // 返回商户未通过页
+            // console.log('审核失败')
+            return  getPage('contractor_AUDIT_FAILED')
+        },
+        [ContractorStatus.ACTIVE]: function ({shopStatus}) {
+            // console.log('审核通过')
+            return  shopStrategies[shopStatus]? shopStrategies[shopStatus]() : shopStrategies[shopStatus]()
+        },
+        [ContractorStatus.INACTIVE]: function ({shopStatus, waitConfirmed, isContractor}) {
+            // console.log('已解约')
+            return  getPage('contractor_INACTIVE')
+        },
+    }
+
+    var shopStrategies = {
+        [ShopStatus.DRAFT]: function () {
+            return getPage('shop_DRAFT')
+        },
+        [ShopStatus.AUDIT]: function () {
+            return getPage('shop_AUDIT')
+        },
+        [ShopStatus.AUDIT_FAILED]: function () {
+            return getPage('shop_AUDIT_FAILED')
+        },
+        [ShopStatus.ACTIVE]: function () {
+            return getPage('shop_ACTIVE')
+        },
+        [ShopStatus.INACTIVE]: function () {
+            return getPage('shop_INACTIVE')
+        },
+        [ShopStatus.INACTIVE_PASSIVE]: function () {
+            return getPage('shop_INACTIVE_PASSIVE')
+        }
+    }
+
+
+    var getPage = function (status) {
+        return allPages[status] ? allPages[status]() : false
+    }
+
+    var allPages = {
+        contractor_DRAFT () {
+            // console.log('contractor草稿')
+            return 'contractor草稿'
+        },
+        contractor_AUDITING () {
+            // console.log('contractor审核中')
+            return 'contractor审核中'
+        },
+        contractor_CONFIRMING () {
+            // console.log('contractor确认电子合同')
+            return 'contractor确认电子合同'
+        },
+        contractor_NOPOWER () {
+            // console.log('contractor无权确认合同')
+            return 'contractor无权确认合同'
+        },
+        contractor_INACTIVE () {
+            // console.log('contractor已解约')
+            return 'contractor已解约'
+        },
+        contractor_AUDIT_FAILED () {
+            // console.log('contractor审核失败')
+            return 'contractor审核失败'
+        },
+        shop_DRAFT () {
+            // console.log('shop草稿')
+            return 'shop草稿'
+        },
+        shop_AUDIT () {
+            // console.log('shop审核中')
+            return 'shop审核中'
+        },
+        shop_AUDIT_FAILED () {
+            // console.log('shop审核失败')
+            return 'shop审核失败'
+        },
+        shop_ACTIVE () {
+            // console.log('shop正常')
+            return 'shop正常'
+        },
+        shop_INACTIVE () {
+            // console.log('shop关闭')
+            return 'shop关闭'
+        },
+        shop_INACTIVE_PASSIVE () {
+            // console.log('shop解约关闭')
+            return 'shop解约关闭'
+        }
+    }
+
+    // 策略
+    //----
+
+
+    //----
+    //迭代器
+
+    var eContractStrategies = function ({waitConfirmed, isContractor}) {
+        var audit = function () {
+            if (!waitConfirmed) {
+                // return '商户审核中'
+                return getPage('contractor_AUDITING')
+            }
+            return false
+        }
+
+
+        var Confirming = function () {
+            if(isContractor) {
+                // return '确认电子合同'
+                return getPage('contractor_CONFIRMING')
+            }
+            return false
+        }
+
+        var noPower = function () {
+            // return '无权确认合同'
+            return getPage('contractor_NOPOWER')
+        }
+
+        return iteratorEContractStrategies(audit, Confirming, noPower)
+    }
+
+    var iteratorEContractStrategies = function () {
+        for (var i = 0, fn; fn = arguments[i++];) {
+            var eContract = fn()
+            if(eContract !== false ) {
+                return eContract
+            }
+        }
+    }
+
+    // 迭代器
+    //----
+
+
+    // 主函数
+
+    var getShowPage = function ({contractorDetail, shopStatus, waitConfirmed, isContractor}) {
+        if(contractorDetail < 0) {
+            contractorDetail = ContractorStatus.ACTIVE
+        }
+        return contractorStrategies[contractorDetail] ? contractorStrategies[contractorDetail]({shopStatus, waitConfirmed, isContractor}) : false
+    };
+
+    console.log(getShowPage({contractorDetail: contractor, shopStatus: shop, waitConfirmed, isContractor}))
+</script>
+</html>

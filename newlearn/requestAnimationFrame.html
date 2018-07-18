@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<hr>
+<button id="btn">move</button>
+<button id="reset">reset</button>
+</body>
+<script>
+    "use strict";
+
+    if (!window.requestAnimationFrame) {
+        console.warn('requestAnimationFrame not support');
+    }
+
+    let btn = document.querySelector('#btn');
+    let reset = document.querySelector('#reset');
+    let box = document.querySelector('#box');
+
+    btn.addEventListener('click', event => {
+        box.style.transform = 'translateX(1000px)';
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                box.style.transform = 'translateX(500px)';
+                box.style.transition = 'transform 1s ease-in-out';
+                box.style.transition = 'transform 1s ease-in-out';
+            });
+        });
+
+        /*setTimeout(()=>{
+            box.style.transform = 'translateX(500px)';
+        }, 1000);*/
+    });
+    reset.addEventListener('click', event => {
+        box.style.transform = 'translateX(0px)';
+    });
+</script>
+</html>

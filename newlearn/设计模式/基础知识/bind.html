@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bind</title>
+</head>
+<body>
+<div id="div">
+    click
+</div>
+</body>
+<script>
+    var div = document.getElementById('div')
+    function demo (){
+        console.log('参数的length：', arguments.length)
+    }
+
+    // 法1
+    Function.prototype.bind1 = function (){
+        var target = Array.prototype.shift.call(arguments)
+        var self = this
+        var args = arguments
+        return function () {
+            self.apply(target, args)
+        }
+    };
+
+    // 法2
+    Function.prototype.bind2 = function () {
+        var args = arguments;
+        var self = this;
+        return function () {
+            Function.prototype.call.apply(self, args)
+        }
+    }
+
+//    div.onclick = demo.bind1(null, 1, 2, 3)
+
+</script>
+</html>

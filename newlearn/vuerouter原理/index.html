@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+window.history.pushState(stateObject, title, URL)
+window.history.pushState(null, null, "/profile66/")
+一个对象或者字符串，用于描述新记录的一些特性。这个参数会被一并添加到历史记录中，以供以后使用。这个参数是开发者根据自己的需要自由给出的。
+一个字符串，代表新页面的标题。当前基本上所有浏览器都会忽略这个参数。
+一个字符串，代表新页面的相对地址。
+
+window.history.replaceState(stateObject, title, URL)
+window.history.replaceState(null, null, "/profile66/")
+用法同楼上
+
+
+popstate
+当用户点击浏览器的「前进」、「后退」按钮时，就会触发popstate事件。你可以监听这一事件，从而作出反应。
+
+</pre>
+</body>
+<script>
+    window.addEventListener("popstate", function(e) {
+        var state = e;
+        // do something...
+        console.log(state)
+        alert(123123)
+    });
+</script>
+</html>

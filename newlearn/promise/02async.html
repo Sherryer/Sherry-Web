@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function demo(){
+        return (
+            new Promise((resolve) => {
+                setTimeout(resolve, 1000, 2)
+            })
+        )
+    }
+
+    async function go() {
+        console.log(1)
+        await demo().then(z => console.log(z))
+        console.log(3)
+    }
+
+    go()
+
+</script>
+</html>

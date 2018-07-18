@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ceshi</title>
+    <style>
+        form, input, button {
+            margin: 0;
+            padding: 0;
+        }
+
+        .btn {
+            width: 20px;
+            text-align: center;
+            margin: 4px 1px 0 3px;
+            cursor: pointer;
+        }
+
+        #equal {
+            width: 20px;
+            text-align: center;
+            margin: 4px 1px 0 3px;
+            cursor: pointer;
+        }
+
+        #container {
+            width: 180px;
+        }
+
+        #clean {
+            width: 30px;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+
+        #back {
+            width: 20px;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+
+        #off {
+            width: 35px;
+            float: right;
+            margin-right: 25px;
+            cursor: pointer;
+            margin-top: 4px;
+            color: #000000;
+            border: 1px solid #ff0b30;
+            font-weight: bolder;
+            height: 20px;
+        }
+
+        #see {
+            width: 152px;
+            height: 20px;
+            border: 1px solid #3c3c3c;
+        }
+    </style>
+</head>
+<body>
+<div id="container">
+    <form>
+        <div id="see"></div>
+        <input class="btn" type="button" value="1">
+        <input class="btn" type="button" value="2">
+        <input class="btn" type="button" value="3">
+        <input class="btn" type="button" value="4">
+        <input class="btn" type="button" value="5">
+        <input class="btn" type="button" value="6">
+        <input class="btn" type="button" value="7">
+        <input class="btn" type="button" value="8">
+        <input class="btn" type="button" value="9">
+        <input class="btn" type="button" value="0">
+        <input class="btn" type="button" value="+">
+        <input class="btn" type="button" value="-">
+        <input class="btn" type="button" value="*">
+        <input class="btn" type="button" value="/">
+        <input id="equal" type="button" value="=">
+        <input id="clean" type="button" value="c">
+        <input id="back" type="button" value="←">
+        <input id="off" type="button" value="开/关">
+    </form>
+</div>
+
+<script>
+    var see = document.getElementById("see");
+    var equal = document.getElementById("equal");
+    var btn = document.getElementsByClassName("btn");
+    var clean = document.getElementById("clean");
+    var off = document.getElementById("off");
+    var back = document.getElementById("back");
+    var look = "";
+    var store = "";
+    var j = 0;
+
+    off.onclick = function () {
+        ++j;
+        if (j == 1) {
+            back.onclick = function () {
+                look = look.substr(0, look.length - 1);
+                see.innerHTML = look;
+            };
+            off.style.color = "#ff0b30";
+            off.style.border = "1px solid #000000";
+
+
+            //让显示器显示我输入的数字
+            for (var i = 0; i < btn.length; i++) {
+                if (btn.length - 5 < i && i < btn.length) {
+                    btn[i].onclick = function () {
+                        var sub = look.substr(look.length - 1);
+                        var sus = store.substr(store.length - 1);
+                        if (see.innerHTML == "") {
+                        } else if ("+" == sub || "-" == sub || "*" == sub || "/" == sub) {
+                            look = look.substring(0, look.length - 1) + this.value;
+                            see.innerHTML = look;
+                        }
+                        else if (sus == "=") {
+                            store = store.substr(0, store.length - 1);
+                            look = eval(store) + this.value;
+                            see.innerHTML = look;
+                        }
+                        else {
+                            look += this.value;
+                            see.innerHTML = look;
+                        }
+                    }
+                } else {
+                    btn[i].onclick = function () {
+                        store = "0";
+                        look += this.value;
+                        see.innerHTML = look;
+                    };
+                }
+            }
+
+
+            //给=添加事件 计算输入的东西 用try catch使程序强壮
+            equal.onclick = function () {
+                try {
+                    if (isNaN(eval(look)) || eval(look) == "Infinity") {
+                        throw new Error
+                    }
+                    see.innerHTML = look + "=" + eval(look);
+                    store = look + "=";
+                    look = "";
+                } catch (e) {
+                    look = "";
+                    e.message = "请正确输入";
+                    alert(e.message);
+                    see.innerHTML = ""
+                }
+            };
+            //c清空键
+            clean.onclick = function () {
+                look = "";
+                see.innerHTML = "";
+                store = "";
+            }
+        } else {
+            look = "";
+            see.innerHTML = "";
+            back.onclick = gan;
+            equal.onclick = gan;
+            for (var i = 0; i < btn.length; i++) {
+                btn[i].onclick = gan;
+            }
+            clean.onclick = gan;
+            look = "";
+            see.innerHTML = "";
+            j = 0;
+            off.style.color = "#000000";
+            off.style.border = " 1px solid #ff0b30";
+        }
+    };
+    equal.onclick = gan;
+    for (var i = 0; i < btn.length; i++) {
+        btn[i].onclick = gan;
+    }
+    clean.onclick = gan;
+    back.onclick = gan;
+    function gan() {
+        alert("大组长,要先打开开关啊")
+    }
+
+</script>
+</body>
+</html>

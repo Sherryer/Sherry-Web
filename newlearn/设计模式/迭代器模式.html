@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a1 = false
+    var b1 = true
+    function demo () {
+        if (a1) {
+            if (b1) {
+                console.log('1')
+            } else {
+                console.log('2')
+
+            }
+        } else {
+            console.log('3')
+        }
+    }
+
+    var fa = function () {
+        if (!a1) {
+            return '3'
+        }
+        return false
+    }
+
+    var fb = function () {
+        if(b1) {
+            return '1'
+        }
+        return false
+    }
+
+    var fc = function () {
+        return '2'
+    }
+
+    var iteratorEContractStrategies = function () {
+        for (var i = 0, fn; fn = arguments[i++];) {
+            var eContract = fn()
+            if(eContract !== false ) {
+                return eContract
+            }
+        }
+    }
+
+
+    var waitConfirmed = true
+    var isContractor = false
+    var electronicContractTimeout = false
+
+    var audit = function () {
+        if (!waitConfirmed) {
+            // '商户审核中'
+            return 11
+        }
+        return false
+    }
+
+    var noPower = function () {
+        if (!isContractor) {
+            // '无权确认电子合同'
+            return 22
+        }
+        return false
+    }
+
+    var timeout = function () {
+        if (electronicContractTimeout) {
+            // 电子合同超时
+            return 33
+        } else {
+            return false
+        }
+    }
+
+    var confirming = function () {
+        // '确认合同'
+        return 44
+    }
+    console.log(iteratorEContractStrategies(audit, noPower, timeout, confirming))
+</script>
+</html>

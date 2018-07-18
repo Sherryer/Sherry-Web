@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+hello1
+</body>
+<script>
+    var ajax1 = new XMLHttpRequest()
+
+    ajax1.open("get", 'http://localhost:9001/getData' + "?t=" + new Date().getTime());
+    ajax1.setRequestHeader('Content-type','application/x-www-form-urlencoded');
+
+
+// 表示同意跨域发送 cookie 并且接受服器务设置Cookie的要求；同时 服务器要开启 Access-Control-Allow-Credentials: true 不然报错
+   // ajax1.withCredentials = true;
+    ajax1.send();
+    ajax1.onreadystatechange = function () {
+        if (ajax1.readyState == 4) {
+            if (ajax1.status == 200) {
+                console.log('得到返回数据：', ajax1.responseText)
+            }
+        }
+    }
+</script>
+</html>

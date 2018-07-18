@@ -8,13 +8,10 @@
 fetch基于Promise
 </body>
 <script>
+    var z;
     var url = "./a.txt"
     fetch(url).then(function(response) {
-        return response.json();
-    }).then(function(data) {
-        console.log(data);
-    }).catch(function(e) {
-        console.log("Oops, error");
-    });
+        z = response
+    })
 </script>
 </html>

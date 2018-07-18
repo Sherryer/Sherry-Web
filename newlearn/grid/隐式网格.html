@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content {
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-template-rows: 50px 50px ;
+
+            /*设置隐藏网格属性*/
+            grid-auto-columns: auto;
+            grid-auto-rows: 100px;
+        }
+        #content div{
+            border: 1px solid black;
+        }
+
+
+        /*把3和4 的位置进行调整*/
+        .item3{
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .item4{
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .item5 {
+            grid-column: 5;
+            grid-row: 5;
+            grid-row-start: 1;
+            grid-row-end: 5;
+        }
+    </style>
+</head>
+<body>
+<div id="content">
+    <div>1</div>
+    <div>2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function getSingle(fn) {
+        var returnValue;
+        return function (){
+            return returnValue || (returnValue = fn.apply(this, arguments))
+        }
+    }
+
+    function demo1(){
+        console.log(111)
+        return true
+    }
+
+    var demo = getSingle(demo1)
+</script>
+</html>
