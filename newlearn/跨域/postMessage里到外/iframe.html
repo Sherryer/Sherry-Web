@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">iframe to outer</button>
+<div id="aa">aa</div>
+</body>
+<script>
+  var btn = document.getElementById('btn')
+  btn.onclick = function () {
+    window.parent.postMessage(
+      {
+        from: 'inner',
+      },
+      '*'
+    )
+  }
+
+  window.addEventListener('message', e => {
+    console.log('iframe 收到外面消息', e.data)
+  })
+</script>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // Write your code here
+
+  function Model (originalObj = {}) {
+    this.originalObj = originalObj
+  }
+
+  Model.prototype.get = function (key) {
+    return this.originalObj[key]
+  }
+
+  Model.prototype.set = function (key, value) {
+    return this.originalObj[key] = value
+  }
+
+  Model.prototype.has = function (key) {
+    return (this.originalObj[key] === undefined) ? false : true
+  }
+
+  Model.prototype.unset = function (key) {
+    delete this.originalObj[key]
+  }
+
+
+  // these are the methods for the Model:
+  function example() {
+    const person = new Model({ name: 'Jess', age: 22 });
+    console.log(person.get('name')); // -> 'Jess'
+    console.log(person.get('age')); // -> 22
+
+    // note that Model accepts arbitrary properties, not just "name" and "age".
+    var company = new Model();
+    company.set('employees', 2500);
+    company.set('revenue', 5);
+
+    console.log(company.get('employees')); // -> 2500
+    console.log(company.get('revenue')); // -> 5
+    console.log(company.get('not present')); // -> undefined
+
+    // here are all the methods for the model
+    person.set('name', 'Bob');
+    console.log(person.get('name'));   // -> 'Bob'
+    console.log(person.has('name'));   // -> true
+    person.unset('name');
+    console.log(person.has('name'));   // -> false
+  }
+
+  example();
+
+</script>
+</html>

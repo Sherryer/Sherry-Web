@@ -9,15 +9,18 @@
 </body>
 <script>
     function getSingle(fn) {
-        var returnValue;
+        var returnValue = false;
         return function (){
-            return returnValue || (returnValue = fn.apply(this, arguments))
+          if (returnValue === undefined) {
+            return
+          }
+          return returnValue || (returnValue = fn.apply(this, arguments))
         }
     }
 
     function demo1(){
         console.log(111)
-        return true
+      return false
     }
 
     var demo = getSingle(demo1)

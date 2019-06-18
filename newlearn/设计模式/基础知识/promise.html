@@ -22,9 +22,11 @@ const promise = new Promise(function(resolve, reject) {
         this.value = '';
         this.state = 0;
         this.resolve =  (value) => {
+            this.state = 1
             this.value = value;
         };
         this.reject = function (error) {
+            this.state = 2
             console.log('reject')
         };
         fn(this.resolve, this.reject)
@@ -42,13 +44,12 @@ const promise = new Promise(function(resolve, reject) {
         resolve(1123)
     })
 
-    z.then(function (value) {
+    var c = z.then(function (value) {
         return value
     }).then(function (value) {
         console.log('打印1123',value)
     })
 
 
-    console.log(222)
 </script>
 </html>

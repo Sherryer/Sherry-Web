@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    // 'use strict'
+    var obj = {
+      a: () => {
+        console.log('a')
+        console.log(this)
+      },
+      b () {
+        console.log('b')
+        console.log(this)
+      },
+      c: function () {
+        console.log('c')
+        console.log(this)
+      }
+    }
+
+    // obj.a()
+    // obj.b()
+    // obj.c()
+
+
+    // new obj.a
+    // new obj.b
+    // new obj.c
+
+    // var aa = obj.a
+    // var bb = obj.b
+    // var cc = obj.c
+
+
+
+</script>
+</html>

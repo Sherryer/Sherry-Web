@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+var STRATEGY = {
+  '[object Array]': {},
+  '[object Object]': {}
+}
+
+function creatProxy (obj) {
+  return new Proxy(obj, {
+    get: (target, key) => {
+      console.log('get:', target, key)
+      let strategy = Reflect.get(STRATEGY, Object.prototype.toString.call(target[key]))
+      if (!strategy) {
+        return target[key]
+      }
+      // if (obj)
+      return creatProxy(target[key])
+      // if (array)
+    },
+    set: (target, key, value) => {
+      console.log('set:', target, key, value)
+      target[key] = value
+    }
+  })
+}
+
+let proxyDetails = {}
+let proxyConfig = {
+  expires: 300000,      // 五分钟
+  maxStoreLength: 10    // 最大缓存容量
+}
+
+function cacheProxy (obj, config = {}) {
+  return new Proxy(obj, {
+    get: (target, key) => {
+      console.log('get:', target, key)
+      let item = proxyDetails[key]
+      if (!item) {
+        return target[key]
+      }
+      return item.value
+    },
+    set: (target, key, value) => {
+      console.log('set:', target, key, value)
+      let item = proxyDetails[key] = proxyDetails[key] || {}
+      item.expires = config.expires
+      item.value = value
+      return value
+    }
+  })
+}
+
+var obj = {
+  a: 1,
+  b: {
+    id: 'bbb----id',
+    contentObj: {
+      content: 'content'
+    }
+  },
+  z: 'z'
+}
+
+var arr = [{a:1}, {b: {id: 2}}]
+
+var obj = cacheProxy(obj, {})
+var arr = cacheProxy(arr)
+
+
+var obj2 = {z: 3}
+var de = Object.defineProperty(obj, 'z',{
+  get () {
+    console.log('obj2 get', obj2.z)
+    return obj2.z
+  },
+  set (value) {
+    console.log('obj2 set', value)
+    obj2.z = value
+  }
+})
+
+</script>
+</html>

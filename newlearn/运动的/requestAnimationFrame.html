@@ -17,12 +17,12 @@
 <div id="div"></div>
 </body>
 <script>
-    var current = 0,during = 10,s;
-    function go(){
+    var current = 0, during = 10, s;
+    function go() {
         s = f(current);
-        ...
+        // ...
         current++;
-        if(current<=during){
+        if(current <= during) {
             requestAnimationFrame(go)
         }
     }

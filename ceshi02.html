@@ -6,13 +6,50 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            padding: 100px;
+            margin: 0;
+        }
+
+        div {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-<ul>
-    <li>1</li>
-    <li>2</li>
-    <li>3</li>
-    <li>4</li>
-</ul>
+<script>
+  function max (a, b) {
+    return (a > b) ? a : b
+  }
+
+  function dKnapsack (capacity, size, value, n) {
+    var K = []
+    for (var i = 0; i <= capacity + 1; i++) {
+      K[i] = []
+    }
+    debugger
+    for (var i = 0; i <= n; i++) {
+      for (var w = 0; w <= capacity; w++) {
+        if (i == 0 || w == 0) {
+          K[i][w] = 0
+        } else if (size[i - 1] <= w) {
+          K[i][w] = max(value[i - 1] + K[i - 1][w - size[i - 1]],
+            K[i - 1][w])
+        } else {
+          K[i][w] = K[i - 1][w]
+        }
+      }
+    }
+    console.log(K)
+    return K[n][capacity]
+  }
+
+  var value = [4, 5, 10, 11, 13]
+  var size = [3, 4, 7, 8, 9]
+  var capacity = 16
+  var n = 5
+  var z = dKnapsack(capacity, size, value, n)
+</script>
 </body>
 </html>

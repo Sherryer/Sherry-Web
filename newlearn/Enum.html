@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function isObject(value) {
+    const type = typeof value
+    return value != null && (type == 'object' || type == 'function')
+  }
+
+  class EnumItem {
+    constructor (params) {
+      this._list = []
+      this._vmap = {}
+      this._kmap = {}
+      if (params) {
+        let list = []
+        let { _kmap, _vmap } = this
+        Object.keys(params).forEach(key => {
+          let value = 0
+          let text = ''
+          let item = params[key]
+          if (isObject(item)) {
+            value = item.value || 0
+            text = item.text || ''
+          } else {
+            value = item
+          }
+            debugger
+          if (this._vmap[value]) {
+            throw new Error('Duplicate Enum value!')
+          }
+
+          let ret = { key, value, text }
+          _kmap[key] = ret
+          _vmap[value] = ret
+          this[key] = value
+          list.push(ret)
+        })
+        this._list = list
+      }
+    }
+
+    val2key (val) {
+      let item = this._vmap[val] || {}
+      return item.key || ''
+    }
+
+    val2text (val) {
+      let item = this._vmap[val] || {}
+      return item.text || ''
+    }
+
+    key2text (key) {
+      let item = this._kmap[key] || {}
+      return item.text || ''
+    }
+
+    key2val (key) {
+      let item = this._kmap[key] || {}
+      return item.value || 0
+    }
+
+    getList () {
+      return [...this._list]
+    }
+  }
+
+  var ShopStatus = new EnumItem({
+    DRAFT: { value: 0, text: 'aa' },
+    AUDIT: { value: 1, text: 'bb' },
+    AUDIT_FAILED: { value: 2, text: 'cc' },
+    ACTIVE: { value: 3, text: 'dd' },
+    INACTIVE: { value: 4, text: 'ee' },
+    INACTIVE_PASSIVE: { value: 5, text: 'ff' }
+  })
+
+</script>
+</html>

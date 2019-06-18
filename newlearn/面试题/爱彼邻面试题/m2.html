@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  var event = {
+    clientList : {},
+    listen: function (key, fn) {
+      if(this.clientList[key]) {
+        this.clientList[key].push(fn)
+      } else {
+        this.clientList[key] = [];
+        this.clientList[key].push (fn)
+      }
+    },
+    trigger: function () {
+      var key = Array.prototype.shift.call(arguments);
+      if(!this.clientList[key]) {
+        return
+      }
+      for (var fn of this.clientList[key]){
+        fn.apply(this, arguments)
+      }
+    }
+  }
+
+  function Model (originalObj = {}) {
+    this.originalObj = originalObj
+    this.triggerAll = false
+    this.triggerObjectList = {}
+  }
+
+  Model.prototype.get = function (key) {
+    return this.originalObj[key]
+  }
+
+  Model.prototype.set = function (key, value) {
+    var oldVal = this.originalObj[key]
+    if (oldVal === value) {
+      return
+    }
+    if (this.triggerAll) {
+      event.trigger('change', key, oldVal, value)
+    }
+    if (this.triggerObjectList[key]) {
+      event.trigger(key, oldVal, value)
+    }
+    return this.originalObj[key] = value
+  }
+
+  Model.prototype.has = function (key) {
+    return (this.originalObj[key] === undefined) ? false : true
+  }
+
+  Model.prototype.unset = function (key) {
+    delete this.originalObj[key]
+  }
+
+  Model.prototype.on = function (eventName, cb) {
+    if (eventName === 'change') {
+      this.triggerAll = true
+      event.listen(eventName, cb)
+    } else {
+      var splitEventName = eventName.split(':')
+      var isChange = splitEventName[0]
+      var targetEventName = splitEventName[1]
+      if (isChange === 'change') {
+        this.triggerObjectList[targetEventName] = true
+        event.listen(targetEventName, cb)
+      }
+    }
+  }
+
+  function example2() {
+    const person = new Model({ name: 'Jess', age: 22 });
+    // the on method allows us add callbacks for events.
+    // Model emits two events for each change:
+    // 'change':              emitted on any change
+    // 'change:${attribute}': emitted only when "attribute"
+    //                        changes.
+    // here’s a concrete example:
+
+    person.on('change', function(key, oldVal, newVal) {
+      // called when any attribute changes
+      console.log('attr', key, 'changed from', oldVal, 'to', newVal);
+    });
+
+    person.on('change:name', function(oldVal, newVal) {
+      // called only when the "name" attribute changes.
+      // note that the signature of this callback is
+      // different from the general ’change’ event
+      // callback
+      console.log('specifically name changed from', oldVal, 'to', newVal);
+    });
+
+    // multiple handlers for the same event name
+    person.on('change:twice', function() { console.log('first') })
+    person.on('change:twice', function() { console.log('second') })
+
+    person.set('dogs', 2);
+    // in console: attr dogs changed from undefined to 2
+    person.set('name', 'Donut');
+    // in console: attr name changed from Jess to Donut
+    // in console: specifically name changed from Jess to Donut
+    person.unset('name')
+    // in console: attr name changed from Donut to undefined
+    // in console: specifically name changed from Donut to undefined
+    person.set('twice', null)
+    // in console: attr twice changed from undefined to null
+    // in console: first
+    // in console: second
+  }
+
+  example2();
+</script>
+</html>

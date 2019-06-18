@@ -19,14 +19,10 @@
     function curry (){
         var arr = [1, 1];
         return function (n){
-            if( arr.length < n ) {
-                while (arr.length < n) {
-                    arr.push( arr[arr.length - 1] + arr[arr.length - 2])
-                }
-                return arr[n - 1]
-            } else {
-                return arr[n - 1]
-            }
+          while (arr.length < n) {
+            arr.push( arr[arr.length - 1] + arr[arr.length - 2])
+          }
+          return arr[n - 1]
         }
     }
 

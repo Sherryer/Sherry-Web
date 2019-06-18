@@ -4,34 +4,39 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        div{
-            border: 1px solid grey;
-            font-size: 50px;
+        #div {
+            width: 100px;
+            height: 100px;
+            animation: haha 3s ease ;
+
         }
-        img {
-            width: 300px;
-            border: 1px solid black;
-        }
-        span {
-            background: grey;
+        @keyframes haha {
+            0% {
+                background: red;
+            }
+            20% {
+                background: #ffdd24;
+            }
+            40% {
+                background: #3eff1e;
+            }
+            60% {
+                background: #2bffe7;
+            }
+            80% {
+                background: #1a56ff;
+            }
+            100% {
+                background: #fc0bff;
+            }
         }
     </style>
 </head>
 <body>
-<div>
-    史蒂夫<img src="https://cdn-images-1.medium.com/max/1800/1*sg-uLNm73whmdOgKlrQdZA.jpeg" alt=""><span>嘿嘿哈哈哈</span>
+<div id="div">
+
 </div>
-出现原因：
-内联元素的 vertical-align 默认为 baseline
-
-解决方案：
-1. 改变 vertical-align
-2. 改 fontsize
-3. 改 lineheight 5px (实际也是改fontsize)
-
-4. 改成块元素
 </body>
 <script>
-
 </script>
 </html>

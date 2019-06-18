@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @media print {
+            a::after {
+                content: '-' attr(href);
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>
+    哈哈
+</h2>
+<a href="www.baidu.com">我是链接</a>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="btn">按钮</button>
+<iframe id="i" src="./iframe.html" frameborder="0"></iframe>
+</body>
+<script>
+    var btn = document.getElementById('btn')
+    var iframe = document.getElementById('i')
+  btn.onclick = function () {
+    iframe.contentWindow.postMessage(
+      {
+        from: 'outer',
+      },
+      '*'
+    )
+  }
+
+    window.addEventListener('message', e => {
+      console.log('收到iframe消息', e.data)
+    })
+</script>
+</html>

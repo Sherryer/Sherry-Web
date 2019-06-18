@@ -25,19 +25,11 @@
     </style>
 </head>
 <body>
+<!--getBoundingClientRect 兼容性超级好-->
 <div id="dom">判断元素是否在屏幕中</div>
-<!--<div class="div">2</div>-->
-<!--<div class="div">3</div>-->
-<!--<div class="div">4</div>-->
 </body>
 <script>
 var dom = document.getElementById('dom');
-var div = document.querySelectorAll('.div')
-// 方法一
-// var io = new IntersectionObserver(function (entries){
-//     console.log(111, entries)
-// }, {});
-// io.observe(dom);
 
 // 方法二
 const inViewport = (el) => {
