@@ -16,9 +16,11 @@
 </div>
 <div>
     写入：从最外层开始调用依次向内
+    从外到内按照包裹顺序依次写入 proxy 最后写 defineProperty
 </div>
 <div>
     读取：从内向外依次调用
+    defineProperty 优先级高于 Proxy，会先读 defineProperty 再依次从内到外读 Proxy
 </div>
 </body>
 <script>
@@ -78,7 +80,7 @@
 
   obj.a = 4
 
-    console.log('----')
+    console.log('上写----下读')
     console.log(obj.a)
 </script>
 </html>
