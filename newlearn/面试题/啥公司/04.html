@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let obj = { a: 0 }
+    function fn(obj) {
+        // 声名变量obj，赋值为外部 object 的索引，所以这一句是对外部 object 的修改
+        obj.a = 1
+        // 把变量obj指向新的对象 { a: 2 }
+        obj = { a: 2 }
+        // 对新对象的修改不会影响外部 object
+        obj.b = 2
+    }
+
+    fn(obj)
+    console.log(obj)
+
+    // { a: 1 }
+</script>
+</html>

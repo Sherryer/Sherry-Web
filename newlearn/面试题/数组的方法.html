@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //不改变原数组的方法：
+
+    //join()方法：
+    arr = [1,2,3,4,5,6];
+    var brr = arr.join('');
+    console.log(brr);123456
+
+    console.log(arr);//[1, 2, 3, 4, 5, 6]
+
+    // toString()方法
+    arr = [1,2,3,4,5,6];
+    var brr = arr.toString();
+    console.log(brr);//1,2,3,4,5,6
+
+    console.log(arr);//[1, 2, 3, 4, 5, 6]
+
+    // toLocaleString()方法
+    arr = [1,2,3,4,5,6];
+    var brr = arr.toLocaleString();
+    console.log(brr);//1,2,3,4,5,6
+
+    console.log(arr);//[1, 2, 3, 4, 5, 6]
+
+    // valurOf()方法
+    arr = [1,2,3,4,5,6];
+    var brr = arr.valueOf();
+    console.log(brr);//[1, 2, 3, 4, 5, 6]
+
+    console.log(arr);//[1, 2, 3, 4, 5, 6]
+
+    // concat()方法
+    arr = [8,1,7,4,0,6];
+    crr = [11,12]
+    var brr = arr.concat(crr);
+    console.log(brr);//[8, 1, 7, 4, 0, 6, 11, 12]
+
+    console.log(arr);//[8, 1, 7, 4, 0, 6]
+
+    //slice()方法
+    arr = [8,1,7,4,0,6];
+    var brr = arr.slice(1,3);
+    console.log(brr);//[1, 7]
+
+    console.log(arr);//[8, 1, 7, 4, 0, 6]
+
+    // indexOf()方法
+    arr = [8,1,7,4,0,6];
+    crr = [11,12]
+    var brr = arr.indexOf(1,0);
+    console.log(brr);//1
+
+    console.log(arr);//[8, 1, 7, 4, 0, 6]
+
+
+    // lastIndexOf()方法
+    arr = [8,1,7,4,0,6];
+    var brr = arr.lastIndexOf(1,5);
+    console.log(brr);//1
+
+    console.log(arr);//[8, 1, 7, 4, 0, 6]
+
+
+
+    //改变原数组的方法：
+
+
+    //push()方法
+    arr = [1,2,3,4,5,6];
+    var crr = [7]
+    var brr = arr.push(crr);
+    console.log(brr);//7
+
+    console.log(arr);//[1, 2, 3, 4, 5, 6, 10]
+    //pop()方法
+    var brr = arr.pop();
+    console.log(brr);//10
+
+    console.log(arr);//[1, 2, 3, 4, 5, 6]
+
+
+    //unshift()方法
+    arr = [1,2,3,4,5,6];
+    var brr = arr.unshift(10);
+    console.log(brr);//7
+
+    console.log(arr);//[10, 1, 2, 3, 4, 5, 6]
+    //shift()方法
+    var brr = arr.shift();
+    console.log(brr);//10
+
+    console.log(arr);//[1, 2, 3, 4, 5, 6]
+
+
+    //排序 sort()方法
+    arr = [8,1,7,4,0,6];
+    var brr = arr.sort();
+    console.log(brr);//[0, 1, 4, 6, 7, 8]
+
+    console.log(arr);//[0, 1, 4, 6, 7, 8]
+
+    //翻转 reverse()方法
+    arr = [8,1,7,4,0,6];
+    var brr = arr.reverse();
+    console.log(brr);//[6, 0, 4, 7, 1, 8]
+
+    console.log(arr);//[6, 0, 4, 7, 1, 8]
+
+
+
+    //splice()方法
+    arr = [8,1,7,4,0,6];
+    var brr = arr.splice(1,3);
+    console.log(brr);//[1, 7, 4]
+
+    console.log(arr);//[8, 0, 6]
+</script>
+</html>

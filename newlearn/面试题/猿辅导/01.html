@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+尖头函数能调用 call apply bind 么
+</body>
+<script>
+    var name = 1
+
+    var obj = {
+        name: 2,
+    }
+    var say = () => {
+        console.log(this.name)
+    }
+
+    say.call(obj)
+</script>
+</html>

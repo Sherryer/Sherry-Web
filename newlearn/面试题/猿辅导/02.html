@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function demo() {
+        setTimeout(() => {
+            console.log(1)
+            demo()
+        }, 1000)
+    }
+
+
+
+    function demoInterval(fn, time) {
+        setTimeout(() => {
+            console.log(1)
+            fn()
+        }, time)
+    }
+</script>
+</html>

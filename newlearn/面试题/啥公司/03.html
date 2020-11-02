@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var nickname = 'lilei'
+
+    function Person(name) {
+        this.nickname = name
+        this.sayhi = function () {
+            console.log(this.nickname)
+            setTimeout(function () {
+                console.log(this.nickname)
+            }, 1000)
+        }
+    }
+
+    var Male = {
+        nickname: 'xiaofang',
+        sayhi: function () {
+            console.log(this.nickname)
+        }
+    }
+
+    var c = Person.bind(Male, "xiaohong")
+
+    var person = new(Person.bind(Male, "xiaohong"))
+
+    person.sayhi()
+
+    // xiaohong lilei
+    // new 对 this 的影响比 bind 优先级要高
+
+</script>
+</html>

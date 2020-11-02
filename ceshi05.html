@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="./ku/chart/echarts.js"></script>
+<body>
+<div>
+    <div id="main" style="height:400px; width: 400px"></div>
+</div>
+</body>
+<script>
+    var option = {
+        "color": ["#4159f7"],
+        "title": [],
+        "tooltip": [{
+            "trigger": "axis",
+            "axisPointer": {
+                "lineStyle": {"color": "#D7D7D7"},
+                "type": "line",
+                "axis": "auto",
+                "animation": "auto",
+                "animationDurationUpdate": 200,
+                "animationEasingUpdate": "exponentialOut",
+                "crossStyle": {"color": "#999", "width": 1, "type": "dashed", "textStyle": {}}
+            },
+            "textStyle": {"fontSize": 12, "color": "#6B7582"},
+            "extraCssText": "position: fixed;background: #fff;padding: 10px;border-radius: 10px;box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);transition: none!important;color: #6B7582;font-size:12px;box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 20px 5px;line-height: 22px",
+        }],
+        "yAxis": [{
+            "type": "value",
+            "show": false,
+            "axisLabel": {
+                "show": false,
+                "inside": false,
+                "rotate": 0,
+                "showMinLabel": null,
+                "showMaxLabel": null,
+                "margin": 8,
+                "fontSize": 12
+            },
+            "axisLine": {
+                "lineStyle": {"color": "#D7D7D7", "width": 1, "type": "solid"},
+                "show": true,
+                "onZero": true,
+                "onZeroAxisIndex": null,
+                "symbol": ["none", "none"],
+                "symbolSize": [10, 15]
+            },
+            "splitLine": {"show": false, "lineStyle": {"color": "#eae9e9", "width": 1, "type": "solid"}},
+            "boundaryGap": [0, 0],
+            "splitNumber": 5,
+            "minorTick": {"show": false, "splitNumber": 5, "length": 3, "lineStyle": {}},
+            "minorSplitLine": {"show": false, "lineStyle": {"color": "#eee", "width": 1}},
+            "zlevel": 0,
+            "z": 0,
+            "inverse": false,
+            "name": "",
+            "nameLocation": "end",
+            "nameRotate": null,
+            "nameTruncate": {"maxWidth": null, "ellipsis": "...", "placeholder": "."},
+            "nameTextStyle": {},
+            "nameGap": 15,
+            "silent": false,
+            "triggerEvent": false,
+            "tooltip": {"show": false},
+            "axisPointer": {},
+            "axisTick": {"show": true, "inside": false, "length": 5, "lineStyle": {"width": 1}},
+            "splitArea": {"show": false, "areaStyle": {"color": ["rgba(250,250,250,0.3)", "rgba(200,200,200,0.3)"]}},
+            "offset": 0,
+            "rangeEnd": null,
+            "rangeStart": null
+        }],
+        "xAxis": [{
+            "type": "category",
+            "show": true,
+            "boundaryGap": false,
+            "axisLine": {
+                "show": false,
+            },
+            "axisTick": {
+                "show": false,
+            },
+            "axisLabel": {
+                "show": false,
+            },
+            "splitLine": {"show": false},
+            "data": ["2020-08-01", "2020-08-02", "2020-08-03", "2020-08-04", "2020-08-05", "2020-08-06", "2020-08-07", "2020-08-08", "2020-08-09", "2020-08-10", "2020-08-11", "2020-08-12", "2020-08-13", "2020-08-14", "2020-08-15", "2020-08-16", "2020-08-17", "2020-08-18", "2020-08-19", "2020-08-20", "2020-08-21", "2020-08-22", "2020-08-23", "2020-08-24", "2020-08-25", "2020-08-26", "2020-08-27", "2020-08-28", "2020-08-29", "2020-08-30", "2020-08-31"],
+        }],
+        "series": [{
+            "name": "历史累积群数",
+            "type": "line",
+            "lineStyle": {"width": 1.5, "type": "solid"},
+            "areaStyle": {"opacity": 0.12},
+            "zlevel": 0,
+            "z": 2,
+            "coordinateSystem": "cartesian2d",
+            "legendHoverLink": true,
+            "hoverAnimation": true,
+            "clip": true,
+            "label": {"position": "top"},
+            "step": false,
+            "smooth": false,
+            "smoothMonotone": null,
+            "symbol": "emptyCircle",
+            "symbolRotate": null,
+            "showSymbol": true,
+            "showAllSymbol": "auto",
+            "connectNulls": false,
+            "sampling": "none",
+            "animationEasing": "linear",
+            "progressive": 0,
+            "hoverLayerThreshold": null,
+            "emphasis": {"label": {}},
+            "data": [{
+                "category": "2020-08-01",
+                "valueName": "历史累积群数",
+                "value": 4159,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-02",
+                "valueName": "历史累积群数",
+                "value": 4160,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-03",
+                "valueName": "历史累积群数",
+                "value": 4160,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-04",
+                "valueName": "历史累积群数",
+                "value": 4162,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-05",
+                "valueName": "历史累积群数",
+                "value": 4173,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-06",
+                "valueName": "历史累积群数",
+                "value": 4190,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-07",
+                "valueName": "历史累积群数",
+                "value": 4219,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-08",
+                "valueName": "历史累积群数",
+                "value": 4220,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-09",
+                "valueName": "历史累积群数",
+                "value": 4225,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-10",
+                "valueName": "历史累积群数",
+                "value": 4225,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-11",
+                "valueName": "历史累积群数",
+                "value": 4232,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-12",
+                "valueName": "历史累积群数",
+                "value": 4236,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-13",
+                "valueName": "历史累积群数",
+                "value": 4241,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-14",
+                "valueName": "历史累积群数",
+                "value": 4264,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-15",
+                "valueName": "历史累积群数",
+                "value": 4264,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-16",
+                "valueName": "历史累积群数",
+                "value": 4264,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-17",
+                "valueName": "历史累积群数",
+                "value": 4275,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-18",
+                "valueName": "历史累积群数",
+                "value": 4279,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-19",
+                "valueName": "历史累积群数",
+                "value": 4281,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-20",
+                "valueName": "历史累积群数",
+                "value": 4287,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-21",
+                "valueName": "历史累积群数",
+                "value": 4295,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-22",
+                "valueName": "历史累积群数",
+                "value": 4295,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-23",
+                "valueName": "历史累积群数",
+                "value": 4295,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-24",
+                "valueName": "历史累积群数",
+                "value": 4317,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-25",
+                "valueName": "历史累积群数",
+                "value": 4324,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-26",
+                "valueName": "历史累积群数",
+                "value": 4337,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-27",
+                "valueName": "历史累积群数",
+                "value": 4379,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-28",
+                "valueName": "历史累积群数",
+                "value": 4388,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-29",
+                "valueName": "历史累积群数",
+                "value": 4390,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-30",
+                "valueName": "历史累积群数",
+                "value": 4390,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }, {
+                "category": "2020-08-31",
+                "valueName": "历史累积群数",
+                "value": 4400,
+                "value_id": 2188043,
+                "symbol": "emptyCircle"
+            }]
+        }]
+    }
+
+    // data 需要收集
+
+    var myChart = echarts.init(document.getElementById('main'));
+    myChart.setOption(option);
+</script>
+</html>

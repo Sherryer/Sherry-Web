@@ -48,6 +48,18 @@
         }
     }
 
-    demo(obj)
+    // demo(obj)
+
+    function demo2(obj){
+        if (obj) {
+            arr.push( obj.name );
+            obj.children.forEach(item => {
+                setTimeout( function () {
+                    demo(item)
+                }, 0)
+            })
+        }
+    }
+    demo2(obj)
 </script>
 </html>

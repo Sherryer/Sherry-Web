@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+      .order {
+        counter-increment: antzone;
+      }
+      .order:before {
+        content: counter(antzone) ". ";
+      }
+    </style>
+</head>
+<body>
+<h3>前端面试题</h3>
+
+
+<div class="order">简述对HTML语义化的理解。</div>
+
+<div style="height: 200px"></div>
+
+<div class="order">盒模型的处理有几种方式？有何差异？
+</div>
+
+<div style="height: 200px"></div>
+
+<div class="order">列举你所知道的 CSS3 新特性。
+</div>
+
+<div style="height: 250px"></div>
+
+<div class="order">尽可能列举实现浮层水平垂直居中的方案。
+</div>
+
+<div style="height: 250px"></div>
+
+<div class="order">写出下面 JS 的执行结果，简述原因。
+</div>
+
+<pre style="background-color: #f9f9f9; color: #000;">
+function foo(){
+  return a++;
+}
+function foo2(){
+  var a=0;
+  return foo();
+}
+console.log(foo2());
+</pre>
+
+<div style="height: 100px"></div>
+
+<pre style="background-color: #f9f9f9; color: #000;">
+console.log(typeof a);
+var a = 1;
+console.log(typeof a);
+function a(){};
+console.log(typeof a);
+</pre>
+
+<div style="height: 100px"></div>
+
+<pre style="background-color: #f9f9f9; color: #000;">
+// 说出执行过程及为什么
+var a = 1;
+setTimeout(function(){
+  a = 0;
+}, 3000);
+while(a){ }
+console.log(a);
+</pre>
+
+<div style="height: 100px"></div>
+
+<div class="order">根据下列 dom 结构，用 js 实现效果：点击 li 后，alert 出来对应的索引，例如，第一个 li alert 出来 1，第二个 alert 2 ...
+</div>
+
+<pre style="background-color: #f9f9f9; color: #000;">
+&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<div style="height: 230px"></div>
+
+<div class="order">为 Date 对象扩展一个方法，使之得到某年某月的天数，例如2019年2月有28天。
+</div>
+
+<div style="height: 350px"></div>
+
+<div class="order">尽可能列举数组的原生方法。
+</div>
+
+<div style="height: 200px"></div>
+
+<div class="order">如何删除数组的指定元素？
+</div>
+
+<div style="height: 200px"></div>
+
+<div class="order">var, let, const 都有什么不同？
+</div>
+
+<div style="height: 200px"></div>
+
+<div class="order">简述 this 关键字的使用注意事项，如何改变 this 指向？
+</div>
+
+<div style="height: 200px"></div>
+
+<div class="order">说说对主流 Javascript 框架的了解及选择理由。
+</div>
+
+<div style="height: 200px"></div>
+
+<div class="order">
+  广度优先遍历树
+</div>
+<pre>
+              a
+          b       c
+        d   e   f   g
+</pre>
+存成 [ a, b, c, d, e, f, g ]
+
+<div style="height: 200px"></div>
+
+
+<div class="order">有从 32768, 32769, 32770 ... 到 65536000 的连续整数，求所有这些整数中，数字 1 一共出现了多少次。举例: 32811 出现了 2 个 1，413101 出现了 3 个 1 。请给出思路，尝试实现最高的计算性能。
+</div>
+
+</body>
+</html>

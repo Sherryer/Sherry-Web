@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function demo1 () {
+        console.log('2')
+        Promise.resolve().then(() => {
+            console.log('promise resolve')
+        })
+        setTimeout(() => {
+            console.log(999)
+        })
+    }
+
+    function demo2 () {
+        console.log('22')
+    }
+
+    function case1() {
+        demo1()
+        demo2()
+    }
+
+    function case2() {
+        setTimeout(demo1)
+        setTimeout(demo2)
+    }
+</script>
+</html>
