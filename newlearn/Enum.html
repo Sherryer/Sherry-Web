@@ -31,7 +31,6 @@
           } else {
             value = item
           }
-            debugger
           if (this._vmap[value]) {
             throw new Error('Duplicate Enum value!')
           }
@@ -71,14 +70,34 @@
     }
   }
 
-  var ShopStatus = new EnumItem({
-    DRAFT: { value: 0, text: 'aa' },
-    AUDIT: { value: 1, text: 'bb' },
-    AUDIT_FAILED: { value: 2, text: 'cc' },
-    ACTIVE: { value: 3, text: 'dd' },
-    INACTIVE: { value: 4, text: 'ee' },
-    INACTIVE_PASSIVE: { value: 5, text: 'ff' }
+  var Status = new EnumItem({
+    DRAFT: { value: 0, text: "草稿" },
+    AUDIT: { value: 1, text: '审批中' },
+    AUDIT_FAILED: { value: 2, text: '审批失败' },
+    AUDIT_SUCCESS: { value: 3, text: '审批成功' },
   })
+
+
+  let text;
+  //
+  // Status = {
+  //     AUDIT: 1, // 审批中
+  //     AUDIT_SUCCESS: 2, // 审批成功
+  // }
+  // if (res.status === Status.AUDIT) {
+  //     text = '审批中'
+  // } else if (res.status === Status.AUDIT_SUCCESS) {
+  //     text = '审批成功'
+  // }
+
+
+  Status = new EnumItem({
+      AUDIT: { value: 1, text: '审批中' },
+      AUDIT_SUCCESS: { value: 3, text: '审批成功' },
+  })
+  text = Status.val2text(res.status)
+
+
 
 </script>
 </html>

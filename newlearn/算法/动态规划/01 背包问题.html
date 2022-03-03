@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+四个物品重量和价值分别是
+
+<p>
+    [{weight: 5, value: 7}, {weight: 3, value: 4}, {weight: 4, value: 5}, {weight: 1, value: 1}]
+</p>
+<p>最优解的计算机运行过程和物品顺序无关</p>
+<p>核心是要想明白：</p>
+<ul>
+    <li>对于新物品，每次要么装，要么不装</li>
+    <li>对于新物品，每次要么装，要么不装</li>
+    <li>包里已有的物品，是对于上一指定空间装入物品的最有解</li>
+    <li>我要计算的，就是对于当前背包空间，新来的物品装或者不装的最优解。所以我是在上一个最优解的基础上继续计算下一个最优解的</li>
+</ul>
+<img src="./01背包.jpg" alt=""  style="width: 400px">
+</body>
+<script>
+    // 01 背包问题
+    var goods = [{weight: 5, value: 7}, {weight: 3, value: 4}, {weight: 4, value: 5}, {weight: 1, value: 1}]
+
+    var pkg = 12
+
+    function demo(goods, pkg) {
+        var lastArr = [];
+        var currentArr = []
+        for (var i = 0; i< goods.length; i++) {
+            for (var j = 0; j <= pkg; j++) {
+                var last = lastArr[j] || 0
+                var value = last
+                if (j >= goods[i].weight) {
+                    var useCurrent = goods[i].value + (lastArr[j - goods[i].weight] || 0)
+                    value = Math.max((lastArr[j] || 0), useCurrent)
+                }
+                currentArr.push(value)
+            }
+            lastArr = currentArr
+            currentArr = []
+        }
+        return lastArr[j - 1]
+    }
+
+    var c = demo(goods, pkg)
+
+</script>
+</html>

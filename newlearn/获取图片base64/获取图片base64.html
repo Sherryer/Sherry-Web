@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+这种方案不能获取跨域图片 base64
+
+由于浏览器的安全考虑，如果在使用canvas绘图的过程中，使用到了外域的图片资源，那么在toDataURL()时会抛出安全异常
+</body>
+
+<script type = "text/javascript">
+    function getBase64Image(img) {
+        var canvas = document.createElement("canvas");
+        canvas.width = img.width;
+        canvas.height = img.height;
+        var ctx = canvas.getContext("2d");
+        ctx.drawImage(img, 0, 0, img.width, img.height);
+        var dataURL = canvas.toDataURL("image/png");
+        return dataURL;
+        //return dataURL.replace("data:image/png;base64,", "");
+    }
+    function main(src) {
+        var img = document.createElement('img');
+        img.onload =function() {
+            var data = getBase64Image(img);
+            console.log(data);
+        }
+        img.src = src;
+        document.body.appendChild(img);
+    }
+    main('./face.jpg');
+    // main('https://qqadapt.qpic.cn/txdocpic/0/e40bb91e2332b3d61ee69282cb2f30fd/0?w=930&h=664');
+</script>
+</html>

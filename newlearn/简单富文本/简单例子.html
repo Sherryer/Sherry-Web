@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            border: 1px solid black;
+            height: 200px;
+        }
+        div:focus {
+            border: 1px solid blue;
+        }
+        textarea {
+            border: none;
+            outline: none;
+            resize: none;
+        }
+
+    </style>
+</head>
+<body>
+<div id="aa" onclick="demo2()">
+    <section>123123</section>
+    <textarea onblur="demo3()" onclick="demo2()" id="area" type="text"></textarea>
+
+</div>
+</body>
+<script>
+
+    function demo2() {
+        document.getElementById('area').focus()
+        document.getElementById('aa').style.border = '1px solid red'
+        // document.getElementById('aa').focus()
+    }
+
+    function demo3() {
+        console.log('3123')
+        document.getElementById('aa').style.border = 'none'
+    }
+</script>
+</html>

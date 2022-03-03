@@ -19,7 +19,10 @@ export default class {
       proxyObj,
       originalObj
     } = this
-    return new Proxy(originalObj, {
+    if (!Proxy) {
+      return Object.freeze({})
+    }
+    let resProxy = new Proxy(originalObj, {
       set: (target, key, value) => {
         this.upDateProxy({key, value})
         target[key] = value
@@ -32,6 +35,10 @@ export default class {
         return proxyObj[key]
       }
     })
+    Object.keys(originalObj).forEach(key => {
+      resProxy[key] = originalObj[key]
+    })
+    return resProxy
   }
 
   upDateProxy ({key, value}) {

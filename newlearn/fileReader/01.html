@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            width: 300px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<input type='file' id="ipt">
+<img src="" alt="" id="image">
+<div>
+    读文件成为二进制 -》 二进制转 blob -》 下载文件
+</div>
+</body>
+<script>
+    var reader = new FileReader();
+    reader.onload = function(evt){
+        document.getElementById('image').src = evt.target.result;
+        var image;
+        window.z = image = evt.target.result;
+        console.log(image)
+        window.blob = getBlob(image)
+        saveAs(window.blob, 'lalala')
+    }
+
+    function read() {
+        reader.readAsDataURL(ipt.files[0]);
+    }
+
+    // ====
+
+    function saveAs(blob, name, opts) {
+        debugger;
+        var _global = window;
+        var URL = _global.URL || _global.webkitURL;
+        var a = document.createElement("a");
+        name = name || blob.name || "download";
+
+        a.download = name;
+        a.rel = "noopener"; // tabnabbing
+
+        // TODO: detect chrome extensions & packaged apps
+        // a.target = '_blank'
+
+        // Support blobsfclick
+        a.href = URL.createObjectURL(blob);
+        setTimeout(function() {
+            URL.revokeObjectURL(a.href);
+        }, 4e4); // 40s
+        setTimeout(function() {
+            click(a);
+        }, 0);
+
+    }
+
+    function click(node) {
+        try {
+            node.dispatchEvent(new MouseEvent("click"));
+        } catch (e) {
+            var evt = document.createEvent("MouseEvents");
+            evt.initMouseEvent(
+                "click",
+                true,
+                true,
+                window,
+                0,
+                0,
+                0,
+                80,
+                20,
+                false,
+                false,
+                false,
+                false,
+                0,
+                null
+            );
+            node.dispatchEvent(evt);
+        }
+    }
+
+    // saveAs(getBlob(buildDocument()), filename);
+
+    function getBlob(data) {
+        return new Blob([getArrayBuffer(data)], {
+            type: "application/pdf"
+        });
+    }
+
+    function getArrayBuffer (data) {
+        var len = data.length,
+            ab = new ArrayBuffer(len),
+            u8 = new Uint8Array(ab);
+
+        while (len--) u8[len] = data.charCodeAt(len);
+        return ab;
+    };
+
+    // saveAs(getBlob(zz), '啦啦')
+
+    let files = new window.File([getBlob(zz)], '啦啦', {type: 'application/pdf'})
+
+</script>
+</html>

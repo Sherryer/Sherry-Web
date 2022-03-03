@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script id="worker" type="javascript/worker">
+  self.onmessage = function(e) {
+    console.log(`data from parent: ${e.data}`);
+    const result = eval(e.data);
+    self.postMessage(`data from worker: ${result}`);
+  };
+</script>
+<script>
+    const blob = new Blob([
+        document.querySelector('#worker').textContent
+    ]);
+
+    const worker = new Worker(window.URL.createObjectURL(blob));
+    worker.onmessage = function(e) {
+        console.log(`${e.data}`);
+    };
+    // 发送用户脚本，这里是 `1 + 2`
+    worker.postMessage(`1 + 2;`);
+</script>
+</html>

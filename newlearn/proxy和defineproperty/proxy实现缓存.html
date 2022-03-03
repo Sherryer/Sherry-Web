@@ -8,93 +8,114 @@
 和 cachemachine 相同
 </body>
 <script>
-  class proxyObj {
-    constructor (originalObj = {}, {
-      expires = 300000, // 默认缓存 300000 毫秒
-      maxlength = 5     // 最多缓存 5 条记录
-    } = {}) {
-      this.originalObj = originalObj
-      this.expires = expires
-      this.proxyObj = {}
-      this.proxyObjConfig = {}
-      this.proxyQueue = []
-      this.maxlength = +maxlength
-      return this.initProxy()
-    }
 
-    initProxy () {
-      let {
-        proxyObj,
-        originalObj
-      } = this
-      return new Proxy(originalObj, {
-        set: (target, key, value) => {
-          this.upDateProxy({key, value})
-          target[key] = value
-          return true
-        },
-        get: (target, key) => {
-          if (proxyObj[key] && this.isTimeOut({key})) {
-            this.deleteItem({key})
-          }
-          return proxyObj[key]
+    // 缓存考虑：
+    // 最大数量、缓存时长
+
+    class proxyObj {
+        constructor(originalObj = {}, {
+            expires = 300000, // 默认缓存 300000 毫秒
+            maxlength = 5     // 最多缓存 5 条记录
+        } = {}) {
+            this.originalObj = originalObj
+            this.expires = expires
+            this.proxyObj = {}
+            this.proxyObjConfig = {}
+            this.proxyQueue = []
+            this.maxlength = +maxlength
+            return this.initProxy()
         }
-      })
+
+        initProxy() {
+            let {
+                proxyObj,
+                originalObj
+            } = this
+            if (!Proxy) {
+                return Object.freeze({})
+            }
+            let resProxy = Proxy(originalObj, {
+                set: (target, key, value) => {
+                    this.upDateProxy({key, value})
+                    return target[key] = value
+                    // return true
+                },
+                get: (target, key) => {
+                    // 检查存在 && 没有过期
+                    if (proxyObj[key] && this.isTimeOut({key})) {
+                        this.deleteItem({key})
+                    }
+                    return proxyObj[key]
+                }
+            })
+            Object.keys(originalObj).forEach(key => {
+                resProxy[key] = originalObj[key]
+            })
+            return resProxy
+        }
+
+        upDateProxy({key, value}) {
+            let {
+                proxyObj,
+                proxyObjConfig,
+                proxyQueue,
+                maxlength
+            } = this
+
+            // update proxyObj&proxyObjConfig
+            // 记录更新 update 时间
+            // 更新 value，过期时间
+            let writeInTime = (new Date()).getTime()
+            proxyObj[key] = value
+            proxyObjConfig[key] = {
+                writeInTime
+            }
+
+            // update proxyQueue
+            // 更新缓存队列
+            let index = proxyQueue.indexOf(key)
+            if (index !== -1) {
+                proxyQueue.splice(index, 1)
+            }
+            proxyQueue.push(key)
+            if (Reflect.ownKeys(proxyObj).length > maxlength) {
+                this.deleteItem()
+            }
+        }
+
+        deleteItem({key} = {}) {
+            let {
+                proxyQueue,
+                proxyObj,
+                proxyObjConfig,
+                originalObj
+            } = this
+            let proxyKey = key || proxyQueue.shift()
+            Reflect.deleteProperty(proxyObj, proxyKey)
+            Reflect.deleteProperty(proxyObjConfig, proxyKey)
+            Reflect.deleteProperty(originalObj, proxyKey)
+        }
+
+        isTimeOut({key}) {
+            let {
+                proxyObjConfig,
+                expires
+            } = this
+            if (!proxyObjConfig[key]) {
+                return false
+            }
+            return (new Date()).getTime() > proxyObjConfig[key].writeInTime + expires
+        }
     }
 
-    upDateProxy ({key, value}) {
-      let {
-        proxyObj,
-        proxyObjConfig,
-        proxyQueue,
-        maxlength
-      } = this
 
-      // update proxyObj&proxyObjConfig
-      let writeInTime = (new Date()).getTime()
-      proxyObj[key] = value
-      proxyObjConfig[key] = {
-        writeInTime
-      }
+    var obj = new proxyObj({})
 
-      // update proxyQueue
-      let index = proxyQueue.indexOf(key)
-      if (index !== -1) {
-        proxyQueue.splice(index, 1)
-      }
-      proxyQueue.push(key)
-      if (Reflect.ownKeys(proxyObj).length > maxlength) {
-        this.deleteItem()
-      }
-    }
-
-    deleteItem ({key} = {}) {
-      let {
-        proxyQueue,
-        proxyObj,
-        proxyObjConfig,
-        originalObj
-      } = this
-      let proxyKey = key || proxyQueue.shift()
-      Reflect.deleteProperty(proxyObj, proxyKey)
-      Reflect.deleteProperty(proxyObjConfig, proxyKey)
-      Reflect.deleteProperty(originalObj, proxyKey)
-    }
-
-    isTimeOut ({key}) {
-      let {
-        proxyObjConfig,
-        expires
-      } = this
-      if (!proxyObjConfig[key]) {
-        return false
-      }
-      return (new Date()).getTime() > proxyObjConfig[key].writeInTime + expires
-    }
-  }
-
-
-
-  var obj = new proxyObj({})
+    obj.a = 1
+    obj.b = 2
+    obj.c = 3
+    obj.d = 4
+    obj.e = 5
+    obj.f = 6
 </script>
 </html>

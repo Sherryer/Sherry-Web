@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    (function() {
+
+        handleAddListener('load', getTiming)
+
+        function handleAddListener(type, fn) {
+            if(window.addEventListener) {
+                window.addEventListener(type, fn)
+            } else {
+                window.attachEvent('on' + type, fn)
+            }
+        }
+
+        function getTiming() {
+            try {
+                var time = performance.timing;
+                var navigation = window.performance.navigation;
+                var timingObj = {};
+
+                var loadTime = (time.loadEventEnd - time.loadEventStart) / 1000;
+
+                if(loadTime < 0) {
+                    setTimeout(function() {
+                        getTiming();
+                    }, 200);
+                    return;
+                }
+
+                // timingObj['重定向次数'] = navigation.redirectCount;
+                // timingObj['重定向耗时（跳转耗时）'] = (time.redirectEnd - time.redirectStart) / 1000;
+                // timingObj['APP CACHE 耗时'] = (Math.max(time.domainLookupStart - time.fetchStart, 0)) / 1000;
+                // timingObj['DNS解析耗时'] = (time.domainLookupEnd - time.domainLookupStart) / 1000;
+                // timingObj['TCP完成握手耗时'] = (time.connectEnd - time.connectStart) / 1000;
+                // timingObj['等待服务器响应耗时'] = (time.responseStart - time.requestStart) / 1000;
+                // timingObj['资源加载耗时'] = (time.responseEnd - time.responseStart) / 1000;
+                // timingObj['HTTP请求响应完成耗时'] = (time.responseEnd - time.requestStart) / 1000;
+                // timingObj['DOM开始加载前所花费时间'] = (time.responseEnd - time.navigationStart) / 1000;
+                // timingObj['DOM加载完成耗时'] = (time.domComplete - time.domLoading) / 1000;
+                // timingObj['DOM结构解析完成耗时'] = (time.domInteractive - time.domLoading) / 1000; // （domInteractive dom tree创建完成，但是内嵌资源（比如外链css、js等）还未加载的时间点）
+                // timingObj['脚本加载耗时'] = (time.domContentLoadedEventEnd - time.domContentLoadedEventStart) / 1000;
+                // timingObj['onload事件耗时'] = (time.loadEventEnd - time.loadEventStart) / 1000;
+                // timingObj['页面完全加载耗时'] = (timingObj['重定向耗时'] + timingObj['DNS解析耗时'] + timingObj['TCP完成握手耗时'] + timingObj['HTTP请求响应完成耗时'] + timingObj['DOM结构解析完成耗时'] + timingObj['DOM加载完成耗时']);
+
+                timingObj['重定向时间'] = (time.redirectEnd - time.redirectStart) / 1000;
+                timingObj['DNS解析时间'] = (time.domainLookupEnd - time.domainLookupStart) / 1000;
+                timingObj['TCP完成握手时间'] = (time.connectEnd - time.connectStart) / 1000;
+                timingObj['HTTP请求响应完成时间'] = (time.responseEnd - time.requestStart) / 1000;
+                timingObj['DOM开始加载前所花费时间'] = (time.responseEnd - time.navigationStart) / 1000;
+                timingObj['DOM加载完成时间'] = (time.domComplete - time.domLoading) / 1000;
+                timingObj['DOM结构解析完成时间'] = (time.domInteractive - time.domLoading) / 1000;
+                timingObj['脚本加载时间'] = (time.domContentLoadedEventEnd - time.domContentLoadedEventStart) / 1000;
+                timingObj['onload事件时间'] = (time.loadEventEnd - time.loadEventStart) / 1000;
+                timingObj['页面完全加载时间'] = (timingObj['重定向时间'] + timingObj['DNS解析时间'] + timingObj['TCP完成握手时间'] + timingObj['HTTP请求响应完成时间'] + timingObj['DOM结构解析完成时间'] + timingObj['DOM加载完成时间']);
+                timingObj['T0 请求响应耗时'] = (time.responseStart - time.navigationStart) / 1000;
+                timingObj['T1 首次出现内容'] = (time.domLoading - time.navigationStart) / 1000;
+                timingObj['T3 内容加载完毕'] = (time.loadEventEnd - time.navigationStart) / 1000;
+
+                for(item in timingObj) {
+                    console.log(item + ":" + timingObj[item] + '毫秒(ms)');
+                }
+
+                console.log(performance.timing);
+
+                console.log(JSON.stringify(timingObj))
+
+            } catch(e) {
+                console.log(timingObj)
+                console.log(performance.timing);
+            }
+        }
+    })();
+</script>
+</html>

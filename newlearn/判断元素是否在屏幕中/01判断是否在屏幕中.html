@@ -35,8 +35,15 @@ var dom = document.getElementById('dom');
 var div = document.querySelectorAll('.div')
 // 方法一
 var io = new IntersectionObserver(function (entries){
-    console.log(111, entries)
+    console.log(111, entries[0].isIntersecting)
+    const bool = entries[0].isIntersecting
+  if (bool === true) {
+    io.unobserve(entries[0].target)
+  }
 }, {});
+io.observe(dom);
+io.observe(dom);
+io.observe(dom);
 io.observe(dom);
 
 // 方法二

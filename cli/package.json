@@ -1,0 +1,16 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "CLI": "./bin/cli"
+  },
+  "scripts": {
+    "pretest": "node build.js",
+    "posttest": "node build.js",
+    "ceshi": "node ceshi.js start"
+  },
+  "author": "",
+  "license": "ISC"
+}

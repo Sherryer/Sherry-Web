@@ -13,16 +13,16 @@
 <p>输入以下内容 然后 ssserver -c </p>
 
 <pre>
-    {
-        "server":"my_server_ip",
-        "server_port":8888,
-        "local_address": "127.0.0.1",
-        "local_port":1080,
-        "password":"mypassword",
-        "timeout":300,
-        "method":"aes-256-cfb",
-        "fast_open": false
-    }
+{
+    "server":"my_server_ip",
+    "server_port":8888,
+    "local_address": "127.0.0.1",
+    "local_port":1080,
+    "password":"mypassword",
+    "timeout":300,
+    "method":"aes-256-cfb",
+    "fast_open": false
+}
 
 
     如
@@ -42,18 +42,18 @@
 "local_address":"127.0.0.1",
 "local_port":1080,
 "port_password":{
-"7788":"password0",
-"7789":"password1",
-"7790":"password2"
-},
+    "7788":"password0",
+    "7789":"password1",
+    "7790":"password2"
+    },
 "timeout":300,
 "method":"aes-256-cfb",
 "fast_open": false
 }
 
 "port_password":{
-"5000":"l112358",
-"8888":"l112358",
+    "5000":"l112358",
+    "8888":"l112358",
 }
 
 
@@ -70,14 +70,14 @@
 
 </pre>
 
-
+<pre>
 要看一下 screen 那个咋用 继峰教我的那个
 
 screen -ls 列出所有会话
 screen 创建一个新的会话
 screen -r +数字 进入会话
 退出： ctrl+a  d暂存  k杀死会话  [可滚动
-
+</pre>
 </body>
 
 </html>

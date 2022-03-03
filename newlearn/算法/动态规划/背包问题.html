@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+现在有三种钱 1元，5元，11元 要凑够48元，最少需要多少张钱
+
+<p>432
+    什么是动态规划（Dynamic Programming）？动态规划的意义是什么？ - 阮行止的回答 - 知乎
+    https://www.zhihu.com/question/23995189/answer/613096905
+</p>
+</body>
+<script>
+    function demo(total, countsList) {
+        var arr = [0]
+        for (var i = 1; i <= total; i++){
+            var value = Infinity
+            countsList.forEach(item => {
+                if (i - item >=0) {
+                    value = Math.min(value, (arr[i-item] + 1))
+                }
+            })
+            arr[i] = value
+        }
+        return arr
+    }
+    var c = demo(48, [5, 1, 11])
+</script>
+</html>

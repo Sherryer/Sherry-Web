@@ -14,7 +14,7 @@
     return Math.ceil(Math.random()*100000)
   }
 
-  class proxyObj {
+  class Cachemachine {
     constructor (originalObj = {}, {
       expires = 3600 * 1000, // 默认缓存一小时
       maxlength = 5     // 最多缓存 5 条记录
@@ -33,7 +33,10 @@
         proxyObj,
         originalObj
       } = this
-      return new Proxy(originalObj, {
+      if (!Proxy) {
+        return Object.freeze({})
+      }
+      let resProxy = new Proxy(originalObj, {
         set: (target, key, value) => {
           this.upDateProxy({key, value})
           target[key] = value
@@ -46,6 +49,10 @@
           return proxyObj[key]
         }
       })
+      Object.keys(originalObj).forEach(key => {
+        resProxy[key] = originalObj[key]
+      })
+      return resProxy
     }
 
     upDateProxy ({key, value}) {
@@ -100,8 +107,15 @@
   }
 
 
-  var zz = {a: 1, b: 2}
-
-  var obj = new proxyObj(zz)
+  let obj = {a: 1, b: 2, c: 3}
+  let data = new Cachemachine(obj, {
+      expires: 5000,
+      maxlength: 2
+  })
+  console.log(data) // {b: 2, c: 3}
+  data.d = 4
+  console.log(data) // {c: 3, d: 4}
+  data.a = 1
+  console.log(data) // {d: 4, a: 1}
 </script>
 </html>

@@ -30,6 +30,7 @@ dist/
 test/
 html/
 apps/
+linshi/
 
 .settings/
 *.rej

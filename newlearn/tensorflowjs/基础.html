@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+<body>
+<!--tennsorflowjs-->
+</body>
+<script>
+    console.log('Hello TensorFlow');
+
+    async function getData() {
+        const carsDataResponse = await fetch('https://storage.googleapis.com/tfjs-tutorials/carsData.json');
+        const carsData = await carsDataResponse.json();
+        const cleaned = carsData.map(car => ({
+            mpg: car.Miles_per_Gallon,
+            horsepower: car.Horsepower,
+        }))
+            .filter(car => (car.mpg != null && car.horsepower != null));
+
+        return cleaned;
+    }
+
+    async function run() {
+        // Load and plot the original input data that we are going to train on.
+        const data = await getData();
+        const values = data.map(d => ({
+            x: d.horsepower,
+            y: d.mpg,
+        }));
+
+        console.log(data)
+        console.log(values)
+
+        tfvis.render.scatterplot(
+            {name: 'Horsepower v MPG'},
+            {values},
+            {
+                xLabel: 'Horsepower',
+                yLabel: 'MPG',
+                height: 300
+            }
+        );
+
+        // More code will be added below
+    }
+
+    document.addEventListener('DOMContentLoaded', run);
+</script>
+</html>
