@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+<!--https://www.youtube.com/watch?v=_Tr9ZcXcMjQ&list=PLNqp92_EXZBJQ3015p9C7hqTDXH_WY57v-->
+
+<!--https://custom-elements-everywhere.com/-->
+<body>
+<my-dom id="custom" attr="zzz"></my-dom>
+</body>
+<script>
+   class myDom extends HTMLElement {
+     constructor() {
+       super()
+       this.innerHTML = '<button id="btn">shadowdom 按钮</button>'
+     }
+
+     speak() {
+        console.log('可以直接调')
+     }
+
+     connectedCallback () {
+        this.querySelector('#btn').addEventListener('click', () => {
+          console.log('触发')
+          this.dispatchEvent(new Event('zz', {a: 1}))
+        })
+     }
+
+     disConnectedCallback () {
+       this.querySelector('#btn').removeEventListener('click')
+     }
+   }
+
+   window.customElements.define('my-dom', myDom);
+    document.querySelector('my-dom').addEventListener('zz', (e, val) => {
+      console.log('外部听到了 zz 事件', e, val)
+    });
+
+   document.querySelector('my-dom').speak();
+</script>
+</html>

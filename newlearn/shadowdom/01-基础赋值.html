@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+<!--https://www.youtube.com/watch?v=_Tr9ZcXcMjQ&list=PLNqp92_EXZBJQ3015p9C7hqTDXH_WY57v-->
+
+<!--https://custom-elements-everywhere.com/-->
+<body>
+<h2>原本的</h2>
+<my-dom attr="zzz"></my-dom>
+<div id="num">
+    <div>11</div>
+    <div>22</div>
+</div>
+</body>
+<script>
+    const temp = document.createElement('aaa');
+    temp.innerHTML = `<style>h2{color: green}</style><h2></h2>`
+
+    class MyDom extends HTMLElement {
+      constructor() {
+        super()
+        // 1 直接赋值
+        // this.innerHTML = `<h2>hello</h2>`
+        // console.log(333, this)
+        // this.innerHTML = `${style}<h2>${this.getAttribute('attr')}</h2>`
+        // this.innerText = 123
+
+        // 2 开 mode open
+        // 类似开启了 iframe
+        // this.attachShadow({mode: 'open'});
+        // const style = "<style>h2{color: green}</style>"
+        // this.shadowRoot.innerHTML = `${style}<h2>${this.getAttribute('attr')}</h2>`
+
+        // 3 template
+        this.attachShadow({mode: 'open'});
+        this.shadowRoot.appendChild(temp.cloneNode(true))
+        // this.shadowRoot.appendChild(document.getElementById('num').cloneNode(true))
+        this.shadowRoot.querySelector('h2').innerHTML = 'haha2'
+      }
+    }
+    window.customElements.define('my-dom', MyDom)
+</script>
+</html>

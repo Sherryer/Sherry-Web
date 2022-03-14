@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
+</head>
+<!--https://www.youtube.com/watch?v=_Tr9ZcXcMjQ&list=PLNqp92_EXZBJQ3015p9C7hqTDXH_WY57v-->
+
+<!--https://custom-elements-everywhere.com/-->
+<body>
+<my-dom id="custom" attr="zzz"></my-dom>
+<button id="btn">aa</button>
+<button id="btn2">直接.a = 1</button>
+</body>
+<script>
+    class myDom extends HTMLElement {
+      // static get observedAttributes() {
+      //   return ['attr']
+      // }
+
+        constructor() {
+        super()
+        let att = this.getAttribute('attr')
+        this.innerText = `${att}`
+        }
+
+
+      attributeChangedCallback (name, oldVal, newVal) {
+          console.log(`Attribute: ${name} changed!`)
+          if (name === 'attr') {
+            this.innerHTML = newVal
+          }
+        }
+
+        // componentDidMount
+        connectedCallback() {
+        console.log('connected!')
+        }
+
+        disconnectedCallback() {
+        console.log('disconnected!')
+        }
+
+        get a () {
+          return this.innerText
+        }
+
+        set a (val) {
+          this.innerText = val
+        }
+
+    }
+    myDom.observedAttributes = ['attr']
+    window.customElements.define('my-dom', myDom)
+
+    var btn = document.getElementById('btn')
+    btn.onclick = () => {
+      document.getElementById('custom').setAttribute('attr', 123)
+    }
+
+    var btn2 = document.getElementById('btn2')
+    btn2.onclick = () => {
+      document.getElementById('custom').a = 1
+    }
+</script>
+</html>
