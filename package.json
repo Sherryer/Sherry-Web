@@ -12,7 +12,7 @@
   "devDependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "webpack": "^3.11.0"
+    "webpack": "^5.75.0"
   },
   "scripts": {
     "start": "webpack --color --progress --watch"
