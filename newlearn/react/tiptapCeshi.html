@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script
+    crossorigin
+    src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.js"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://wxa.wxs.qq.com/wxad-design/wxad-tiptap/0.1.32/umd/wxad-tiptap.css"
+  />
+  <script src="https://wxa.wxs.qq.com/wxad-design/wxad-tiptap/0.1.32/umd/wxad-tiptap.bundle.js"></script>
+  <title>tiptap</title>
+</head>
+
+<body>
+<div id="root"></div>
+</body>
+<script type="text/babel">
+  const value = {
+    "type": "doc",
+    "content": [{
+      "type": "branch",
+      "attrs": {
+        "id": "branch_4MuT0",
+        "dataSource": [{
+          "id": "nknqO",
+          "title": "分支标题1",
+          "panel": {
+            "type": "doc",
+            "content": [{
+              "type": "heading",
+              "attrs": {"level": 1},
+              "content": [{"type": "text", "text": "哈喽"}]
+            }, {
+              "type": "codeBlock",
+              "attrs": {"language": null},
+              "content": [{"type": "text", "text": "1112"}]
+            }, {
+              "type": "paragraph",
+              "attrs": {"textAlign": "left"},
+              "content": [{"type": "text", "text": "你好"}]
+            }, {"type": "paragraph", "attrs": {"textAlign": "left"}}]
+          }
+        }, {
+          "id": "NGjwb",
+          "title": "分支标题2",
+          "panel": {
+            "type": "doc",
+            "content": [{
+              "type": "paragraph",
+              "attrs": {"textAlign": "left"},
+              "content": [{"type": "text", "text": "标题2"}]
+            }, {
+              "type": "orderedList",
+              "attrs": {"start": 1},
+              "content": [{
+                "type": "listItem",
+                "content": [{
+                  "type": "paragraph",
+                  "attrs": {"textAlign": "left"},
+                  "content": [{"type": "text", "text": "第一"}]
+                }]
+              }, {
+                "type": "listItem",
+                "content": [{
+                  "type": "paragraph",
+                  "attrs": {"textAlign": "left"},
+                  "content": [{"type": "text", "text": "第二"}]
+                }]
+              }]
+            }]
+          }
+        }]
+      }
+    }]
+  };
+
+  function App() {
+    return <TipTap value={value} editable={false}/>;
+  }
+
+  ReactDOM.render(<App/>, document.getElementById("root"));
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../../ku/rxjs7.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+  const {
+    Observable,
+    of,
+    map,
+    interval,
+    take,
+    fromEvent,
+    mapTo,
+    bufferCount,
+    defer
+  } = rxjs;
+
+
+
+  const code = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowUp",
+    // "ArrowDown",
+    // "ArrowDown",
+    // "ArrowLeft",
+    // "ArrowRight",
+    // "ArrowLeft",
+    // "ArrowRight",
+    // "KeyB",
+    // "KeyA",
+    // "KeyB",
+    // "KeyA"
+  ]
+
+  // fromEvent(document, 'keyup').pipe(map(e => e.code), bufferCount(3, 1))
+  //   .subscribe(last12key => {
+  //     console.log(last12key)
+  //     // if (last12key.join('') == code.join('')) {
+  //     //   console.log('隐藏的彩蛋 \(^o^)/~')
+  //     // }
+  //   })
+  //
+  //
+  // fromEvent(document, 'keydown').subscribe(val => console.log(val))
+
+  var zz = defer(() => {
+    console.log('执行啦')
+    return of(11, 22, 33);
+  })
+
+  // zz.subscribe(val => {
+  //   console.log(val)
+  // })
+
+</script>
+</html>

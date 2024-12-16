@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  #content {
+      width: 200px;
+      height: 300px;
+      overflow-x: scroll;
+      overflow-y: hidden;
+      border: 1px solid black;
+  }
+  #child {
+      height: 30px;
+      width: 50px;
+      border: 1px solid greenyellow;
+      position:sticky;
+      top: 10px;
+      left: 00px;
+  }
+  #child2 {
+      padding: 30px;
+      width: 500px;
+      height: 30px;
+      border: 1px solid red;
+      position: relative;
+  }
+</style>
+<body>
+<div id="content">
+  <div id="child2">
+    <div id="child"></div>
+  </div>
+</div>
+</body>
+</html>

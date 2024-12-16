@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+.parent {
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+.rate-column-list {
+    float: left;
+    display: flex;
+    gap: 46px;
+    position: relative;
+}
+.rate-column-list::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: #6997F4;
+    position: absolute;
+    top: 246px;
+}
+
+.rate-item {
+    width: 60px;
+    border-radius: 4px;
+}
+
+.rate-item:hover {
+    background: #E9F0FD;
+    cursor: pointer;
+}
+
+.rate-item:hover {
+    background: #E9F0FD;
+    cursor: pointer;
+}
+
+.rate-item:hover .pillar-left {
+    background: #296BEF;
+}
+
+.rate-item:hover .pillar-right {
+    background: #FA8E00;
+}
+
+.rate-item, .pillar-left, .pillar-right {
+    transition: background-color 0.3s ease;
+}
+
+.pillar-container {
+    height: 246px;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+
+.pillar-tip {
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #E63D2E;
+    background: #FFF8F7;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.pillar-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.pillar-left, .pillar-right {
+    height: 180px; /* 动态的 */
+    width: 16px;
+}
+
+.pillar-left {
+    background: #6997F4;
+}
+
+.pillar-right {
+    height: 204px; /* 动态的 */
+    background: #FDC780;
+}
+
+.text-content {
+    text-align: center;
+    font-size: 14px;
+    line-height: 22px;
+    border-top: 1px solid #6997F4;
+    padding-top: 8px;
+    padding-bottom: 20px;
+}
+
+</style>
+<body>
+<section class="parent">
+  <div class="rate-column-list">
+    <div class="rate-item">
+      <div class="pillar-container">
+        <div class="pillar-tip">建议增投</div>
+        <div class="pillar-content">
+          <div class="pillar-left"></div>
+          <div class="pillar-right"></div>
+        </div>
+      </div>
+      <div class="text-content">
+        阿斯顿旅客发送量的理解
+      </div>
+    </div>
+
+    <div class="rate-item">
+      <div class="pillar-container">
+        <div class="pillar-tip">建议增投</div>
+        <div class="pillar-content">
+          <div class="pillar-left"></div>
+          <div class="pillar-right"></div>
+        </div>
+      </div>
+      <div class="text-content">
+        阿斯顿旅客发送量的理解
+      </div>
+    </div>
+  </div>
+</section>
+<div>123123</div>
+</body>
+</html>

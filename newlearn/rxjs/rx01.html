@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="../../ku/rxjs7.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+  const {
+    Observable,
+    of,
+  } = rxjs;
+
+// foo 可观察者，可观察者可以通过 subscribe 被观察
+  const foo = new Observable((subscriber) => {
+    console.log('哈哈');
+    subscriber.next('44')
+    subscriber.next('55')
+    subscriber.complete();
+  })
+
+  // foo.subscribe((msg) => {
+  //   console.log(msg)
+  // });
+  //
+  foo.subscribe((msg) => {
+    console.log(msg)
+  });
+  foo.subscribe({
+    next: (res) => {
+      console.log('next', res)
+    },
+    error: (err) => {
+      console.log('error', err)
+    },
+    complete: (msg) => {
+      console.log('complete', msg)
+    }
+  })
+
+  // of 会自动触发 complete
+  const foo2 = of(11, 22, 33)
+
+  foo2.subscribe({
+    next: (msg) => { console.log(msg) },
+    error: (msg) => { console.log(msg) },
+    complete: (msg) => { console.log('complete') },
+  })
+
+</script>
+</html>

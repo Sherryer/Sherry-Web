@@ -9,6 +9,7 @@
 </body>
 <script>
     function demo(){
+        console.log('demo 里的')
         return (
             new Promise((resolve) => {
                 setTimeout(resolve, 1000, 2)
@@ -23,6 +24,7 @@
     }
 
     go()
+    console.log('end')
 
 </script>
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #div{
+        border: 1px solid black;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+  </style>
+</head>
+<body>
+<div id="div">111</div>
+</body>
+<script>
+  var dd = document.getElementById('div');
+
+  const drag = (dom) => {
+    dom.ontouchstart = function (ev) {
+      const preventDefault = (e) => e.preventDefault();
+      document.body.style.overflow = 'hidden';
+      document.body.addEventListener('touchstart', preventDefault);
+
+      const oEvent = (ev || event).touches[0];
+      const zuo = oEvent.clientX - dom.offsetLeft;
+      const shang = oEvent.clientY - dom.offsetTop;
+      document.ontouchmove = function (ev) {
+        const oEvent = (ev || event).touches[0];
+        dom.style.top = `${oEvent.clientY - shang}px`;
+        if (!dom.dataset.blockshuiping) {
+          dom.style.left = `${oEvent.clientX - zuo}px`;
+        }
+        // 左边
+        if (dom.offsetLeft < 0) {
+          dom.style.left = 0;
+        }
+        // 右
+        if (dom.offsetLeft > document.documentElement.clientWidth - dom.offsetWidth) {
+          dom.style.left = `${document.documentElement.clientWidth - dom.offsetWidth}px`;
+        }
+        // 上
+        if (dom.offsetTop < 0) {
+          dom.style.top = 0;
+        }
+        // 下
+        if (dom.offsetTop > document.documentElement.clientHeight - dom.offsetHeight) {
+          dom.style.top = `${document.documentElement.clientHeight - dom.offsetHeight}px`;
+        }
+      };
+      document.ontouchend = function () {
+        document.ontouchmove = null;
+        dom.ontouchend = null;
+
+        document.body.style.overflow = 'scroll';
+        document.body.removeEventListener('touchstart', preventDefault);
+      };
+      return false;
+    };
+  };
+
+  drag(dd)
+</script>
+</script>
+</html>

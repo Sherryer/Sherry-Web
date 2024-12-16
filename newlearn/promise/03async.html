@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  console.log('script start')
+  async function async1() {
+    console.log('async1 start')
+    var c = await async2()
+    console.log('async1 end', c)
+  }
+  async function async2() {
+    console.log('async2')
+    return 111
+  }
+  async1()
+  new Promise((resolve) => {
+    resolve();
+    console.log(4);
+  }).then(() => {
+    console.log(5);
+  })
+</script>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  function ForMateData(data) {
+    const departmentHash = {};
+    const tree = [];
+    const orphanList = [];
+
+    data.forEach(({ industry_id, display_name, parent_id: parentid }) => {
+      const item = {
+        value: industry_id,
+        desc: display_name,
+        parentid,
+      };
+
+      departmentHash[industry_id] = item;
+
+      if (+parentid === 0) {
+        tree.push(item);
+        return;
+      }
+
+      const parent = departmentHash[parentid];
+      if (!parent) {
+        orphanList.push(item);
+        return;
+      }
+
+
+      if (!parent.options) {
+        parent.options = [];
+      }
+      parent.options.push(item);
+    });
+
+    // 孤儿列表
+    orphanList.forEach((item) => {
+      const parent = departmentHash[item.parentid];
+      if (!parent) {
+        tree.push(item);
+        return;
+      }
+
+      if (!parent.children) {
+        parent.children = [];
+      }
+      parent.children.push(item);
+    });
+    return {
+      departmentHash,
+      tree,
+    };
+  }
+
+</script>
+</html>

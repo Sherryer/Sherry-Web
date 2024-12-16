@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #div {
+        width: 100px;
+        height: 100px;
+        background: yellowgreen;
+    }
+  </style>
+</head>
+<body>
+  <div id="div">123</div>
+</body>
+<script>
+  var div = document.getElementById('div')
+  // div.onresize = (e) => console.log(e)
+
+  const resizeObserver = new ResizeObserver(entries => {
+    for (let entry of entries) {
+      console.log(444, entry.target)
+      // entry.target.style.borderRadius = Math.max(0, 250 - entry.contentRect.width) + 'px';
+    }
+  });
+  resizeObserver.observe(div);
+</script>
+</html>

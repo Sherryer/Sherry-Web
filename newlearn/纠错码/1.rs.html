@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+https://blog.csdn.net/weixin_43954962/article/details/117459250
+二维码-纠错码生成(js)
+</body>
+<script>
+  //对数反对数表 (来源 qrcode.js)
+  let QRMath = {
+    glog: function (n) {
+      if (n < 1) {
+        throw new Error("glog(" + n + ")");
+      }
+      return QRMath.LOG_TABLE[n];
+    }, gexp: function (n) {
+      while (n < 0) {
+        n += 255;
+      }
+      while (n >= 256) {
+        n -= 255;
+      }
+      return QRMath.EXP_TABLE[n];
+    }, EXP_TABLE: new Array(256),//  真数
+    LOG_TABLE: new Array(256) // 指数
+  };
+  for (let i = 0; i < 8; i++) {
+    QRMath.EXP_TABLE[i] = 1 << i; // 1 2 4 8  16 32 64 128
+  }
+  for (let i = 8; i < 256; i++) {
+    QRMath.EXP_TABLE[i] = QRMath.EXP_TABLE[i - 4] ^ QRMath.EXP_TABLE[i - 5] ^ QRMath.EXP_TABLE[i - 6] ^ QRMath.EXP_TABLE[i - 8];
+    //8:  16 ^ 8 ^ 4 ^ 1  29
+    // 9: 32 ^ 16 ^ 8 ^ 2  58
+  }
+  for (let i = 0; i < 255; i++) {
+    QRMath.LOG_TABLE[QRMath.EXP_TABLE[i]] = i;
+  }
+  //数据码字(消息多项式的系数)
+  let _msg_coefficients = [17, 236, 17, 236, 17, 236, 64, 67, 77, 220, 114, 209, 120, 11, 91, 32];
+  // 生成多项式 α 表达式指数
+  let _generator_coefficients = [45, 32, 94, 64, 70, 118, 61, 46, 67, 251, 0];
+
+  /**  * 根据数据码字生成纠错指定数量的纠错码
+   * * @param msg_coefficients  数据码字十进制数组
+   * * @param generator_coefficients 生成多项式 各项α表达式指数数字组
+   * */
+  function rs(msg_coefficients, generator_coefficients) {
+    //格式化消息多项式 、生成多项式
+    let msgPolynomial = {};
+    let generatorPolynomial = {};
+    msg_coefficients.forEach((d, i) => msgPolynomial[i] = d);
+    generator_coefficients.forEach((d, i) => generatorPolynomial[i] = d);
+    let msg_num = msg_coefficients.length;
+    let generator_num = generator_coefficients.length - 1;
+    //纠错数量 纠错数量比生成表达式项数少一
+    // a 表示消息多项式 msgPolynomial  b 表示生成多项式 generatorPolynomial
+    let curr_a = {};
+    let curr_b = {};
+
+    // msg 升幂
+    Object.keys(msgPolynomial).forEach(d => {
+      curr_a[+d + generator_num] = msgPolynomial[d]
+    });
+
+    // generator 升幂
+    Object.keys(generatorPolynomial).forEach(d => {
+      curr_b[+d + msg_num - 1] = generatorPolynomial[d]
+    });
+    for (let i = 0; i < msg_num; i++) {
+      //各项阶数的降序排列
+      let a_keys = Object.keys(curr_a).map(d => +d).sort((m, n) => n - m);
+      let b_keys = Object.keys(curr_b).map(d => +d).sort((m, n) => n - m);
+      /*      * 1)
+      * * generator 乘以msg最高项系数，
+      * * 因为 msg的项系数为真数 generator的项系数为指数表达式
+      * * 因此 将msg的项系数为真数最高项的系数转成alpha 表达式,然后再乘到generator上
+      * */
+      let a_item_0 = QRMath.glog(curr_a[a_keys[0]]);
+      b_keys.forEach(k => {
+        curr_b[k] = (curr_b[k] + a_item_0) % 255;
+      });
+      /*
+      * *2)
+      * * 2-1)a XOR b  (系数XOR)将结果的首项去除(首项系数为0) 作为新的消息多项式a,
+      * * 2-2)b降幂一次作为新的生成多项式，之前的升幂操作就避免
+      * * 最低阶项降幂失败，因为升幂消息码字数量，同样的需要进行消息码字数量次 异或，也就是降幂的次数等于异或的次数。
+      * */
+      let xor_result = {};
+      let xor_start = Math.min(a_keys[a_keys.length - 1], b_keys[b_keys.length - 1]); // 起始阶数
+      let xor_end = Math.min(a_keys[0], b_keys[0]); //终止 阶数
+      let a_t, b_t;
+      for (let j = xor_start; j <= xor_end; j++) {
+        if (xor_result[j] == null) {
+          //异或操作时没有对应阶数的项,取本身
+          a_t = curr_a[j] != null ? curr_a[j] : 0;
+          b_t = curr_b[j] != null ? QRMath.gexp(curr_b[j]) : 0;
+          xor_result[j] = a_t ^ b_t
+        }
+      }
+      if (xor_result[xor_end] == 0) {
+        delete xor_result[xor_end]; //异或结果移除系数为零首项
+      }
+      //新的a
+      curr_a = xor_result;
+      //降幂获得新 b
+      curr_b = {};
+      Object.keys(generatorPolynomial).forEach(d => {
+        curr_b[+d + msg_num - 1 - i - 1] = generatorPolynomial[d]
+      });
+    }
+    //异或结果
+    let result_desc = Object.keys(curr_a).sort((a, b) => +b - +a).map(k => curr_a[k]);
+    console.log('数据码字:', msg_coefficients);
+    console.log('纠错码字:', result_desc);
+    console.log('纠错7纠错码字:', [196, 35, 39, 119, 235, 215, 231, 226, 93, 23])
+  }
+
+
+  var c = rs(_msg_coefficients, _generator_coefficients, 16, 10);
+</script>
+</html>

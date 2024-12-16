@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script
+    crossorigin
+    src="https://cdn.bootcdn.net/ajax/libs/react/18.2.0/umd/react.production.min.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://cdn.bootcdn.net/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://cdn.bootcss.com/babel-standalone/6.26.0/babel.js"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://wxa.wxs.qq.com/wxad-design/wxad-tiptap/0.1.32/umd/wxad-tiptap.css"
+  />
+  <script src="https://wxa.wxs.qq.com/wxad-design/wxad-tiptap/0.1.32/umd/wxad-tiptap.bundle.js"></script>
+  <title>tiptap</title>
+</head>
+
+<body>
+<div id="root"></div>
+</body>
+<script type="text/babel">
+  const value = {"type":"doc","content":[{"type":"paragraph","attrs":{"textAlign":"left"},"content":[{"type":"text","text":"哈哈哈"}]},{"type":"theimage","attrs":{"id":"image_huUkk","src":"https://bbx-pic.gtimg.com/bbx/pictures/2023/205_20230811112642_356839.png","caption":"","width":"100%","ratio":"原比例","naturalWidth":2672,"naturalHeight":2400,"offset":{"x":0,"xPercent":0,"y":0,"yPercent":0},"markPoint":{"startX":0,"startY":0,"endX":0,"endY":0},"baseWidth":960}}]};
+
+  function App() {
+    return <TipTap value={value} editable={false} />;
+  }
+  ReactDOM.render(<App />, document.getElementById("root"));
+</script>
+</html>

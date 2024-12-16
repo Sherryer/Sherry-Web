@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  const createPromiseCallback = () => {
+    let resolveCallback;
+    let rejectCallback;
+    const promise = new Promise((resolve) => {
+      resolveCallback = (data) => {
+        resolve(data);
+      }
+    }, (reject) => {
+      rejectCallback = (data) => {
+        reject(data);
+      }
+    });
+    return [promise, resolveCallback, rejectCallback];
+  }
+
+  var [promise, resolve] = createPromiseCallback();
+  promise.then(res => {
+    console.log(res);
+  })
+
+  // var promise = new Promise((resolve) => {
+  //   var callback = (data) => {
+  //     resolve(data);
+  //   }
+  //   resolve(123)
+  // });
+  // promise.then(res => {
+  //   console.log(res);
+  // })
+</script>
+</html>

@@ -3,11 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="http://unpkg.com/loadjs@latest/dist/loadjs.min.js"></script>
 </head>
-<script src="./html2pdf.bundle.min.js"></script>
+<style>
+    /*换行样式*/
+    .breakInsideAvoid {
+        break-inside: avoid;
+    }
+    div {
+        border: 1px solid yellow;
+    }
+    #dom {
+        border: 1px solid black;
+    }
+</style>
 <body>
-
+<div id="dom">
+    <div>head</div>
+    <div>body</div>
+    <div>foot</div>
+    <img src="./Lenna.jpeg" alt="">
+    <img src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt="">
+</div>
 </body>
 <script>
+    const dom = document.getElementById('dom')
+    // import loadjs from "loadjs"
+    // 实现方法
+    // loadjs
+    const jsPath = 'https://public.gdtimg.com/qzone/biz/gdt/lib/html2pdf-0.9.2/html2pdf.js';
+    const loadHtml2Pdf = () => {
+        return new Promise((res, rej) => {
+            if (window.html2pdf) {
+                return res()
+            }
+            loadjs([jsPath], "html2pdf", {
+                success: function () {
+                    console.log("load html2pdf done")
+                    res()
+                },
+                error: function (pathsNotFound) {
+                    console.error("load htlm2pdf.js error，path：" + jsPath)
+                    rej()
+                },
+                numRetries: 3,
+            })
+        })
+    }
+    let draw = async (cb) => {
+        // 进入报表页，加载 html2pdf
+        await loadHtml2Pdf()
+        // let element = container.current
+        let element = dom
+        let html2pdf = window.html2pdf
+        if (!html2pdf) {
+            console.error("html2pdf 未加载")
+            return
+        }
+        let opt = {
+            margin: 2,
+            filename: "报告.pdf",
+            image: { type: "jpeg", quality: 0.98 },
+            html2canvas: { scale: 2 },
+        }
+        console.log("print")
+        setTimeout(() => {
+            if (cb) {
+                cb(html2pdf().set(opt).from(element).outputPdf())
+            } else {
+                html2pdf().set(opt).from(element).save()
+            }
+        }, 20)
+    }
 </script>
 </html>

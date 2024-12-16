@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css position演示</title>
+  <style>
+      body {
+          font-size: larger;
+      }
+
+      .box {
+          float: left;
+          margin: 1rem;
+          width: 100px;
+          height: 100px;
+          border: 3px solid #00f;
+          background: rgba(0, 0, 255, .2);
+      }
+
+      #example-element {
+          border: 3px solid #f00;
+          background: rgba(255, 255, 0, .6);
+      }
+
+      #example-option {
+          display: flex;
+          flex-flow: column;
+      }
+
+      table {
+          border-collapse: collapse;
+          border: 1px solid gray;
+      }
+
+      td {
+          padding: 16px;
+          border-right: 1px solid gray;
+      }
+
+      button {
+          margin: 0.5rem;
+          padding: 1rem 2rem;
+      }
+  </style>
+</head>
+
+<body>
+<h1>Position属性效果演示</h1>
+<table>
+  <tr>
+    <td id="example-option">
+      <button onclick="updateStyle('static')">
+        默认定位 <br>
+        position: static;
+      </button>
+      <button onclick="updateStyle('relative')">
+        相对定位<br>
+        position: relative;
+        top: 40px; left: 40px;
+      </button>
+      <button onclick="updateStyle('absolute')">
+        绝对定位<br>
+        position: absolute;
+        top: 40px; left: 40px;
+      </button>
+      <button onclick="updateStyle('fixed')">
+        固定定位<br>
+        position: fixed;
+        top: 40px; left: 40px;
+      </button>
+      <button onclick="updateStyle('sticky')">
+        粘性定位<br>
+        position: sticky;
+        top: 20px;
+      </button>
+    </td>
+    <td id="output">
+      <div style="height: 452px;overflow: scroll;">
+        <div style="position: relative;">
+          <p>这个示例演示css position属性</p>
+          <br>
+          <br>
+          <br>
+          <div class="box"></div>
+          <div class="box" id="example-element"></div>
+          <div class="box"></div>
+          <p style="clear: left;">为了演示position: sticky效果</p>
+          <p>这里增加了一个可滚动的容器</p>
+          <p>上下滚动这段内容</p>
+          <p>你将发现黄色框会始终停留在视线范围内</p>
+          <p>就像黏在在顶部一样</p>
+          <p>重新向下滚动</p>
+          <p>黄色框还会恢复到原来的位置</p>
+          <p>使用sticky特性</p>
+          <p>可以实现很多特效</p>
+          <p>比如始终黏在顶部的菜单栏</p>
+          <p>发挥想象力还可以实现其他效果...</p>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<script>
+  function updateStyle(position_mode) {
+    let box = document.getElementById("example-element")
+    if (position_mode == 'static') {
+      box.style = ""
+    } else if (position_mode == 'relative') {
+      box.style = "position: relative; top: 40px; left: 40px;"
+    } else if (position_mode == 'absolute') {
+      box.style = "position: absolute; top: 40px; left: 40px;"
+    } else if (position_mode == 'fixed') {
+      box.style = "position: fixed; top: 40px; left: 40px;"
+    } else if (position_mode == 'sticky') {
+      box.style = "position: sticky; top: 20px;"
+    }
+  }
+</script>
+</body>
+
+</html>

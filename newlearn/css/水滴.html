@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>动感水滴</title>
+  <style>
+      /* 清除默认边距 */
+      * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+      }
+
+      body {
+          width: 100vw;
+          height: 100vh;
+          display: flex;
+          /*background-color: #63b9e4;*/
+          /* 设置主轴居中 */
+          justify-content: center;
+      }
+
+      /* 设置水滴的样式 */
+      #water {
+          width: 300px;
+          height: 300px;
+          margin-top: 200px;
+          border-radius: 50% 50% 58% 42% / 39% 48% 52% 61%;
+          box-shadow: inset 10px 20px 30px rgba(0, 0, 0, 0.5),
+          10px 10px 20px rgba(0, 0, 0, 0.3),
+          15px 15px 30px rgba(0, 0, 0, 0.05),
+          inset -10px -10px 15px rgba(255, 255, 255, 0.8);
+          animation: waterDrop 3s ease-in-out infinite alternate;
+      }
+
+      /* 设置水滴上面的两个小白点为椭圆形状 */
+      #water::after,
+      #water::before {
+          content: '';
+          position: absolute;
+          /* 创建渐变背景以实现颜色过渡 */
+          background: white;
+          border-radius: 50%;
+          /* 调整为50%来创建椭圆形状 */
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+      }
+
+      #water::after {
+          width: 15px;
+          /* 增加宽度以形成椭圆 */
+          height: 10px;
+          /* 调整高度 */
+          top: 240px;
+          left: 48%;
+          animation: waterDropShineLarge 3s ease-in-out infinite alternate;
+      }
+
+      #water::before {
+          width: 30px;
+          /* 增加宽度以形成椭圆 */
+          height: 20px;
+          /* 调整高度 */
+          top: 265px;
+          left: 47%;
+          animation: waterDropShineSmall 3s ease-in-out infinite alternate;
+      }
+
+      /* 水滴晃动效果 */
+      @keyframes waterDrop {
+
+          0%,
+          100% {
+              border-radius: 50% 50% 58% 42% / 39% 48% 52% 61%;
+          }
+
+          50% {
+              border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+          }
+      }
+
+      /* 大小白点晃动效果 */
+      @keyframes waterDropShineLarge {
+
+          0%,
+          100% {
+              top: 240px;
+              left: 48%;
+          }
+
+          50% {
+              top: 235px;
+              left: 49%;
+          }
+      }
+
+      @keyframes waterDropShineSmall {
+
+          0%,
+          100% {
+              top: 265px;
+              left: 47%;
+          }
+
+          50% {
+              top: 260px;
+              left: 48%;
+          }
+      }
+  </style>
+</head>
+
+<body>
+<div id="water"></div>
+</body>
+</html>

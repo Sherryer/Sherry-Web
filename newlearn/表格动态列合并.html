@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+  // 表格动态列合并
+  function demo (priorityList, tableData) {
+    // 标注实际 index
+    tableData.forEach((item, index) => item.real_index_num = index);
+
+    const resultArr = [];
+    let splitArr = [tableData];
+    let splitIndex = [];
+    // 遍历列
+    priorityList.forEach((key, colIndex) => {
+
+      let temporarySplitArr = [];
+      let resulArr = [];
+      // 遍历块
+      splitArr.forEach((arr) => {
+        const result = [];
+
+        let lastValue = null;
+        let lastRow = null;
+        let beginRow = null;
+        let startCountFlag = false;
+
+        const setResult = () => {
+          let rowSpan = lastRow - beginRow + 1;
+          result.push({
+            colSpan: 1,
+            rowSpan,
+            style: {
+              textAlign: 'center',
+              verticalAlign: 'middle'
+            },
+            rowIndex: beginRow,
+            colIndex,
+          });
+        };
+        // 遍历这一块下所有行
+        arr.forEach((item, index) => {
+          // 第一次重复
+          if (lastValue === item[key]) {
+            if (!startCountFlag) {
+              beginRow = lastRow;
+              startCountFlag = true
+            }
+          } else {
+            if (startCountFlag) {
+              setResult();
+              startCountFlag = false
+            }
+            splitIndex.push(lastRow);
+          }
+          lastRow = item.real_index_num;
+          lastValue = item[key];
+        });
+
+        if (startCountFlag) {
+          setResult();
+        }
+
+        if (result.length) {
+          resultArr.push(result)
+        }
+
+        // 拆分数组
+        arr.forEach((item) => {
+          resulArr.push(item);
+          if (splitIndex.includes(item.real_index_num)) {
+            temporarySplitArr.push(resulArr);
+            resulArr = [];
+          }
+        });
+
+        if (resulArr.length) {
+          temporarySplitArr.push(resulArr);
+          resulArr = [];
+        }
+      });
+      splitIndex = [];
+      splitArr = temporarySplitArr;
+      temporarySplitArr = [];
+    });
+    return resultArr.flat();
+  }
+
+  var priorityList = ['a', 'b', 'c'];
+  var listData = [
+    { a: 1, b: 2, c: 3, aaa: 123456 },
+    { a: 1, b: 2, c: 33, aaa: 123456 },
+    { a: 1, b: 22, c: 33, aaa: 123456 },
+    { a: 11, b: 22, c: 33, aaa: 123456 },
+    { a: 1, b: 2, c: 3, aaa: 123456 },
+  ]
+  var res = demo(priorityList, listData);
+
+  // setRowAndColSpan(type, name, value, rowIndex, colIndex) {
+  //   if (type === 'data') {
+  //     // rowIndex 行  colIndex 列
+  //     // rowSpan 跨行
+  //     // colSpan 跨列
+  //     let result = undefined;
+  //     this.state.RoleAndColSpan.forEach(item => {
+  //       if (rowIndex === item.rowIndex && colIndex === item.colIndex) {
+  //         result = {
+  //           ...item
+  //         }
+  //       }
+  //     });
+  //     return result;
+  //   }
+  // }
+
+</script>
+</html>

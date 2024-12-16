@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .parent {
+        display: grid;
+        height: 500px;
+        /*grid-template-columns: 200px minmax(100px, 300px) 200px;*/
+        /*grid-template-columns: repeat(auto-fill, 200px);*/
+        grid-template-columns: repeat(12, 1fr);
+        /*grid-template-rows: 20% 20%;*/
+    }
+    .child {
+        /*width: 300px;*/
+        border: 1px solid black;
+    }
+    .child img{
+        width: 300px;
+        display: none;
+    }
+    .row2 {
+
+    }
+  </style>
+</head>
+<body>
+<div class="parent">
+  <div class="child" >
+    <img src="https://i.pinimg.com/originals/0d/67/72/0d677237854ed19dcfe69f0f9a4065ee.jpg" alt="">
+  </div>
+  <div class="child">
+    <img src="https://i.pinimg.com/736x/26/db/84/26db84b2bf348f79792f7c5f0f9bd5ef.jpg" alt="">
+  </div>
+  <div class="child">
+    <img src="https://i.pinimg.com/736x/45/0d/1c/450d1c87ce61bc0c2429701ed3ea631a.jpg" alt="">
+  </div>
+  <div class="child">
+    <img src="https://i.pinimg.com/564x/94/76/dd/9476dd3d346a3d697362da94b9aa2dc2.jpg" alt="">
+  </div>
+  <div class="child row2">
+    <img src="https://www.sitedogta.com.br/gta5/imagens/personagens/Trevor%20GTA%20V.JPG" alt="">
+  </div>
+  <div class="child">
+    <img src="https://i.pinimg.com/564x/3b/3b/56/3b3b56745376625aa66d5943b3db0275.jpg" alt="">
+  </div>
+  <div class="child">
+    <img src="https://i.pinimg.com/originals/c8/9c/6b/c89c6b8f2165cfbe5ecccfebace1042d.jpg" alt="">
+  </div>
+  <div class="child">
+    <img src="https://i.pinimg.com/736x/ea/e7/b5/eae7b513060702e86bdd51d4d5cfc5ae.jpg" alt="">
+  </div>
+  <div class="child">
+    <img src="https://cdn.hipwallpaper.com/i/94/92/Fk0l6I.jpg" alt="">
+  </div>
+</div>
+</body>
+</html>

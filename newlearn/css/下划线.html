@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+    div {
+        width: 400px;
+    }
+  .container {
+      cursor: pointer;
+      /*width: 400px;*/
+      line-height: 2;
+
+      background: linear-gradient(to right, red, yellow) no-repeat right bottom;
+      background-size: 0 2px;
+      transition: background-size 0.5s ease;
+  }
+
+  .container:hover {
+      background-size: 100% 2px;
+      background-position: left bottom;
+  }
+</style>
+<body>
+<div>
+  <span class="container">
+    文字下划线，啦啦啦阿斯顿啊啊是的发送到发送到发送到发送到发送到发撒到发送到发送到
+  </span>
+</div>
+</body>
+</html>

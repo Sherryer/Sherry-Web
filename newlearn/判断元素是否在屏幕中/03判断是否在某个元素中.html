@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+        margin: 0;
+    }
+    #parent {
+        width: 400px;
+        height: 600px;
+        border: 1px solid black;
+        overflow-y: scroll;
+    }
+    .zhanwei {
+        background: yellow;
+        height: 700px;
+    }
+    #child {
+        width: 100px;
+        height: 100px;
+        background: #eeb7b7;
+    }
+  </style>
+</head>
+<body>
+<div id='parent'>
+  <div class="zhanwei">
+    111
+  </div>
+  <div id="child"></div>
+</div>
+</body>
+<script>
+  const child = document.getElementById('child');
+  // const parent = child.parentNode;
+  // const rect = child.getBoundingClientRect();
+  // const elementTop = rect.top
+  // const current = parent.getBoundingClientRect().bottom;
+  // if (elementTop < current) {
+  //   console.log('===load');
+  // }
+
+  var io = new IntersectionObserver(function (entries){
+    console.log(111, entries[0].isIntersecting)
+    const bool = entries[0].isIntersecting
+    // if (bool === true) {
+    //   io.unobserve(entries[0].target)
+    // }
+  }, {});
+  io.observe(child);
+</script>
+</html>

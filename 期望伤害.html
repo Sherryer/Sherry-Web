@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div>
+  <div>天赋点：<input type="text" id="talent" value="100"></div>
+  <div>基础伤害：<input type="text" id="baseDamage" value="100"></div>
+  <div>暴击倍率：<input type="text" id="power" value="1.5"></div>
+  <div>暴伤增加倍率：<input type="text" id="powerAddPow" value="1.25"></div>
+</div>
+<div>
+  <button onclick="count()">计算</button>
+</div>
+<div>
+  <div>计算结果：</div>
+  <pre id="pre"></pre>
+</div>
+</body>
+<script>
+  const count = () => {
+    let talent = +document.getElementById('talent').value;     // 天赋点数
+    let baseDamage = +document.getElementById('baseDamage').value; // 基础伤害
+    const power = +document.getElementById('power').value;      // 暴击倍率
+    const powerAddPow = +document.getElementById('powerAddPow').value; // 暴伤增加倍率
+    const pre = document.getElementById('pre');
+
+    if ([talent, baseDamage, power, powerAddPow].filter(item => (
+      isNaN(item)
+    )).length) {
+      alert('请输入数字')
+    }
+
+    let bigDamageData = {
+      damage: -1,
+      index: -1
+    }
+
+    let resText = '';
+
+    for (let i = 0; i <= talent; i ++) {
+      const powerPercent = 1 - (i / talent);
+      const expectDamage = (baseDamage + i) * (1 - powerPercent)
+        + (baseDamage + i) * power * powerAddPow * powerPercent;
+      if (expectDamage > bigDamageData.damage) {
+        bigDamageData = {
+          damage: expectDamage,
+          index: i,
+        }
+      }
+      resText = resText + `基础攻击力：${baseDamage + i}。暴击率：${powerPercent.toFixed(2)}。期望伤害：${expectDamage.toFixed(2)}。 \n`
+    }
+
+    // console.log('结论：暴击倍率:', power, '。最大伤害')
+    console.log('down', bigDamageData)
+    resText = `最高伤害时  基础攻击力：${bigDamageData.index + baseDamage}。暴击率：${1 - (bigDamageData.index / talent).toFixed(2)}。期望伤害：${bigDamageData.damage.toFixed(2)}。 \n\n` + resText
+
+    pre.innerHTML = resText;
+  }
+</script>
+</html>

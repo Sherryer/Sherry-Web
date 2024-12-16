@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+    .animated {
+        animation: slideIn 2s infinite;
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(100%);
+        }
+    }
+</style>
+<body>
+<div id="animatedElement" class="animated">Hello, World!</div>
+<button onclick="pauseAnimation()">Pause</button>
+<button onclick="resumeAnimation()">Resume</button>
+</body>
+<script>
+  function pauseAnimation() {
+    var element = document.getElementById('animatedElement');
+    element.style.animationPlayState = 'paused';
+  }
+
+  function resumeAnimation() {
+    var element = document.getElementById('animatedElement');
+    element.style.animationPlayState = 'running';
+  }
+</script>
+</html>

@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        #i {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
 <button id="btn">按钮</button>
@@ -21,7 +26,7 @@
   }
 
     window.addEventListener('message', e => {
-      console.log('收到iframe消息', e.data)
+      console.log('外面收到iframe消息', e.data)
     })
 </script>
 </html>

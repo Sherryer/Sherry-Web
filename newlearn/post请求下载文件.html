@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+
+  /**
+   * @description 当请求返回时一个文件时进行转化下载
+   * {url} 下载链接
+   * {data} 请求参数
+   * {name} 导出文件名
+   * {setDialogOptions} 设置自定义弹窗
+   * {hideDialog} 关闭弹窗
+   * {message} 提示信息
+   */
+
+  const downloadFileDialog = (url, data, name, setDialogOptions, hideDialog, message) => {
+    setDialogOptions({
+      config: {
+        title: '下载提示',
+        modalClassName: 'dialog-alert',
+      },
+      content: '请确认是否要下载文件?',
+      closeBySuccess: false, // 手动关闭dialog
+      onSuccess: () => {
+        const opt = {
+          url,
+          method: 'post',
+          responseType: 'blob',
+          data,
+        };
+        return axios.request(opt)
+          .then((res) => {
+            const fileReader = new FileReader();
+            const BLOB = res.data;
+            if (res.headers['content-type'] === 'application/json') {
+              fileReader.readAsText(BLOB, 'utf-8');
+              fileReader.onload = (event) => {
+                const result = JSON.parse(event.target.result);
+                // 处理失败的情况
+                if (result?.code === 10001) {
+                  message.error(result.message);
+                }
+              };
+            } else {
+              fileReader.readAsDataURL(BLOB);
+              // 处理load事件，该事件在读取操作完成时触发
+              fileReader.onload = (event) => {
+                const a = document.createElement('a');
+                a.download = `${name}.xlsx`;
+                a.href = event.target.result;
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+              };
+              hideDialog();
+            }
+          })
+          .catch(error => message.error(`下载失败\n${error.message}`));
+      },
+    });
+  };
+</script>
+</html>

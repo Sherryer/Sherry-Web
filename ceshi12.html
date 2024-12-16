@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<style>
+  html {
+      /*font-size: 62.5%;*/
+      font-size: 10px;
+  }
+  div {
+      font-size: 1.6rem;
+  }
+</style>
+<body>
+<div>
+123123
+</div>
+<script>
+
+  // 55860 dot
+  // 27930 diag
+  // 27930 transform
+
+  // 矩阵乘法
+  const dot = (a, b) => {
+    if (a[0].length !== b.length) {
+      return Promise.reject('矩阵不匹配，无法点乘');
+    }
+    let m = a.length;
+    let p = a[0].length;
+    let n = b[0].length;
+
+    // 初始化 m*n 全 0 二维数组
+    let result = new Array(m).fill(0).map(arr => new Array(n).fill(0));
+    // let result = []
+
+    for (let i = 0; i < m; i++) {
+      for (let j = 0; j < n; j++) {
+        for (let k = 0; k < p; k++) {
+          // if (!result[i]) {
+          //   result[i] = []
+          // }
+          // if (result[i][j] === undefined) {
+          //   result[i][j] = 0
+          // }
+          // result[i][j] += a[i][k] * b[k][j];
+          result[i][j] = result[i][j] + a[i][k] * b[k][j];
+        }
+      }
+    }
+
+    return result;
+  };
+
+
+  var arr1 = [
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+  ];
+  var arr2 = [
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+    [1,2,3,4,5,6],
+  ];
+  console.time('a');
+  // for (let i = 0; i < 10000 * 10000 * 10; i ++) {
+  //   // arr.push(i);
+  // }
+
+
+  var c = dot(arr1, arr2)
+  console.log(c)
+
+  var d;
+  var z = Math.PI;
+  for (let i = 0; i < 55860 * 10; i ++) {
+    // new Array(10).fill(0)
+    // arr2.fill(0)
+    // dot(arr1, arr2)
+    d = z
+  }
+  console.timeEnd('a')
+</script>
+</body>
+</html>

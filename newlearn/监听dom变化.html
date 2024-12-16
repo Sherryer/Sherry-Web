@@ -5,17 +5,19 @@
     <title>Title</title>
 </head>
 <body>
-<button id="myelement">ADD</button>
+<div id="div1">12345</div>
 </body>
 <script>
+    const div1 = document.getElementById('div1');
+
     var MutationObserver = window.MutationObserver ||
         window.WebKitMutationObserver ||
         window.MozMutationObserver;
 
     var mutationObserverSupport = !!MutationObserver;
 
-    var callback = function(records){
-        console.log('触发了MutationObserver callback');
+    const callback = function(records){
+        console.log('触发了MutationObserver callback', records);
         records.map(function(record){
             console.log(111,'Mutation type: '+ record.type, ', target: ', record.target.nodeName);
 //            type:观察的变动类型（attribute、characterData或者childList）。
@@ -29,11 +31,12 @@
         });
     };
 
-    var mo = new MutationObserver(callback);
+    const observer = new MutationObserver(callback);
 
-    var option = {
-        'childList': true,
-        'subtree': true
+    const option = {
+        // 'childList': true,
+        'subtree': true,
+        'characterData': true,
     };
 //    option可以定制以下信息
 //    childList：子元素的变动
@@ -41,25 +44,38 @@
 //    characterData：节点内容或节点文本的变动
 //    subtree：所有下属节点（包括子节点和子节点的子节点）的变动
 
-    mo.observe(document.body, option);
+    // observer.observe(div1, option)
 
-    window.onload = init;
-
-    function init(){
-        if (!mutationObserverSupport) {
-            return;
+    function observeSelector(element) {
+        if (element) {
+            const parentNode = element.parentNode || document.body;
+            // 为什么这么做？因为这是最原始的节点了
+            // 如果直接拿element去replace只能拿到具有最新属性的节点
+            const newClonedNode = element.cloneNode(true);
+            new MutationObserver(mutations => {
+                mutations.forEach(mutationRecord => {
+                    const currentTarget = mutationRecord.target;
+                    const removedNode = mutationRecord.removedNodes[0];
+                    // 修改属性的时候，target就是当前元素
+                    if (currentTarget === element) {
+                        const replaceNode = newClonedNode.cloneNode(true);
+                        parentNode.replaceChild(replaceNode, element);
+                        element = replaceNode;
+                    } else {
+                        // 删除元素的时候，removedNodes是一个数组，只删它一个，那第一个就是当前元素
+                        if (removedNode === element) {
+                            element = element.cloneNode(true);
+                            parentNode.appendChild(element);
+                        }
+                    }
+                });
+            }).observe(document.body, {
+                attributes: true,
+                childList: true,
+                subtree: true, // 监听后代节点变化
+            });
         }
-
-        var addBtn = document.getElementById('myelement'),
-            body = document.getElementsByTagName('body')[0];
-        addBtn.addEventListener('click', function(e) {
-            for (var i = 0, j = 100; i < j; i++) {
-                var p = document.createElement('p');
-                p.appendChild(document.createTextNode(i));
-                body.appendChild(p);
-                console.log('append child node: ' + i);
-            }
-        }, false);
     }
+    observeSelector(div1)
 </script>
 </html>
