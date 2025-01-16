@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>散点图</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        const list = [
+            {
+                name: '送货上门',
+                value: [-0.8, -0.6],
+                symbolSize: 20
+            },
+            {
+                name: '退货包邮',
+                value: [-0.4, -0.2],
+                symbolSize: 30
+            },
+            {
+                name: '免费试穿',
+                value: [-0.5, 0.3],
+                symbolSize: 30
+            },
+            {
+                name: '万人团',
+                value: [-0.1, -0.2],
+                symbolSize: 35
+            },
+            {
+                name: '全国包邮',
+                value: [0, 0],
+                symbolSize: 30
+            },
+            {
+                name: '9.9包邮',
+                value: [0.2, 0],
+                symbolSize: 35
+            },
+            {
+                name: '服务好',
+                value: [0.3, -0.2],
+                symbolSize: 35
+            },
+            {
+                name: '品质优势',
+                value: [0.4, 0.3],
+                symbolSize: 45
+            },
+            {
+                name: '强时效-秒杀',
+                value: [0.5, 0.5],
+                symbolSize: 45
+            },
+            {
+                name: '货到付款',
+                value: [0.8, 0.2],
+                symbolSize: 50
+            },
+            {
+                name: '消耗高',
+                value: [1, 0],
+                symbolSize: 40
+            }
+        ];
+
+        const ScatterChart = ({ data }) => {
+            React.useEffect(() => {
+                const chartDom = document.getElementById('scatter-chart');
+                const myChart = echarts.init(chartDom);
+
+                const option = {
+                    grid: {
+                        top: '6%',
+                        bottom: '6%',
+                        left: '10%',
+                        right: '10%'
+                    },
+                    xAxis: {
+                        type: 'value',
+                        axisLine: {
+                            show: true,
+                            onZero: true,
+                            symbol: ['none', 'arrow'],
+                            symbolSize: [10, 15],
+                            lineStyle: {
+                                color: '#E9EBEF'
+                            }
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: false
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        axisLine: {
+                            show: true,
+                            onZero: true,
+                            symbol: ['none', 'arrow'],
+                            symbolSize: [10, 15],
+                            lineStyle: {
+                                color: '#E9EBEF'
+                            }
+                        },
+                        axisTick: {
+                            show: false
+                        },
+                        axisLabel: {
+                            show: false
+                        },
+                        splitLine: {
+                            show: false
+                        }
+                    },
+                    graphic: [
+                        {
+                            type: 'text',
+                            right: '2%',
+                            top: '49%',
+                            style: {
+                                text: '消耗高',
+                                textAlign: 'left',
+                                fill: '#626365',
+                                fontSize: 12,
+                                fontWeight: 600
+                            }
+                        },
+                        {
+                            type: 'text',
+                            left: '42%',
+                            top: '2%',
+                            style: {
+                                text: 'CTR高',
+                                textAlign: 'center',
+                                fill: '#626365',
+                                fontSize: 12,
+                                fontWeight: 600
+                            }
+                        }
+                    ],
+                    series: [{
+                        type: 'scatter',
+                        data: data.map(item => ({
+                            ...item,
+                            itemStyle: {
+                                color: {
+                                    type: 'radial',
+                                    x: 0.5,
+                                    y: 0.5,
+                                    r: 0.5,
+                                    colorStops: [{
+                                        offset: 0,
+                                        color: '#FFA500' // 中心点颜色
+                                    }, {
+                                        offset: 1,
+                                        color: 'rgba(255, 165, 0, 0.3)' // 外围颜色
+                                    }]
+                                }
+                            },
+                            emphasis: {
+                                itemStyle: {
+                                    color: {
+                                        type: 'radial',
+                                        x: 0.5,
+                                        y: 0.5,
+                                        r: 0.5,
+                                        colorStops: [{
+                                            offset: 0,
+                                            color: '#FF8C00' // 悬浮时中心点颜色加深
+                                        }, {
+                                            offset: 1,
+                                            color: 'rgba(255, 140, 0, 0.4)' // 悬浮时外围颜色加深
+                                        }]
+                                    }
+                                },
+                                label: {
+                                    show: true,
+                                    position: 'top',
+                                    fontSize: 14,
+                                    fontWeight: 'bold',
+                                    color: '#333'
+                                }
+                            }
+                        })),
+                        label: {
+                            show: true,
+                            formatter: '{b}',
+                            position: 'top',
+                            fontSize: 12,
+                            color: '#333'
+                        }
+                    }]
+                };
+
+                myChart.setOption(option);
+
+                // 响应式处理
+                window.addEventListener('resize', () => {
+                    myChart.resize();
+                });
+
+                return () => {
+                    window.removeEventListener('resize', () => {
+                        myChart.resize();
+                    });
+                    myChart.dispose();
+                };
+            }, [data]);
+
+            return (
+                <div id="scatter-chart" style={{ width: '100%', height: '600px' }}></div>
+            );
+        };
+
+        ReactDOM.render(<ScatterChart data={list} />, document.getElementById('root'));
+    </script>
+</body>
+</html>

@@ -25,7 +25,7 @@
 }
 
 .rate-item {
-    width: 60px;
+    width: 68px;
     border-radius: 4px;
 }
 
@@ -72,20 +72,18 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    gap: 4px;
+}
+
+.pillar-group {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .pillar-left, .pillar-right {
-    height: 180px; /* 动态的 */
+    height: 180px;
     width: 16px;
-}
-
-.pillar-left {
-    background: #6997F4;
-}
-
-.pillar-right {
-    height: 204px; /* 动态的 */
-    background: #FDC780;
 }
 
 .text-content {
@@ -97,6 +95,24 @@
     padding-bottom: 20px;
 }
 
+/* 修改第一组柱子的颜色 */
+.pillar-group:first-child .pillar-left {
+    background: #6997F4;
+}
+
+.pillar-group:first-child .pillar-right {
+    background: #BFD3FA;
+}
+
+/* 修改第二组柱子的颜色 */
+.pillar-group:last-child .pillar-left {
+    background: #FCB04C;
+}
+
+.pillar-group:last-child .pillar-right {
+    background: #FEDDB2;
+}
+
 </style>
 <body>
 <section class="parent">
@@ -105,8 +121,14 @@
       <div class="pillar-container">
         <div class="pillar-tip">建议增投</div>
         <div class="pillar-content">
-          <div class="pillar-left"></div>
-          <div class="pillar-right"></div>
+          <div class="pillar-group">
+            <div class="pillar-left"></div>
+            <div class="pillar-right"></div>
+          </div>
+          <div class="pillar-group">
+            <div class="pillar-left"></div>
+            <div class="pillar-right"></div>
+          </div>
         </div>
       </div>
       <div class="text-content">
@@ -118,8 +140,14 @@
       <div class="pillar-container">
         <div class="pillar-tip">建议增投</div>
         <div class="pillar-content">
-          <div class="pillar-left"></div>
-          <div class="pillar-right"></div>
+          <div class="pillar-group">
+            <div class="pillar-left"></div>
+            <div class="pillar-right"></div>
+          </div>
+          <div class="pillar-group">
+            <div class="pillar-left"></div>
+            <div class="pillar-right"></div>
+          </div>
         </div>
       </div>
       <div class="text-content">
